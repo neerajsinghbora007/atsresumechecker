@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free ATS Resume Checker — 16 Crucial Checks | Neeraj Bora Consulting</title>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<style>
+:root {
+  --blue:   #1A56DB; --blue-d: #1244b8; --blue-l: #EBF2FF;
+  --green:  #0E9F6E; --red: #E02424; --orange: #FF8A00;
+  --dark:   #111827; --mid: #374151; --soft: #6B7280;
+  --border: #E5E7EB; --bg: #F9FAFB; --white: #FFFFFF;
+  --radius: 12px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--dark); min-height: 100vh; }
+
+.topbar { background: var(--dark); color: #fff; text-align: center; font-size: 13px; padding: 9px 16px; }
+.topbar span { color: #FCD34D; font-weight: 600; }
+
+.hero {
+  background: linear-gradient(135deg, #0F2D6B 0%, #1A56DB 60%, #2563EB 100%);
+  color: white; padding: 52px 24px 48px; text-align: center; position: relative; overflow: hidden;
+}
+.hero::before {
+  content:""; position:absolute; inset:0;
+  background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/svg%3E");
+}
+.hero-badge {
+  display:inline-flex; align-items:center; gap:6px;
+  background:rgba(255,255,255,0.15); border:1px solid rgba(255,255,255,0.25);
+  border-radius:999px; padding:5px 14px; font-size:12px; font-weight:600;
+  letter-spacing:0.08em; text-transform:uppercase; margin-bottom:18px;
+}
+.hero h1 { font-family:'Sora',sans-serif; font-size:clamp(26px,5vw,40px); font-weight:800; line-height:1.15; margin-bottom:14px; }
+.hero h1 em { font-style:normal; color:#FCD34D; }
+.hero p { font-size:15px; color:rgba(255,255,255,0.82); max-width:500px; margin:0 auto 28px; line-height:1.65; }
+.trust-row { display:flex; flex-wrap:wrap; justify-content:center; gap:18px; }
+.trust-item { display:flex; align-items:center; gap:6px; font-size:12.5px; color:rgba(255,255,255,0.75); }
+.trust-dot { color:#4ADE80; font-size:10px; }
+
+.card {
+  max-width:680px; margin:-24px auto 0;
+  background:var(--white); border-radius:16px;
+  box-shadow:0 8px 40px rgba(0,0,0,0.10);
+  padding:32px 28px 36px; position:relative; z-index:2;
+}
+
+.upload-zone {
+  border:2px dashed #CBD5E1; border-radius:var(--radius);
+  padding:36px 20px; text-align:center; cursor:pointer;
+  transition:all 0.2s; background:#F8FAFF; margin-bottom:16px;
+}
+.upload-zone:hover, .upload-zone.active { border-color:var(--blue); background:var(--blue-l); }
+.upload-icon { font-size:42px; margin-bottom:10px; }
+.upload-title { font-family:'Sora',sans-serif; font-weight:700; font-size:15px; color:var(--dark); margin-bottom:4px; }
+.upload-sub { font-size:13px; color:var(--soft); }
+.upload-sub strong { color:var(--blue); }
+.file-name { margin-top:10px; color:var(--green); font-size:13px; font-weight:600; }
+#resumeFile { display:none; }
+
+.checks-preview { display:grid; grid-template-columns:repeat(2,1fr); gap:8px; margin-bottom:20px; }
+.cp-item { display:flex; align-items:center; gap:8px; font-size:12.5px; color:var(--mid); background:var(--bg); border-radius:8px; padding:8px 10px; }
+.cp-icon { color:var(--blue); font-size:14px; flex-shrink:0; }
+
+.btn-main {
+  width:100%; background:var(--blue); color:white; border:none;
+  padding:16px; border-radius:var(--radius); font-size:16px;
+  font-family:'Sora',sans-serif; font-weight:700; cursor:pointer;
+  transition:all 0.2s; display:flex; align-items:center; justify-content:center; gap:8px;
+}
+.btn-main:hover { background:var(--blue-d); transform:translateY(-1px); box-shadow:0 6px 20px rgba(26,86,219,0.35); }
+.btn-main:disabled { background:#A0AEC0; cursor:not-allowed; transform:none; box-shadow:none; }
+
+.loader { display:none; text-align:center; padding:32px 0; }
+.loader-ring { width:48px; height:48px; border:4px solid var(--blue-l); border-top:4px solid var(--blue); border-radius:50%; animation:spin 0.8s linear infinite; margin:0 auto 14px; }
+@keyframes spin { to { transform:rotate(360deg); } }
+.loader-text { font-size:14px; color:var(--soft); }
+.loader-step { font-size:12px; color:#9CA3AF; margin-top:4px; }
+
+.error-box { display:none; background:#FEF2F2; border:1px solid #FECACA; border-radius:var(--radius); padding:12px 16px; color:var(--red); font-size:13px; margin-top:14px; text-align:center; }
+
+.results { display:none; margin-top:28px; }
+
+.score-hero { background:linear-gradient(135deg,#0F2D6B,#1A56DB); border-radius:14px; padding:28px 24px; text-align:center; color:white; margin-bottom:24px; }
+.score-number { font-family:'Sora',sans-serif; font-size:72px; font-weight:800; line-height:1; margin-bottom:4px; }
+.score-number.green { color:#4ADE80; } .score-number.orange { color:#FCD34D; } .score-number.red { color:#F87171; }
+.score-lbl { font-size:16px; font-weight:600; margin-bottom:8px; opacity:.9; }
+.score-desc { font-size:13px; opacity:.72; max-width:360px; margin:0 auto 18px; line-height:1.6; }
+.prog-track { background:rgba(255,255,255,0.15); border-radius:999px; height:10px; overflow:hidden; max-width:320px; margin:0 auto 8px; }
+.prog-fill { height:100%; border-radius:999px; transition:width 1.2s cubic-bezier(0.4,0,0.2,1); }
+.fill-green { background:linear-gradient(90deg,#4ADE80,#22D3EE); }
+.fill-orange { background:linear-gradient(90deg,#FCD34D,#F97316); }
+.fill-red { background:linear-gradient(90deg,#F87171,#EF4444); }
+.prog-labels { display:flex; justify-content:space-between; font-size:11px; opacity:.6; max-width:320px; margin:0 auto; }
+.mini-stats { display:flex; justify-content:center; gap:24px; margin-top:18px; }
+.ms-item { text-align:center; }
+.ms-num { font-family:'Sora',sans-serif; font-size:22px; font-weight:800; }
+.ms-lbl { font-size:11px; opacity:.65; margin-top:2px; }
+
+.sec-head { display:flex; align-items:center; gap:10px; font-family:'Sora',sans-serif; font-size:14px; font-weight:700; color:var(--dark); margin:24px 0 12px; padding-bottom:10px; border-bottom:2px solid var(--border); }
+.sec-badge { border-radius:999px; font-size:11px; font-weight:700; padding:2px 9px; color:white; }
+.badge-green { background:var(--green); } .badge-red { background:var(--red); }
+
+.pass-card { display:flex; align-items:flex-start; gap:12px; background:#F0FDF4; border:1px solid #BBF7D0; border-left:4px solid var(--green); border-radius:var(--radius); padding:12px 14px; margin-bottom:8px; animation:fadeUp 0.3s ease both; }
+.pass-title { font-weight:600; font-size:13.5px; color:#065F46; margin-bottom:2px; }
+.pass-detail { font-size:12.5px; color:#047857; line-height:1.5; }
+
+.lock-card { display:flex; align-items:center; gap:12px; background:#FFF5F5; border:1px solid #FED7D7; border-left:4px solid var(--red); border-radius:var(--radius); padding:12px 14px; margin-bottom:8px; position:relative; overflow:hidden; }
+.lock-inner { display:flex; align-items:flex-start; gap:12px; opacity:0.3; filter:blur(2px); pointer-events:none; }
+.lock-title { font-weight:600; font-size:13.5px; color:#9B1C1C; margin-bottom:2px; }
+.lock-detail { font-size:12.5px; color:#C53030; }
+.lock-overlay { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; font-size:13px; font-weight:700; color:var(--red); gap:6px; background:rgba(255,245,245,0.5); }
+
+.unlock-teaser { background:linear-gradient(135deg,#FFF7ED,#FEF3C7); border:1px solid #FDE68A; border-radius:var(--radius); padding:14px 16px; margin:4px 0 24px; text-align:center; font-size:13px; color:#92400E; }
+.unlock-teaser strong { color:var(--red); }
+
+.cta-block { background:linear-gradient(135deg,#0F2D6B 0%,#1A56DB 100%); border-radius:16px; padding:28px 24px; text-align:center; color:white; }
+.cta-block h3 { font-family:'Sora',sans-serif; font-size:20px; font-weight:800; margin-bottom:8px; }
+.cta-block p { font-size:13.5px; opacity:.82; margin-bottom:14px; line-height:1.6; }
+.cta-price { display:inline-block; background:#FCD34D; color:#1A1A1A; font-family:'Sora',sans-serif; font-weight:800; font-size:15px; border-radius:999px; padding:6px 20px; margin-bottom:16px; }
+.wa-cta { display:inline-flex; align-items:center; gap:10px; background:#25D366; color:white; padding:15px 32px; border-radius:var(--radius); font-family:'Sora',sans-serif; font-size:15px; font-weight:700; text-decoration:none; transition:all 0.2s; }
+.wa-cta:hover { background:#1DB954; transform:translateY(-2px); box-shadow:0 8px 24px rgba(37,211,102,0.4); }
+.wa-sub { font-size:12px; opacity:.65; margin-top:10px; }
+
+.footer { text-align:center; padding:32px 16px 40px; font-size:12px; color:#9CA3AF; }
+.footer a { color:var(--blue); text-decoration:none; }
+
+@keyframes fadeUp { from { opacity:0; transform:translateY(10px); } to { opacity:1; transform:translateY(0); } }
+@media(max-width:520px) {
+  .card { padding:24px 16px 28px; margin:-16px 12px 0; }
+  .checks-preview { grid-template-columns:1fr; }
+  .mini-stats { gap:16px; }
+  .score-number { font-size:56px; }
+}
+</style>
+</head>
+<body>
+<nav style="background:white;border-bottom:1px solid #E5E7EB;padding:0 24px;position:sticky;top:0;z-index:100;">
+  <div style="max-width:680px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:56px;">
+    <a href="index.html" style="font-family:'Sora',sans-serif;font-weight:800;font-size:16px;color:#0F2D6B;text-decoration:none;">ATS<span style="color:#1A56DB">.</span>ResumeChecker</a>
+    <a href="https://wa.me/919910136637?text=Hi%20Neeraj%2C%20I%20want%20an%20ATS%20resume." target="_blank" style="background:#25D366;color:white;padding:8px 16px;border-radius:8px;font-size:13px;font-weight:700;text-decoration:none;">💬 Get Resume Help</a>
+  </div>
+</nav>
+
+<div class="topbar">🔥 <span>Limited Offer:</span> ATS-Optimized Resume Rewrite at just ₹499 — WhatsApp us now</div>
+
+<div class="hero">
+  <div class="hero-badge">✦ AI-Powered &nbsp;•&nbsp; 100% Free &nbsp;•&nbsp; Instant Results</div>
+  <h1>Is Your Resume<br><em>Invisible to Recruiters?</em></h1>
+  <p>A free and fast AI resume checker doing <strong>16 crucial checks</strong> to ensure your resume is ready to perform and get you interview callbacks.</p>
+  <div class="trust-row">
+    <div class="trust-item"><span class="trust-dot">●</span> 16 ATS Checks</div>
+    <div class="trust-item"><span class="trust-dot">●</span> No Login Required</div>
+    <div class="trust-item"><span class="trust-dot">●</span> Results in 10 Seconds</div>
+    <div class="trust-item"><span class="trust-dot">●</span> 10,000+ Resumes Optimized</div>
+  </div>
+</div>
+
+<div style="max-width:680px;margin:0 auto;padding:0 16px 60px;">
+<div class="card">
+
+  <div class="upload-zone" id="uploadZone" onclick="document.getElementById('resumeFile').click()">
+    <div class="upload-icon">📄</div>
+    <div class="upload-title">Drop your resume here or click to upload</div>
+    <div class="upload-sub">Supports <strong>PDF, DOC, DOCX, TXT</strong> &nbsp;•&nbsp; Max 5MB</div>
+    <div class="file-name" id="fileName"></div>
+  </div>
+  <input type="file" id="resumeFile" accept=".pdf,.doc,.docx,.txt">
+
+  <div class="checks-preview">
+    <div class="cp-item"><span class="cp-icon">✦</span> Contact & LinkedIn Info</div>
+    <div class="cp-item"><span class="cp-icon">✦</span> Work Experience Section</div>
+    <div class="cp-item"><span class="cp-icon">✦</span> Education & Credentials</div>
+    <div class="cp-item"><span class="cp-icon">✦</span> Skills & Keywords Match</div>
+    <div class="cp-item"><span class="cp-icon">✦</span> Quantified Achievements</div>
+    <div class="cp-item"><span class="cp-icon">✦</span> Action Verbs Strength</div>
+    <div class="cp-item"><span class="cp-icon">✦</span> Resume Length & Density</div>
+    <div class="cp-item"><span class="cp-icon">✦</span> ATS Formatting Safety</div>
+    <div class="cp-item"><span class="cp-icon">✦</span> Professional Summary</div>
+    <div class="cp-item"><span class="cp-icon">✦</span> Job Title Optimization</div>
+    <div class="cp-item"><span class="cp-icon">✦</span> Soft Skills Keywords</div>
+    <div class="cp-item"><span class="cp-icon">✦</span> Bullet Point Structure</div>
+    <div class="cp-item"><span class="cp-icon">✦</span> Employment Date Format</div>
+    <div class="cp-item"><span class="cp-icon">✦</span> Keyword Density Score</div>
+    <div class="cp-item"><span class="cp-icon">✦</span> JD Keyword Alignment ✦</div>
+    <div class="cp-item"><span class="cp-icon">✦</span> Multi-ATS Platform Test ✦</div>
+  </div>
+
+  <button class="btn-main" id="checkBtn" onclick="checkATS()">🔍 Check My ATS Score — Free</button>
+  <div class="error-box" id="errorBox"></div>
+
+  <div class="loader" id="loader">
+    <div class="loader-ring"></div>
+    <div class="loader-text">Scanning your resume across 16 checkpoints...</div>
+    <div class="loader-step" id="loaderStep">Extracting resume content...</div>
+  </div>
+
+  <div class="results" id="results"></div>
+</div>
+</div>
+
+<div class="footer">
+  Powered by <strong>Neeraj Bora Consulting</strong> &nbsp;•&nbsp;
+  <a href="https://wa.me/919910136637">WhatsApp: +91 99101 36637</a> &nbsp;•&nbsp;
+  Results are indicative. Expert review recommended.
+</div>
+
+<script>
+pdfjsLib.GlobalWorkerOptions.workerSrc = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
+
+const zone = document.getElementById("uploadZone");
+zone.addEventListener("dragover", e => { e.preventDefault(); zone.classList.add("active"); });
+zone.addEventListener("dragleave", () => zone.classList.remove("active"));
+zone.addEventListener("drop", e => {
+  e.preventDefault(); zone.classList.remove("active");
+  const f = e.dataTransfer.files[0];
+  if (f) { document.getElementById("resumeFile").files = e.dataTransfer.files; setFile(f.name); }
+});
+document.getElementById("resumeFile").addEventListener("change", e => { if (e.target.files[0]) setFile(e.target.files[0].name); });
+function setFile(n) { document.getElementById("fileName").textContent = "✅ " + n; zone.classList.add("active"); }
+
+async function extractText(file) {
+  const ext = file.name.split(".").pop().toLowerCase();
+  if (ext === "txt") return await file.text();
+  if (ext === "pdf") {
+    const buf = await file.arrayBuffer();
+    const pdf = await pdfjsLib.getDocument({ data: buf }).promise;
+    let t = "";
+    for (let i = 1; i <= pdf.numPages; i++) {
+      const pg = await pdf.getPage(i); const ct = await pg.getTextContent();
+      t += ct.items.map(s => s.str).join(" ") + "\n";
+    }
+    return t;
+  }
+  const buf = await file.arrayBuffer(); const bytes = new Uint8Array(buf); let t = "";
+  for (let i = 0; i < bytes.length; i++) {
+    const c = bytes[i];
+    if (c >= 32 && c < 127) t += String.fromCharCode(c);
+    else if (c === 10 || c === 13) t += "\n";
+  }
+  return t.replace(/\s{4,}/g, "\n").trim();
+}
+
+function runChecks(text) {
+  const t = text.toLowerCase(); const checks = []; let score = 0;
+
+  function add(pass, title, detail, pts, lock) {
+    checks.push({ type: lock ? "lock" : (pass ? "pass" : "fail"), title, detail });
+    if (pass && !lock) score += pts;
+  }
+
+  add(/[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-z]{2,}/.test(text), "Email Address", "Email found — ATS can identify and contact you.", 7);
+  add(/(\+?\d[\d\s\-().]{7,}\d)/.test(text), "Phone Number", "Phone number detected and parseable by ATS.", 6);
+  add(t.includes("linkedin"), "LinkedIn Profile URL", "LinkedIn URL found — boosts recruiter trust.", 4);
+  add(/experience|work history|employment/i.test(text), "Work Experience Section", "Experience section detected — ATS can parse your history.", 8);
+  add(/education|degree|university|college|bachelor|master|b\.tech|m\.tech|mba/i.test(text), "Education Section", "Education details found and correctly formatted.", 6);
+  add(/skills|technologies|tools|competencies/i.test(text), "Skills & Technologies Section", "Skills section found — ATS uses this for keyword matching.", 7);
+  add(/summary|objective|profile|about/i.test(text), "Professional Summary", "Opening summary found — ATS classifies your profile quickly.", 4);
+
+  const wc = text.split(/\s+/).filter(Boolean).length;
+  add(wc >= 300 && wc <= 900, "Resume Length & Word Density",
+    wc < 300 ? `Only ${wc} words — too thin for ATS.` : wc > 900 ? `${wc} words — slightly long.` : `${wc} words — ideal for ATS.`, 6);
+
+  const bullets = (text.match(/^[\s]*[•\-\*▪▸◦]/mg) || []).length;
+  add(bullets >= 6, "Bullet Point Structure", bullets >= 6 ? `${bullets} bullets — well-structured for ATS.` : `Only ${bullets} bullets — ATS prefers bullet-formatted content.`, 5);
+
+  const av = ["managed","led","developed","designed","implemented","increased","reduced","built","created","launched","achieved","delivered","improved","optimized","analyzed","coordinated","generated","streamlined","supervised","negotiated"].filter(v => t.includes(v));
+  add(av.length >= 5, "Action Verb Strength", av.length >= 5 ? `Strong verbs: ${av.slice(0,4).join(", ")}.` : `Only ${av.length} action verbs detected.`, 6);
+
+  const nums = (text.match(/\d+\s*(%|percent|cr|lakh|k\b|million|\+|x\b)/gi) || []);
+  add(nums.length >= 3, "Quantified Achievements", nums.length >= 3 ? `${nums.length} metrics found — excellent.` : `Only ${nums.length} metric. Add % growth, revenue figures.`, 8);
+
+  const kw = ["strategy","management","analysis","development","marketing","sales","operations","leadership","project","client","revenue","growth","digital","performance","planning","execution","stakeholder","reporting"].filter(k => t.includes(k));
+  add(kw.length >= 7, "Industry Keywords Match", kw.length >= 7 ? `${kw.length} industry keywords found.` : `Only ${kw.length} keywords — low keyword density.`, 8);
+
+  add(/20\d\d|19\d\d|jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec/i.test(text), "Employment Date Format", "Dates detected — ATS can build your career timeline.", 5);
+  add(/manager|executive|analyst|engineer|developer|director|consultant|specialist|coordinator|officer|associate|lead|head/i.test(text), "Job Title Optimization", "Job titles match common ATS search filters.", 4);
+
+  // Always locked — expert only
+  add(false, "Job Description Keyword Alignment", "Requires expert comparison against actual JD.", 0, true);
+  add(false, "Multi-ATS Platform Compatibility", "Parsing test across Workday, Taleo, Greenhouse, SAP — premium only.", 0, true);
+
+  score = Math.min(Math.round(score), 100);
+  return { score, checks };
+}
+
+async function checkATS() {
+  const fi = document.getElementById("resumeFile");
+  const btn = document.getElementById("checkBtn");
+  const loader = document.getElementById("loader");
+  const results = document.getElementById("results");
+  const errBox = document.getElementById("errorBox");
+  const stepEl = document.getElementById("loaderStep");
+
+  errBox.style.display = "none"; results.style.display = "none";
+  if (!fi.files.length) { showErr("⚠️ Please upload your resume first."); return; }
+
+  btn.disabled = true; btn.textContent = "Analyzing..."; loader.style.display = "block";
+
+  const steps = ["Extracting resume content...", "Running ATS format checks...", "Scanning keyword density...", "Calculating your score..."];
+  let si = 0;
+  const st = setInterval(() => { stepEl.textContent = steps[Math.min(++si, steps.length-1)]; }, 600);
+
+  try {
+    const text = await extractText(fi.files[0]);
+    if (!text || text.trim().length < 60) throw new Error("Could not read resume content. Please use a searchable PDF or TXT file.");
+    await new Promise(r => setTimeout(r, 2000));
+    clearInterval(st);
+    const { score, checks } = runChecks(text);
+    renderResults(score, checks);
+  } catch(e) { clearInterval(st); showErr("❌ " + e.message); }
+  finally { loader.style.display = "none"; btn.disabled = false; btn.innerHTML = "🔍 Check My ATS Score — Free"; }
+}
+
+function renderResults(score, checks) {
+  const col = score >= 80 ? "green" : score >= 55 ? "orange" : "red";
+  const label = score >= 80 ? "✅ ATS Friendly Resume" : score >= 55 ? "⚠️ Needs Improvement" : "❌ High Risk of Rejection";
+  const desc = score >= 80 ? "Your resume passes most ATS criteria. A few hidden issues may still cost you interviews."
+    : score >= 55 ? "Several critical issues could get your resume filtered out automatically."
+    : "Your resume is likely rejected before any human even sees it.";
+
+  const passes = checks.filter(c => c.type === "pass");
+  const locked = checks.filter(c => c.type !== "pass");
+  const waMsg = encodeURIComponent(`Hi Neeraj, my ATS score is ${score}%. I want the full report and resume optimization.`);
+
+  const passCards = passes.map(c => `
+    <div class="pass-card">
+      <span style="font-size:18px;flex-shrink:0;margin-top:1px;">✅</span>
+      <div><div class="pass-title">${c.title}</div><div class="pass-detail">${c.detail}</div></div>
+    </div>`).join("");
+
+  const lockCards = locked.map(c => `
+    <div class="lock-card">
+      <div class="lock-inner">
+        <span style="font-size:18px;flex-shrink:0;">🔒</span>
+        <div><div class="lock-title">${c.title}</div><div class="lock-detail">Issue details hidden in free report</div></div>
+      </div>
+      <div class="lock-overlay">🔒 Expert Will Fix This — WhatsApp Us</div>
+    </div>`).join("");
+
+  document.getElementById("results").innerHTML = `
+    <div class="score-hero">
+      <div class="score-number ${col}">${score}%</div>
+      <div class="score-lbl">${label}</div>
+      <div class="score-desc">${desc}</div>
+      <div class="prog-track"><div class="prog-fill fill-${col}" style="width:0%" id="pBar"></div></div>
+      <div class="prog-labels"><span>0%</span><span>50%</span><span>100%</span></div>
+      <div class="mini-stats">
+        <div class="ms-item"><div class="ms-num" style="color:#4ADE80">${passes.length}</div><div class="ms-lbl">Passed</div></div>
+        <div class="ms-item"><div class="ms-num" style="color:#F87171">${locked.length}</div><div class="ms-lbl">Issues Found</div></div>
+        <div class="ms-item"><div class="ms-num" style="color:#FCD34D">16</div><div class="ms-lbl">Total Checks</div></div>
+      </div>
+    </div>
+
+    <div class="sec-head">✅ What's Working <span class="sec-badge badge-green">${passes.length} passed</span></div>
+    ${passCards}
+
+    <div class="sec-head">🔒 Issues Found <span class="sec-badge badge-red">${locked.length} hidden</span></div>
+    ${lockCards}
+
+    <div class="unlock-teaser">
+      <strong>${locked.length} issues</strong> found that could be costing you interviews every day.
+      WhatsApp us — our experts will manually review your resume and fix everything for you.
+    </div>
+
+    <div class="cta-block">
+      <h3>Get a Hand-Crafted ATS Resume</h3>
+      <p>Our experts will <strong>manually rewrite your resume</strong>, fix all issues, and deliver a hand-crafted ATS resume with a premium template — ready to send to any company.</p>
+      <div class="cta-price">✨ ATS Optimized Resume + Premium Template — Only ₹499</div><br>
+      <a class="wa-cta" href="https://wa.me/919910136637?text=${waMsg}" target="_blank" rel="noopener">💬 WhatsApp Us — Get Started Now</a>
+      <div class="wa-sub">⚡ Usually responds within 15 minutes &nbsp;•&nbsp; 10,000+ resumes optimized</div>
+    </div>`;
+
+  document.getElementById("results").style.display = "block";
+  document.getElementById("results").scrollIntoView({ behavior:"smooth", block:"start" });
+  setTimeout(() => { const b = document.getElementById("pBar"); if(b) b.style.width = score + "%"; }, 100);
+}
+
+function showErr(msg) { const el = document.getElementById("errorBox"); el.textContent = msg; el.style.display = "block"; }
+</script>
+</body>
+</html>
