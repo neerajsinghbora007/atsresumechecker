@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resume Template Samples — Premium ATS Resume Designs | Neeraj Bora Consulting</title>
+<meta name="description" content="Browse 11 premium ATS-optimized resume templates for every industry. Creative, Healthcare, Engineering, Finance, Sales, and more. Starting ₹499.">
+<meta name="google-site-verification" content="fYone3QgZlpmNbKoAJwMtnFq3T3O9pCSmY2aYRll7fk" />
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --blue: #1A56DB; --blue-d: #1244b8; --blue-l: #EBF2FF;
+  --navy: #0F2D6B; --green: #0E9F6E; --yellow: #FCD34D;
+  --dark: #111827; --mid: #374151; --soft: #6B7280;
+  --border: #E5E7EB; --bg: #F9FAFB; --white: #FFFFFF;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: 'DM Sans', sans-serif; background: var(--white); color: var(--dark); }
+
+/* NAV */
+nav {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(255,255,255,0.95); backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border); padding: 0 24px;
+}
+.nav-inner {
+  max-width: 1100px; margin: 0 auto;
+  display: flex; align-items: center; justify-content: space-between; height: 64px;
+}
+.logo { font-family: 'Sora', sans-serif; font-weight: 800; font-size: 18px; color: var(--navy); text-decoration: none; }
+.logo-dot { color: var(--blue); }
+.nav-links { display: flex; align-items: center; gap: 24px; }
+.nav-links a { font-size: 14px; font-weight: 500; color: var(--mid); text-decoration: none; transition: color 0.2s; }
+.nav-links a:hover { color: var(--blue); }
+.nav-cta {
+  background: var(--blue); color: white !important;
+  padding: 9px 20px; border-radius: 8px; font-weight: 700 !important; font-size: 13px !important;
+}
+.nav-cta:hover { background: var(--blue-d) !important; }
+.hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
+.hamburger span { display: block; width: 22px; height: 2px; background: var(--dark); border-radius: 2px; }
+.mobile-menu { display: none; background: white; border-top: 1px solid var(--border); padding: 16px 24px; flex-direction: column; gap: 16px; }
+.mobile-menu a { font-size: 15px; font-weight: 500; color: var(--mid); text-decoration: none; padding: 8px 0; border-bottom: 1px solid var(--border); }
+.mobile-menu a:last-child { border: none; }
+.mobile-menu.open { display: flex; }
+
+/* HERO */
+.hero {
+  background: linear-gradient(135deg, #0A1F4E 0%, #0F2D6B 40%, #1A56DB 100%);
+  padding: 64px 24px 80px; text-align: center;
+}
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 999px; padding: 6px 16px; font-size: 12px; font-weight: 600;
+  color: rgba(255,255,255,0.9); letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 20px;
+}
+.hero h1 {
+  font-family: 'Sora', sans-serif; font-size: clamp(28px, 5vw, 48px);
+  font-weight: 800; color: white; margin-bottom: 16px; line-height: 1.15;
+}
+.hero h1 em { font-style: normal; color: var(--yellow); }
+.hero p { font-size: 16px; color: rgba(255,255,255,0.75); max-width: 520px; margin: 0 auto 32px; line-height: 1.7; }
+.hero-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+.btn-yellow {
+  background: var(--yellow); color: var(--dark);
+  padding: 14px 28px; border-radius: 10px; font-family: 'Sora', sans-serif;
+  font-weight: 800; font-size: 14px; text-decoration: none; display: inline-flex; align-items: center; gap: 8px;
+  transition: all 0.2s;
+}
+.btn-yellow:hover { background: #f5c400; transform: translateY(-2px); }
+.btn-ghost {
+  background: transparent; color: white; border: 2px solid rgba(255,255,255,0.35);
+  padding: 14px 28px; border-radius: 10px; font-family: 'Sora', sans-serif;
+  font-weight: 700; font-size: 14px; text-decoration: none; display: inline-flex; align-items: center; gap: 8px;
+  transition: all 0.2s;
+}
+.btn-ghost:hover { border-color: white; background: rgba(255,255,255,0.1); }
+
+/* FILTER BAR */
+.filter-section { background: var(--bg); padding: 28px 24px; border-bottom: 1px solid var(--border); }
+.filter-inner { max-width: 1100px; margin: 0 auto; }
+.filter-label { font-size: 12px; font-weight: 700; color: var(--soft); letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 12px; }
+.filter-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip {
+  font-size: 13px; font-weight: 500; color: var(--mid);
+  border: 1px solid var(--border); background: white;
+  padding: 7px 16px; border-radius: 999px; cursor: pointer;
+  transition: all 0.2s;
+}
+.chip:hover { border-color: var(--blue); color: var(--blue); }
+.chip.active { background: var(--blue); color: white; border-color: var(--blue); }
+
+/* GALLERY */
+.gallery-section { padding: 52px 24px 80px; }
+.gallery-inner { max-width: 1100px; margin: 0 auto; }
+.gallery-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 32px; flex-wrap: wrap; gap: 12px; }
+.gallery-count { font-size: 14px; color: var(--soft); }
+.gallery-count span { font-weight: 700; color: var(--dark); }
+
+.cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 24px; }
+
+.resume-card {
+  background: white; border: 1px solid var(--border); border-radius: 16px;
+  overflow: hidden; transition: all 0.3s; cursor: pointer;
+}
+.resume-card:hover { box-shadow: 0 16px 48px rgba(0,0,0,0.12); transform: translateY(-4px); border-color: transparent; }
+
+.card-preview {
+  height: 220px; position: relative; overflow: hidden;
+  display: flex; align-items: center; justify-content: center;
+}
+.preview-frame {
+  width: 100%; height: 100%;
+  transform-origin: top center;
+  pointer-events: none;
+  border: none;
+  display: block;
+}
+.card-overlay {
+  position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 50%, rgba(0,0,0,0.5) 100%);
+  display: flex; align-items: flex-end; padding: 16px;
+  opacity: 0; transition: opacity 0.3s;
+}
+.resume-card:hover .card-overlay { opacity: 1; }
+.overlay-btn {
+  background: white; color: var(--dark); border: none;
+  padding: 8px 18px; border-radius: 8px; font-family: 'Sora', sans-serif;
+  font-weight: 700; font-size: 12px; cursor: pointer; text-decoration: none;
+  display: inline-block;
+}
+
+.card-body { padding: 18px 20px; }
+.card-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 10px; }
+.card-tag {
+  font-size: 10px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
+  padding: 3px 9px; border-radius: 999px;
+}
+.tag-blue { background: var(--blue-l); color: var(--blue); }
+.tag-green { background: #D1FAE5; color: #065F46; }
+.tag-purple { background: #EDE9FE; color: #5B21B6; }
+.tag-orange { background: #FEF3C7; color: #92400E; }
+.tag-red { background: #FEE2E2; color: #991B1B; }
+.tag-teal { background: #CCFBF1; color: #0F766E; }
+
+.card-title { font-family: 'Sora', sans-serif; font-weight: 700; font-size: 16px; color: var(--dark); margin-bottom: 4px; }
+.card-sub { font-size: 12px; color: var(--soft); margin-bottom: 14px; }
+.card-footer { display: flex; justify-content: space-between; align-items: center; padding-top: 14px; border-top: 1px solid var(--border); }
+.card-price { font-family: 'Sora', sans-serif; font-weight: 800; font-size: 16px; color: var(--blue); }
+.card-cta {
+  background: var(--blue); color: white;
+  padding: 8px 16px; border-radius: 8px; font-size: 12px; font-weight: 700;
+  text-decoration: none; transition: background 0.2s;
+}
+.card-cta:hover { background: var(--blue-d); }
+
+/* COLOR PREVIEWS (fallback backgrounds when iframe not shown) */
+.preview-bg-1 { background: linear-gradient(135deg, #0d0d0d 0%, #1a1a1a 50%, #c49c52 100%); }
+.preview-bg-2 { background: linear-gradient(135deg, #0f2522 0%, #1b7a6e 100%); }
+.preview-bg-3 { background: linear-gradient(135deg, #0a2342 0%, #3b9ddd 100%); }
+.preview-bg-4 { background: linear-gradient(135deg, #0d0d0d 0%, #c9a84c 100%); }
+.preview-bg-5 { background: linear-gradient(135deg, #333 0%, #e86432 100%); }
+.preview-bg-6 { background: linear-gradient(135deg, #2d1b3d 0%, #d4af64 100%); }
+.preview-bg-7 { background: linear-gradient(135deg, #1a0a0a 0%, #c41e1e 100%); }
+.preview-bg-8 { background: linear-gradient(135deg, #1a1a1a 0%, #c4a882 100%); }
+.preview-bg-9 { background: linear-gradient(135deg, #0e2236 0%, #2196f3 100%); }
+.preview-bg-10 { background: linear-gradient(135deg, #1a1200 0%, #ff8c00 100%); }
+.preview-bg-11 { background: linear-gradient(135deg, #004d40 0%, #26a69a 100%); }
+
+.preview-label {
+  position: absolute; inset: 0; display: flex; flex-direction: column;
+  align-items: center; justify-content: center; gap: 8px;
+}
+.preview-icon { font-size: 48px; }
+.preview-name { font-family: 'Sora', sans-serif; font-weight: 800; font-size: 14px; color: white; text-align: center; line-height: 1.3; }
+.preview-style { font-size: 10px; color: rgba(255,255,255,0.6); letter-spacing: 2px; text-transform: uppercase; }
+
+/* CTA BANNER */
+.cta-section {
+  background: var(--yellow); padding: 64px 24px; text-align: center;
+}
+.cta-section h2 { font-family: 'Sora', sans-serif; font-size: clamp(22px, 4vw, 34px); font-weight: 800; color: var(--dark); margin-bottom: 12px; }
+.cta-section p { font-size: 16px; color: var(--mid); margin-bottom: 28px; }
+.btn-dark {
+  background: var(--dark); color: white; padding: 15px 36px; border-radius: 10px;
+  font-family: 'Sora', sans-serif; font-weight: 700; font-size: 15px; text-decoration: none;
+  display: inline-flex; align-items: center; gap: 10px; transition: all 0.2s;
+}
+.btn-dark:hover { background: var(--navy); transform: translateY(-2px); }
+
+/* FOOTER */
+footer { background: var(--dark); color: rgba(255,255,255,0.6); padding: 48px 24px 24px; }
+.footer-inner { max-width: 1100px; margin: 0 auto; }
+.footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; margin-bottom: 36px; }
+.footer-logo { font-family: 'Sora', sans-serif; font-weight: 800; font-size: 18px; color: white; margin-bottom: 10px; }
+.footer-desc { font-size: 13px; line-height: 1.7; max-width: 260px; }
+.footer-col h4 { font-family: 'Sora', sans-serif; font-weight: 700; font-size: 14px; color: white; margin-bottom: 14px; }
+.footer-col a { display: block; font-size: 13px; color: rgba(255,255,255,0.55); text-decoration: none; padding: 4px 0; transition: color 0.2s; }
+.footer-col a:hover { color: white; }
+.footer-social { display: flex; gap: 10px; margin-top: 14px; }
+.footer-social a { width: 36px; height: 36px; border-radius: 8px; display: flex; align-items: center; justify-content: center; text-decoration: none; }
+.footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); padding-top: 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; font-size: 12px; }
+.footer-bottom a { color: rgba(255,255,255,0.5); text-decoration: none; }
+
+.wa-float {
+  position: fixed; bottom: 24px; right: 24px; z-index: 999;
+  background: #25D366; color: white; width: 56px; height: 56px;
+  border-radius: 50%; display: flex; align-items: center; justify-content: center;
+  font-size: 26px; text-decoration: none; box-shadow: 0 4px 20px rgba(37,211,102,0.5);
+  transition: all 0.2s; animation: pulse 2s infinite;
+}
+.wa-float:hover { transform: scale(1.1); }
+@keyframes pulse { 0%,100% { box-shadow: 0 4px 20px rgba(37,211,102,0.5); } 50% { box-shadow: 0 4px 32px rgba(37,211,102,0.8); } }
+
+/* MODAL */
+.modal-overlay {
+  position: fixed; inset: 0; background: rgba(0,0,0,0.85); z-index: 1000;
+  display: none; align-items: center; justify-content: center; padding: 20px;
+}
+.modal-overlay.open { display: flex; }
+.modal-box {
+  background: white; border-radius: 16px; max-width: 480px; width: 100%;
+  padding: 32px; position: relative; animation: modalIn 0.3s ease;
+}
+@keyframes modalIn { from { opacity:0; transform: scale(0.9) translateY(20px); } to { opacity:1; transform: scale(1) translateY(0); } }
+.modal-close {
+  position: absolute; top: 16px; right: 16px; width: 32px; height: 32px;
+  background: var(--bg); border: none; border-radius: 50%; cursor: pointer;
+  font-size: 16px; color: var(--soft); display: flex; align-items: center; justify-content: center;
+}
+.modal-title { font-family: 'Sora', sans-serif; font-weight: 800; font-size: 22px; color: var(--dark); margin-bottom: 6px; }
+.modal-sub { font-size: 14px; color: var(--soft); margin-bottom: 24px; }
+.modal-options { display: flex; flex-direction: column; gap: 12px; }
+.modal-opt {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 16px 18px; border: 1px solid var(--border); border-radius: 12px;
+  text-decoration: none; transition: all 0.2s;
+}
+.modal-opt:hover { border-color: var(--blue); background: var(--blue-l); }
+.modal-opt-left {}
+.modal-opt-name { font-family: 'Sora', sans-serif; font-weight: 700; font-size: 15px; color: var(--dark); }
+.modal-opt-desc { font-size: 12px; color: var(--soft); margin-top: 2px; }
+.modal-opt-price { font-family: 'Sora', sans-serif; font-weight: 800; font-size: 18px; color: var(--blue); }
+.modal-wa {
+  display: flex; align-items: center; justify-content: center; gap: 10px;
+  background: #25D366; color: white; padding: 15px; border-radius: 12px;
+  text-decoration: none; font-family: 'Sora', sans-serif; font-weight: 700; font-size: 15px;
+  margin-top: 16px; transition: all 0.2s;
+}
+.modal-wa:hover { background: #20bd5a; }
+
+@media(max-width: 768px) {
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+  .footer-top { grid-template-columns: 1fr; gap: 24px; }
+  .footer-bottom { flex-direction: column; text-align: center; }
+  .cards-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<a class="wa-float" href="https://wa.me/919910136637?text=Hi%20Neeraj%2C%20I%20saw%20your%20resume%20templates%20and%20want%20a%20custom%20ATS%20resume." target="_blank">💬</a>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a class="logo" href="index.html">ATS<span class="logo-dot">.</span>ResumeChecker</a>
+    <div class="nav-links">
+      <a href="index.html#services">Services</a>
+      <a href="index.html#tools">Free Tools</a>
+      <a href="resume-samples.html" style="color:var(--blue);font-weight:700;">Resume Samples</a>
+      <a href="index.html#testimonials">Reviews</a>
+      <a href="https://wa.me/919910136637" class="nav-cta" target="_blank">💬 WhatsApp Us</a>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html#services" onclick="toggleMenu()">Services</a>
+    <a href="index.html#tools" onclick="toggleMenu()">Free Tools</a>
+    <a href="resume-samples.html" onclick="toggleMenu()">Resume Samples</a>
+    <a href="index.html#testimonials" onclick="toggleMenu()">Reviews</a>
+    <a href="https://wa.me/919910136637" target="_blank">💬 WhatsApp Us</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-badge">✦ Premium Resume Templates</div>
+  <h1>11 Industry-Specific<br><em>Resume Designs</em> Built to Win</h1>
+  <p>Every template is hand-crafted, ATS-optimized, and tailored for your industry. Tell us your job — we'll deliver your personalized version in 24 hours.</p>
+  <div class="hero-btns">
+    <a href="https://wa.me/919910136637?text=Hi%20Neeraj%2C%20I%20want%20a%20custom%20ATS%20resume." target="_blank" class="btn-yellow">💬 Get My Custom Resume — ₹499</a>
+    <a href="ats-checker.html" class="btn-ghost">🔍 Free ATS Check First</a>
+  </div>
+</section>
+
+<!-- FILTER -->
+<div class="filter-section">
+  <div class="filter-inner">
+    <div class="filter-label">Filter by Industry</div>
+    <div class="filter-chips">
+      <span class="chip active" onclick="filterCards('all', this)">All Templates (11)</span>
+      <span class="chip" onclick="filterCards('creative', this)">🎨 Creative</span>
+      <span class="chip" onclick="filterCards('healthcare', this)">🏥 Healthcare</span>
+      <span class="chip" onclick="filterCards('engineering', this)">⚙️ Engineering</span>
+      <span class="chip" onclick="filterCards('finance', this)">💰 Finance</span>
+      <span class="chip" onclick="filterCards('social', this)">🤝 Social / Teaching</span>
+      <span class="chip" onclick="filterCards('hospitality', this)">🏨 Hospitality</span>
+      <span class="chip" onclick="filterCards('sales', this)">📈 Sales</span>
+      <span class="chip" onclick="filterCards('design', this)">🏛️ Design</span>
+      <span class="chip" onclick="filterCards('logistics', this)">🚛 Logistics</span>
+      <span class="chip" onclick="filterCards('technical', this)">⚡ Technical / MEP</span>
+      <span class="chip" onclick="filterCards('hr', this)">👩‍💼 HR / Admin</span>
+    </div>
+  </div>
+</div>
+
+<!-- GALLERY -->
+<section class="gallery-section">
+  <div class="gallery-inner">
+    <div class="gallery-header">
+      <div class="gallery-count">Showing <span id="countNum">11</span> templates</div>
+      <div style="font-size:13px;color:var(--soft);">✓ All templates are ATS-friendly & customized for you</div>
+    </div>
+
+    <div class="cards-grid" id="cardsGrid">
+
+      <!-- 01 Creative -->
+      <div class="resume-card" data-cat="creative" onclick="openModal('Photographer / Videographer', 'Creative & Dark Gold Theme')">
+        <div class="card-preview preview-bg-1">
+          <div class="preview-label">
+            <div class="preview-icon">📷</div>
+            <div class="preview-name">Creative<br>Dark Gold</div>
+            <div class="preview-style">Dark · Luxury · Editorial</div>
+          </div>
+          <div class="card-overlay">
+            <span class="overlay-btn">Get This Design →</span>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-tags">
+            <span class="card-tag tag-purple">Creative</span>
+            <span class="card-tag tag-orange">Photographer</span>
+            <span class="card-tag tag-orange">Videographer</span>
+          </div>
+          <div class="card-title">Photographer / Videographer</div>
+          <div class="card-sub">Dark luxury theme with gold accents — perfect for creative professionals</div>
+          <div class="card-footer">
+            <div class="card-price">From ₹499</div>
+            <a href="https://wa.me/919910136637?text=Hi%20Neeraj%2C%20I%20want%20the%20Photographer%20resume%20template." target="_blank" class="card-cta" onclick="event.stopPropagation()">Get This →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 02 Healthcare -->
+      <div class="resume-card" data-cat="healthcare" onclick="openModal('Nurse / Healthcare Professional', 'Clean Teal Medical Theme')">
+        <div class="card-preview preview-bg-2">
+          <div class="preview-label">
+            <div class="preview-icon">🏥</div>
+            <div class="preview-name">Healthcare<br>Teal & White</div>
+            <div class="preview-style">Clean · Clinical · Professional</div>
+          </div>
+          <div class="card-overlay">
+            <span class="overlay-btn">Get This Design →</span>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-tags">
+            <span class="card-tag tag-teal">Healthcare</span>
+            <span class="card-tag tag-teal">Nurse</span>
+            <span class="card-tag tag-teal">ICU / Medical</span>
+          </div>
+          <div class="card-title">Nurse / Healthcare Professional</div>
+          <div class="card-sub">Clean teal medical theme with clinical skills & equipment sections</div>
+          <div class="card-footer">
+            <div class="card-price">From ₹499</div>
+            <a href="https://wa.me/919910136637?text=Hi%20Neeraj%2C%20I%20want%20the%20Healthcare%20Nurse%20resume%20template." target="_blank" class="card-cta" onclick="event.stopPropagation()">Get This →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 03 Engineering -->
+      <div class="resume-card" data-cat="engineering" onclick="openModal('Civil / Mechanical Engineer', 'Navy & Steel Blue Theme')">
+        <div class="card-preview preview-bg-3">
+          <div class="preview-label">
+            <div class="preview-icon">⚙️</div>
+            <div class="preview-name">Engineering<br>Navy & Steel</div>
+            <div class="preview-style">Bold · Technical · Structured</div>
+          </div>
+          <div class="card-overlay">
+            <span class="overlay-btn">Get This Design →</span>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-tags">
+            <span class="card-tag tag-blue">Engineering</span>
+            <span class="card-tag tag-blue">Civil</span>
+            <span class="card-tag tag-blue">Mechanical</span>
+          </div>
+          <div class="card-title">Civil / Mechanical Engineer</div>
+          <div class="card-sub">Bold navy & steel blue with certifications grid and achievements section</div>
+          <div class="card-footer">
+            <div class="card-price">From ₹499</div>
+            <a href="https://wa.me/919910136637?text=Hi%20Neeraj%2C%20I%20want%20the%20Engineering%20resume%20template." target="_blank" class="card-cta" onclick="event.stopPropagation()">Get This →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 04 Finance -->
+      <div class="resume-card" data-cat="finance" onclick="openModal('Finance / Accountant', 'Dark Gold 3-Column Theme')">
+        <div class="card-preview preview-bg-4">
+          <div class="preview-label">
+            <div class="preview-icon">💰</div>
+            <div class="preview-name">Finance<br>Dark Gold</div>
+            <div class="preview-style">Executive · 3-Column · Premium</div>
+          </div>
+          <div class="card-overlay">
+            <span class="overlay-btn">Get This Design →</span>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-tags">
+            <span class="card-tag tag-orange">Finance</span>
+            <span class="card-tag tag-orange">Accountant</span>
+            <span class="card-tag tag-orange">HR</span>
+          </div>
+          <div class="card-title">Finance / Accountant / HR</div>
+          <div class="card-sub">Executive 3-column dark gold — ideal for senior finance & accounting roles</div>
+          <div class="card-footer">
+            <div class="card-price">From ₹499</div>
+            <a href="https://wa.me/919910136637?text=Hi%20Neeraj%2C%20I%20want%20the%20Finance%20Accountant%20resume%20template." target="_blank" class="card-cta" onclick="event.stopPropagation()">Get This →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 05 Social Work -->
+      <div class="resume-card" data-cat="social" onclick="openModal('Social Worker / Counselor / Teacher', 'Warm Orange & Charcoal Theme')">
+        <div class="card-preview preview-bg-5">
+          <div class="preview-label">
+            <div class="preview-icon">🤝</div>
+            <div class="preview-name">Social Work<br>Warm Orange</div>
+            <div class="preview-style">Warm · Friendly · Approachable</div>
+          </div>
+          <div class="card-overlay">
+            <span class="overlay-btn">Get This Design →</span>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-tags">
+            <span class="card-tag tag-red">Social Work</span>
+            <span class="card-tag tag-red">Counselor</span>
+            <span class="card-tag tag-red">Teacher</span>
+          </div>
+          <div class="card-title">Social Worker / Counselor / Teacher</div>
+          <div class="card-sub">Warm orange & charcoal with skills bars and interests section</div>
+          <div class="card-footer">
+            <div class="card-price">From ₹499</div>
+            <a href="https://wa.me/919910136637?text=Hi%20Neeraj%2C%20I%20want%20the%20Social%20Worker%20Counselor%20resume%20template." target="_blank" class="card-cta" onclick="event.stopPropagation()">Get This →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 11 Hospitality -->
+      <div class="resume-card" data-cat="hospitality" onclick="openModal('Hotel Manager / Hospitality', 'Deep Purple & Gold Theme')">
+        <div class="card-preview preview-bg-6">
+          <div class="preview-label">
+            <div class="preview-icon">🏨</div>
+            <div class="preview-name">Hospitality<br>Purple Gold</div>
+            <div class="preview-style">Luxury · 5-Star · Elegant</div>
+          </div>
+          <div class="card-overlay">
+            <span class="overlay-btn">Get This Design →</span>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-tags">
+            <span class="card-tag tag-purple">Hospitality</span>
+            <span class="card-tag tag-purple">Hotel Manager</span>
+          </div>
+          <div class="card-title">Hotel Manager / Hospitality</div>
+          <div class="card-sub">Deep purple & gold — made for luxury hospitality and 5-star hotel roles</div>
+          <div class="card-footer">
+            <div class="card-price">From ₹499</div>
+            <a href="https://wa.me/919910136637?text=Hi%20Neeraj%2C%20I%20want%20the%20Hospitality%20Hotel%20Manager%20resume%20template." target="_blank" class="card-cta" onclick="event.stopPropagation()">Get This →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 12 Sales -->
+      <div class="resume-card" data-cat="sales" onclick="openModal('Sales Executive', 'Bold Red & Stats Theme')">
+        <div class="card-preview preview-bg-7">
+          <div class="preview-label">
+            <div class="preview-icon">📈</div>
+            <div class="preview-name">Sales Executive<br>Bold Red</div>
+            <div class="preview-style">Bold · Numbers-First · High Impact</div>
+          </div>
+          <div class="card-overlay">
+            <span class="overlay-btn">Get This Design →</span>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-tags">
+            <span class="card-tag tag-red">Sales</span>
+            <span class="card-tag tag-red">B2B</span>
+            <span class="card-tag tag-red">Key Accounts</span>
+          </div>
+          <div class="card-title">Sales Executive / Business Dev.</div>
+          <div class="card-sub">Bold red with revenue stats header — makes your numbers impossible to ignore</div>
+          <div class="card-footer">
+            <div class="card-price">From ₹499</div>
+            <a href="https://wa.me/919910136637?text=Hi%20Neeraj%2C%20I%20want%20the%20Sales%20Executive%20resume%20template." target="_blank" class="card-cta" onclick="event.stopPropagation()">Get This →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 13 Interior Design -->
+      <div class="resume-card" data-cat="design" onclick="openModal('Interior Designer / Architect', 'Minimal Warm Ivory Theme')">
+        <div class="card-preview preview-bg-8">
+          <div class="preview-label">
+            <div class="preview-icon">🏛️</div>
+            <div class="preview-name">Interior Design<br>Warm Ivory</div>
+            <div class="preview-style">Minimal · Refined · Portfolio-Style</div>
+          </div>
+          <div class="card-overlay">
+            <span class="overlay-btn">Get This Design →</span>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-tags">
+            <span class="card-tag tag-orange">Design</span>
+            <span class="card-tag tag-orange">Architect</span>
+            <span class="card-tag tag-orange">Interior</span>
+          </div>
+          <div class="card-title">Interior Designer / Architect</div>
+          <div class="card-sub">Minimal warm ivory with project portfolio section and timeline layout</div>
+          <div class="card-footer">
+            <div class="card-price">From ₹499</div>
+            <a href="https://wa.me/919910136637?text=Hi%20Neeraj%2C%20I%20want%20the%20Interior%20Designer%20resume%20template." target="_blank" class="card-cta" onclick="event.stopPropagation()">Get This →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 14 Logistics -->
+      <div class="resume-card" data-cat="logistics" onclick="openModal('Logistics / Supply Chain Manager', 'Deep Navy & Blue Theme')">
+        <div class="card-preview preview-bg-9">
+          <div class="preview-label">
+            <div class="preview-icon">🚛</div>
+            <div class="preview-name">Logistics<br>Navy Blue</div>
+            <div class="preview-style">Technical · Process · Data-Driven</div>
+          </div>
+          <div class="card-overlay">
+            <span class="overlay-btn">Get This Design →</span>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-tags">
+            <span class="card-tag tag-blue">Logistics</span>
+            <span class="card-tag tag-blue">Supply Chain</span>
+            <span class="card-tag tag-blue">Operations</span>
+          </div>
+          <div class="card-title">Logistics / Supply Chain Manager</div>
+          <div class="card-sub">Deep navy & blue with supply chain process flow and KPI stats header</div>
+          <div class="card-footer">
+            <div class="card-price">From ₹499</div>
+            <a href="https://wa.me/919910136637?text=Hi%20Neeraj%2C%20I%20want%20the%20Logistics%20Supply%20Chain%20resume%20template." target="_blank" class="card-cta" onclick="event.stopPropagation()">Get This →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 15 Electrician MEP -->
+      <div class="resume-card" data-cat="technical" onclick="openModal('Electrician / MEP Technician', 'Dark & Orange Industrial Theme')">
+        <div class="card-preview preview-bg-10">
+          <div class="preview-label">
+            <div class="preview-icon">⚡</div>
+            <div class="preview-name">MEP / Electrician<br>Industrial Orange</div>
+            <div class="preview-style">Industrial · Technical · Bold</div>
+          </div>
+          <div class="card-overlay">
+            <span class="overlay-btn">Get This Design →</span>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-tags">
+            <span class="card-tag tag-orange">MEP</span>
+            <span class="card-tag tag-orange">Electrician</span>
+            <span class="card-tag tag-orange">Technical</span>
+          </div>
+          <div class="card-title">Electrician / MEP Technician</div>
+          <div class="card-sub">Industrial dark & orange — ideal for MEP, DEWA, and construction trades</div>
+          <div class="card-footer">
+            <div class="card-price">From ₹499</div>
+            <a href="https://wa.me/919910136637?text=Hi%20Neeraj%2C%20I%20want%20the%20Electrician%20MEP%20resume%20template." target="_blank" class="card-cta" onclick="event.stopPropagation()">Get This →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 16 HR Admin -->
+      <div class="resume-card" data-cat="hr" onclick="openModal('HR Executive / Admin / PRO', 'Deep Teal & White Theme')">
+        <div class="card-preview preview-bg-11">
+          <div class="preview-label">
+            <div class="preview-icon">👩‍💼</div>
+            <div class="preview-name">HR / Admin / PRO<br>Teal & White</div>
+            <div class="preview-style">Clean · Corporate · Professional</div>
+          </div>
+          <div class="card-overlay">
+            <span class="overlay-btn">Get This Design →</span>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-tags">
+            <span class="card-tag tag-teal">HR</span>
+            <span class="card-tag tag-teal">Admin</span>
+            <span class="card-tag tag-teal">PRO</span>
+          </div>
+          <div class="card-title">HR Executive / Admin / PRO</div>
+          <div class="card-sub">Deep teal & white with PRO services, HR skills, and compliance sections</div>
+          <div class="card-footer">
+            <div class="card-price">From ₹499</div>
+            <a href="https://wa.me/919910136637?text=Hi%20Neeraj%2C%20I%20want%20the%20HR%20Admin%20PRO%20resume%20template." target="_blank" class="card-cta" onclick="event.stopPropagation()">Get This →</a>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /cards-grid -->
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<div class="cta-section">
+  <h2>Don't See Your Industry?</h2>
+  <p>We build custom resume designs for ANY profession. Just WhatsApp us with your job title.</p>
+  <a href="https://wa.me/919910136637?text=Hi%20Neeraj%2C%20I%20need%20a%20custom%20resume%20for%20my%20industry." target="_blank" class="btn-dark">💬 Request Custom Design</a>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-logo">ATS.ResumeChecker</div>
+        <p class="footer-desc">Premium ATS resume writing for Indian & UAE job seekers. Hand-crafted by experts. Delivered in 24 hours.</p>
+        <a href="https://wa.me/919910136637" target="_blank" style="display:inline-flex;align-items:center;gap:8px;background:#25D366;color:white;padding:9px 16px;border-radius:8px;text-decoration:none;font-weight:700;font-size:13px;margin-top:14px;">💬 +91 99101 36637</a>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/people/Neeraj-Bora-Consulting/61588636340291/" target="_blank" style="background:#1877F2;" title="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="https://www.linkedin.com/company/neeraj-bora-consulting/" target="_blank" style="background:#0A66C2;" title="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+          <a href="https://www.instagram.com/neeraj_bora_consulting/" target="_blank" style="background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);" title="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="index.html#services">ATS Resume Writing</a>
+        <a href="index.html#services">LinkedIn Optimization</a>
+        <a href="index.html#services">Resume + LinkedIn Combo</a>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="ats-checker.html">Free ATS Checker</a>
+        <a href="resume-samples.html">Resume Samples</a>
+        <a href="https://wa.me/919910136637" target="_blank">WhatsApp Us</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 ATS Resume Checker | Neeraj Bora Consulting, Noida, India</div>
+      <div><a href="#">Privacy Policy</a> &nbsp;•&nbsp; <a href="#">Terms</a></div>
+    </div>
+  </div>
+</footer>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modal" onclick="closeModalOutside(event)">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <div class="modal-title" id="modalTitle">Get This Resume</div>
+    <div class="modal-sub" id="modalSub">Choose your service package</div>
+    <div class="modal-options">
+      <a href="https://wa.me/919910136637?text=Hi%20Neeraj%2C%20I%20want%20an%20ATS%20resume." target="_blank" class="modal-opt">
+        <div class="modal-opt-left">
+          <div class="modal-opt-name">📄 ATS Resume Only</div>
+          <div class="modal-opt-desc">Hand-crafted resume with premium template, delivered in 24hrs</div>
+        </div>
+        <div class="modal-opt-price">₹499</div>
+      </a>
+      <a href="https://wa.me/919910136637?text=Hi%20Neeraj%2C%20I%20want%20LinkedIn%20optimization." target="_blank" class="modal-opt">
+        <div class="modal-opt-left">
+          <div class="modal-opt-name">🔗 LinkedIn Optimization</div>
+          <div class="modal-opt-desc">Keyword-rich LinkedIn profile that gets found by recruiters</div>
+        </div>
+        <div class="modal-opt-price">₹599</div>
+      </a>
+      <a href="https://wa.me/919910136637?text=Hi%20Neeraj%2C%20I%20want%20the%20Resume%20plus%20LinkedIn%20combo." target="_blank" class="modal-opt">
+        <div class="modal-opt-left">
+          <div class="modal-opt-name">💼 Resume + LinkedIn Combo</div>
+          <div class="modal-opt-desc">Best value — get both done together with priority delivery</div>
+        </div>
+        <div class="modal-opt-price">₹899</div>
+      </a>
+    </div>
+    <a href="https://wa.me/919910136637?text=Hi%20Neeraj%2C%20I%20want%20to%20know%20more%20about%20your%20resume%20service." target="_blank" class="modal-wa">💬 Chat on WhatsApp to Order</a>
+  </div>
+</div>
+
+<script>
+function toggleMenu() {
+  document.getElementById('mobileMenu').classList.toggle('open');
+}
+
+function filterCards(cat, el) {
+  document.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
+  el.classList.add('active');
+  const cards = document.querySelectorAll('.resume-card');
+  let count = 0;
+  cards.forEach(card => {
+    if (cat === 'all' || card.dataset.cat === cat) {
+      card.style.display = '';
+      count++;
+    } else {
+      card.style.display = 'none';
+    }
+  });
+  document.getElementById('countNum').textContent = count;
+}
+
+function openModal(title, sub) {
+  document.getElementById('modalTitle').textContent = 'Get This Resume: ' + title;
+  document.getElementById('modalSub').textContent = sub + ' — Choose your package below';
+  document.getElementById('modal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+  document.getElementById('modal').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+function closeModalOutside(e) {
+  if (e.target === document.getElementById('modal')) closeModal();
+}
+
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+</script>
+</body>
+</html>
