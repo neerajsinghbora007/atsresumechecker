@@ -9,6 +9,10 @@
 <title>ATS Resume Checker | Expert Resume Writing — ₹499</title>
 <meta name="description" content="Free ATS resume checker + expert resume writing service. Beat ATS filters, land more interviews. Hand-crafted resumes starting at ₹499. 24hr delivery.">
 <meta name="google-site-verification" content="fYone3QgZlpmNbKoAJwMtnFq3T3O9pCSmY2aYRll7fk" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" href="/favicon.svg">
+<link rel="apple-touch-icon" href="/favicon.svg">
+<meta name="theme-color" content="#1A56DB">
 <link rel="canonical" href="https://atsresumechecker.co.in/" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -325,9 +329,24 @@ footer {
   .nav-links { display: none; }
   .hamburger { display: flex; }
   .hero { padding: 60px 20px 80px; }
+  .hero-stats { gap: 20px; }
+  .hero-stat-num { font-size: 22px; }
   .steps::before { display: none; }
   .footer-top { grid-template-columns: 1fr; gap: 28px; }
   .footer-bottom { flex-direction: column; text-align: center; }
+  /* FAQ mobile */
+  .faq-item h3 { font-size: 14px !important; }
+  /* Why us grid */
+  #why-us .section-inner > div:last-child { grid-template-columns: 1fr !important; gap: 14px !important; }
+  /* Services grid */
+  .services-grid { grid-template-columns: 1fr !important; }
+  /* Tools grid */
+  .tools-grid { grid-template-columns: 1fr !important; }
+  /* Testimonials */
+  .testi-grid { grid-template-columns: 1fr !important; }
+  /* Section title */
+  .section-title { font-size: 24px !important; }
+  /* Expert section handled by .expert-grid */
 }
 </style>
 
@@ -759,18 +778,40 @@ footer {
 </section>
 
 <!-- Expert Bio Section -->
+<style>
+.expert-grid { display:grid; grid-template-columns:1fr 2fr; gap:52px; align-items:center; }
+.expert-photo-col { text-align:center; }
+.expert-photo-wrap { width:180px;height:180px;border-radius:50%;margin:0 auto 16px;overflow:hidden;border:4px solid var(--blue);box-shadow:0 8px 32px rgba(26,86,219,0.3); }
+.expert-photo-wrap img { width:100%;height:100%;object-fit:cover;object-position:center top; }
+.expert-name { font-family:'Sora',sans-serif;font-weight:800;font-size:18px;color:var(--dark); }
+.expert-role { font-size:12px;color:var(--blue);font-weight:700;letter-spacing:0.06em;text-transform:uppercase;margin-top:4px; }
+.expert-btns { display:flex;justify-content:center;gap:8px;margin-top:12px; }
+.expert-stats { display:flex;gap:16px;flex-wrap:wrap; }
+.expert-stat { text-align:center;padding:14px 20px;background:var(--blue-l);border-radius:10px;flex:1;min-width:80px; }
+.expert-stat-n { font-family:'Sora',sans-serif;font-weight:800;font-size:22px;color:var(--blue); }
+.expert-stat-l { font-size:11px;color:var(--soft); }
+@media(max-width:768px){
+  .expert-grid { grid-template-columns:1fr; gap:28px; text-align:center; }
+  .expert-photo-col { order:0; }
+  .expert-photo-wrap { width:140px;height:140px; }
+  .expert-name { font-size:20px; }
+  .section-title br { display:none; }
+  .expert-stats { justify-content:center; }
+  .expert-stat { min-width:70px; padding:12px 14px; }
+}
+</style>
 <section id="expert" style="padding:72px 24px;background:white;">
   <div class="section-inner">
-    <div style="display:grid;grid-template-columns:1fr 2fr;gap:52px;align-items:center;">
-      <div style="text-align:center;">
-        <div style="width:180px;height:180px;border-radius:50%;margin:0 auto 16px;overflow:hidden;border:4px solid var(--blue);box-shadow:0 8px 32px rgba(26,86,219,0.3);">
-          <img src="neeraj-singh-bora.jpg" alt="Neeraj Singh Bora — Resume Expert & Founder" style="width:100%;height:100%;object-fit:cover;object-position:center top;">
+    <div class="expert-grid">
+      <div class="expert-photo-col">
+        <div class="expert-photo-wrap">
+          <img src="neeraj-singh-bora.jpg" alt="Neeraj Singh Bora — Resume Expert & Founder" loading="lazy">
         </div>
-        <div style="font-family:'Sora',sans-serif;font-weight:800;font-size:18px;color:var(--dark);">Neeraj Singh Bora</div>
-        <div style="font-size:12px;color:var(--blue);font-weight:700;letter-spacing:0.06em;text-transform:uppercase;margin-top:4px;">Resume Expert & Founder</div>
-        <div style="display:flex;justify-content:center;gap:8px;margin-top:12px;">
-          <a href="https://www.linkedin.com/company/neeraj-bora-consulting/" target="_blank" rel="noopener noreferrer" style="background:#0A66C2;color:white;padding:6px 14px;border-radius:6px;font-size:11px;font-weight:700;text-decoration:none;">LinkedIn</a>
-          <a href="https://wa.me/919910136637" target="_blank" rel="noopener noreferrer" style="background:#25D366;color:white;padding:6px 14px;border-radius:6px;font-size:11px;font-weight:700;text-decoration:none;">WhatsApp</a>
+        <div class="expert-name">Neeraj Singh Bora</div>
+        <div class="expert-role">Resume Expert & Founder</div>
+        <div class="expert-btns">
+          <a href="https://www.linkedin.com/company/neeraj-bora-consulting/" target="_blank" rel="noopener noreferrer" style="background:#0A66C2;color:white;padding:8px 16px;border-radius:7px;font-size:12px;font-weight:700;text-decoration:none;">LinkedIn</a>
+          <a href="https://wa.me/919910136637" target="_blank" rel="noopener noreferrer" style="background:#25D366;color:white;padding:8px 16px;border-radius:7px;font-size:12px;font-weight:700;text-decoration:none;">WhatsApp</a>
         </div>
       </div>
       <div>
@@ -779,19 +820,10 @@ footer {
         <p style="font-size:14px;color:var(--mid);line-height:1.85;margin-bottom:14px;">With over 10 years of experience in SEO, SEM, digital marketing, and recruitment strategy, I founded <strong>Neeraj Bora Consulting</strong> to solve one of India's most common career problems — ATS rejection.</p>
         <p style="font-size:14px;color:var(--mid);line-height:1.85;margin-bottom:14px;">I've personally reviewed and rewritten 10,000+ resumes for professionals across India, UAE, and Gulf countries — from fresh graduates to CFOs. I understand what Indian ATS systems, Naukri recruiters, and global hiring managers actually look for.</p>
         <p style="font-size:14px;color:var(--mid);line-height:1.85;margin-bottom:20px;">Unlike automated tools like Enhancv or ResumeWorded that generate generic content, I write your resume personally — tailored to your experience, your target role, and the Indian job market's specific keyword requirements in 2025.</p>
-        <div style="display:flex;gap:20px;flex-wrap:wrap;">
-          <div style="text-align:center;padding:14px 20px;background:var(--blue-l);border-radius:10px;">
-            <div style="font-family:'Sora',sans-serif;font-weight:800;font-size:22px;color:var(--blue);">10+</div>
-            <div style="font-size:11px;color:var(--soft);">Years Experience</div>
-          </div>
-          <div style="text-align:center;padding:14px 20px;background:var(--blue-l);border-radius:10px;">
-            <div style="font-family:'Sora',sans-serif;font-weight:800;font-size:22px;color:var(--blue);">10K+</div>
-            <div style="font-size:11px;color:var(--soft);">Resumes Written</div>
-          </div>
-          <div style="text-align:center;padding:14px 20px;background:var(--blue-l);border-radius:10px;">
-            <div style="font-family:'Sora',sans-serif;font-weight:800;font-size:22px;color:var(--blue);">4.9★</div>
-            <div style="font-size:11px;color:var(--soft);">Client Rating</div>
-          </div>
+        <div class="expert-stats">
+          <div class="expert-stat"><div class="expert-stat-n">10+</div><div class="expert-stat-l">Years Experience</div></div>
+          <div class="expert-stat"><div class="expert-stat-n">10K+</div><div class="expert-stat-l">Resumes Written</div></div>
+          <div class="expert-stat"><div class="expert-stat-n">4.9★</div><div class="expert-stat-l">Client Rating</div></div>
         </div>
       </div>
     </div>
