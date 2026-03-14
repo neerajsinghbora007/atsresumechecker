@@ -318,7 +318,7 @@ footer {
   transition: all 0.2s; animation: pulse 2s infinite;
 }
 .wa-float:hover { transform: scale(1.1); box-shadow: 0 6px 28px rgba(37,211,102,0.6); }
-@keyframes pulse { 0%,100% { box-shadow: 0 4px 20px rgba(37,211,102,0.5); } 50% { box-shadow: 0 4px 32px rgba(37,211,102,0.8); } }
+@keyframes pulse { 0%,100% { opacity:1; } 50% { opacity:0.82; } }
 @keyframes fadeDown { from { opacity:0; transform:translateY(-16px); } to { opacity:1; transform:translateY(0); } }
 
 
@@ -481,10 +481,12 @@ footer {
 </script>
 </head>
 <body>
+<a href="#main-content" style="position:absolute;left:-9999px;top:0;z-index:9999;background:#1A56DB;color:white;padding:8px 16px;font-size:14px;font-weight:700;text-decoration:none;border-radius:0 0 8px 0;" onfocus="this.style.left='0'" onblur="this.style.left='-9999px'">Skip to main content</a>
 
 <!-- WhatsApp Float -->
 <a class="wa-float" href="https://wa.me/919910136637?text=Hi%20Neeraj%2C%20I%20want%20an%20ATS%20optimized%20resume." target="_blank" rel="noopener noreferrer" title="Chat on WhatsApp">💬</a>
 
+<main id="main-content">
 <!-- Nav -->
 <nav>
   <div class="nav-inner">
@@ -941,7 +943,7 @@ function toggleFaq(el) {
     <div class="footer-top">
       <div class="footer-brand">
         <div class="footer-logo">ATS.ResumeChecker</div>
-        <p class="footer-desc">Expert resume writing and ATS optimization service. Helping Indian job seekers get noticed and hired since 2015.</p>
+        <p class="footer-desc">Expert resume writing and ATS optimization service. Helping Indian job seekers get noticed and hired since 2025.</p>
         <div style="margin-top:16px;">
           <a href="https://wa.me/919910136637" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:8px;background:#25D366;color:white;padding:10px 18px;border-radius:8px;text-decoration:none;font-weight:700;font-size:13px;">💬 +91 99101 36637</a>
         </div>
@@ -959,21 +961,22 @@ function toggleFaq(el) {
       </div>
       <div class="footer-col">
         <h4>Services</h4>
-        <a href="#services">ATS Resume Writing</a>
-        <a href="#services">LinkedIn Optimization</a>
-        <a href="#services">Resume + LinkedIn Combo</a>
-        <a href="#services">Cover Letter Writing</a>
+        <a href="/#services">ATS Resume Writing — ₹499</a>
+        <a href="/#services">LinkedIn Optimization — ₹599</a>
+        <a href="/#services">Resume + LinkedIn Combo</a>
+        <a href="https://wa.me/919910136637" target="_blank" rel="noopener noreferrer">WhatsApp to Order</a>
       </div>
       <div class="footer-col">
         <h4>Free Tools</h4>
-        <a href="https://atsresumechecker.co.in/ats-checker.html">ATS Resume Checker</a>
+        <a href="/ats-checker.html">Free ATS Resume Checker</a>
+        <a href="/resume-samples.html">Resume Templates</a>
         <a href="#">Keyword Matcher (Soon)</a>
-        <a href="#">Cover Letter Generator (Soon)</a>
+        <a href="#">Cover Letter (Soon)</a>
       </div>
     </div>
     <div class="footer-bottom">
       <div>© 2025 ATS Resume Checker | Neeraj Bora Consulting, Noida, India</div>
-      <div><a href="#">Privacy Policy</a> &nbsp;•&nbsp; <a href="#">Terms of Service</a></div>
+      <div><a href="#" style="color:rgba(255,255,255,0.5);text-decoration:none;">Privacy Policy</a> &nbsp;•&nbsp; <a href="#" style="color:rgba(255,255,255,0.5);text-decoration:none;">Terms</a></div>
     </div>
   </div>
 </footer>
