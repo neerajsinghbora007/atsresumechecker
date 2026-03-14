@@ -135,26 +135,27 @@ nav {
 .resume-card:hover { box-shadow: 0 16px 48px rgba(0,0,0,0.12); transform: translateY(-4px); border-color: transparent; }
 
 .card-preview {
-  height: 240px; position: relative; overflow: hidden;
-  background: #f0f4f8;
-}
-.card-preview iframe {
-  width: 900px; height: 900px;
-  transform: scale(0.27); transform-origin: top left;
-  pointer-events: none; border: none;
-  position: absolute; top: 0; left: 0;
-}
-.card-preview .preview-fallback {
-  width: 100%; height: 100%;
-  display: flex; flex-direction: column;
-  align-items: center; justify-content: center; gap: 8px;
+  height: 220px; position: relative; overflow: hidden;
 }
 .card-overlay {
-  position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 40%, rgba(0,0,0,0.65) 100%);
+  position: absolute; inset: 0;
+  background: linear-gradient(to bottom, transparent 40%, rgba(0,0,0,0.7) 100%);
   display: flex; align-items: flex-end; padding: 16px;
   opacity: 0; transition: opacity 0.3s;
 }
 .resume-card:hover .card-overlay { opacity: 1; }
+/* Resume mock preview styles */
+.rp { width:100%; height:100%; display:flex; }
+.rp-side { flex-shrink:0; height:100%; }
+.rp-main { flex:1; padding:10px 12px; display:flex; flex-direction:column; gap:5px; }
+.rp-name { height:8px; border-radius:2px; margin-bottom:3px; }
+.rp-role { height:5px; border-radius:2px; width:70%; }
+.rp-line { height:3px; border-radius:2px; margin-top:2px; }
+.rp-section { margin-top:6px; }
+.rp-section-title { height:4px; border-radius:1px; width:40%; margin-bottom:4px; }
+.rp-block { height:3px; border-radius:1px; margin-bottom:2px; }
+.rp-dots { display:flex; gap:3px; margin-top:4px; }
+.rp-dot { width:6px; height:6px; border-radius:50%; }
 .overlay-btn {
   background: white; color: var(--dark); border: none;
   padding: 8px 18px; border-radius: 8px; font-family: 'Sora', sans-serif;
@@ -384,7 +385,30 @@ footer { background: var(--dark); color: rgba(255,255,255,0.6); padding: 48px 24
       <!-- 01 Creative -->
       <div class="resume-card" data-cat="creative" onclick="openModal('Photographer / Videographer', 'Creative & Dark Gold Theme')">
         <div class="card-preview preview-bg-1">
-          <iframe src="templates/01_Creative_Photographer_Videographer.html" scrolling="no" loading="lazy" title="Creative Resume Template"></iframe>
+          <div class="rp" style="background:#0d0d0d;">
+  <div class="rp-side" style="width:38%;background:#050505;padding:10px 8px;">
+    <div style="width:44px;height:44px;border-radius:50%;border:2px solid #c49c52;margin:0 auto 6px;"></div>
+    <div class="rp-name" style="background:#c49c52;width:80%;margin:0 auto 3px;"></div>
+    <div class="rp-role" style="background:rgba(196,156,82,0.4);margin:0 auto 8px;"></div>
+    <div class="rp-section"><div class="rp-section-title" style="background:rgba(196,156,82,0.6);"></div>
+    <div class="rp-block" style="background:rgba(255,255,255,0.1);width:90%;"></div>
+    <div class="rp-block" style="background:rgba(255,255,255,0.1);width:80%;"></div>
+    <div class="rp-block" style="background:rgba(255,255,255,0.1);width:85%;"></div></div>
+    <div class="rp-section" style="margin-top:8px;"><div class="rp-section-title" style="background:rgba(196,156,82,0.6);"></div>
+    <div style="height:3px;background:linear-gradient(90deg,#c49c52,transparent);border-radius:2px;margin-bottom:2px;width:85%;"></div>
+    <div style="height:3px;background:linear-gradient(90deg,#c49c52,transparent);border-radius:2px;margin-bottom:2px;width:70%;"></div></div>
+  </div>
+  <div class="rp-main" style="background:#f9f7f4;">
+    <div class="rp-name" style="background:#111;width:75%;height:10px;"></div>
+    <div style="height:1px;background:linear-gradient(90deg,#c49c52,transparent);margin:3px 0;"></div>
+    <div class="rp-block" style="background:#aaa;width:95%;"></div>
+    <div class="rp-block" style="background:#aaa;width:88%;"></div>
+    <div class="rp-section"><div class="rp-section-title" style="background:#c49c52;"></div>
+    <div class="rp-block" style="background:#ddd;width:90%;"></div>
+    <div class="rp-block" style="background:#ddd;width:95%;"></div>
+    <div class="rp-block" style="background:#ddd;width:80%;"></div></div>
+  </div>
+</div>
           <div class="card-overlay">
             <span class="overlay-btn">Get This Design →</span>
           </div>
@@ -407,7 +431,27 @@ footer { background: var(--dark); color: rgba(255,255,255,0.6); padding: 48px 24
       <!-- 02 Healthcare -->
       <div class="resume-card" data-cat="healthcare" onclick="openModal('Nurse / Healthcare Professional', 'Clean Teal Medical Theme')">
         <div class="card-preview preview-bg-2">
-          <iframe src="templates/02_Healthcare_Nurse_Medical.html" scrolling="no" loading="lazy" title="Healthcare Resume"></iframe>
+          <div class="rp" style="background:#fff;">
+  <div style="width:100%;background:#1b7a6e;height:28px;position:absolute;top:0;left:0;border-top:3px solid #1b7a6e;"></div>
+  <div style="width:100%;padding:32px 0 0;display:flex;height:100%;">
+    <div class="rp-side" style="width:38%;background:#0f2522;padding:8px;">
+      <div class="rp-section"><div class="rp-section-title" style="background:#1b7a6e;width:60%;"></div>
+      <div class="rp-block" style="background:rgba(255,255,255,0.15);width:90%;"></div>
+      <div class="rp-block" style="background:rgba(255,255,255,0.15);width:80%;"></div>
+      <div class="rp-block" style="background:rgba(255,255,255,0.15);width:85%;"></div>
+      <div class="rp-block" style="background:rgba(255,255,255,0.15);width:75%;"></div></div>
+      <div class="rp-section" style="margin-top:6px;"><div class="rp-section-title" style="background:#1b7a6e;width:60%;"></div>
+      <div class="rp-dots"><div class="rp-dot" style="background:#1b7a6e;"></div><div class="rp-dot" style="background:#1b7a6e;"></div><div class="rp-dot" style="background:#1b7a6e;"></div><div class="rp-dot" style="background:#1b7a6e;"></div><div class="rp-dot" style="background:rgba(255,255,255,0.2);"></div></div>
+      <div class="rp-dots" style="margin-top:3px;"><div class="rp-dot" style="background:#1b7a6e;"></div><div class="rp-dot" style="background:#1b7a6e;"></div><div class="rp-dot" style="background:#1b7a6e;"></div><div class="rp-dot" style="background:rgba(255,255,255,0.2);"></div><div class="rp-dot" style="background:rgba(255,255,255,0.2);"></div></div></div>
+    </div>
+    <div class="rp-main">
+      <div class="rp-name" style="background:#0f2522;width:70%;height:9px;"></div>
+      <div class="rp-role" style="background:#1b7a6e;width:55%;height:4px;"></div>
+      <div class="rp-section" style="margin-top:5px;"><div style="height:2px;background:#1b7a6e;width:100%;margin-bottom:4px;"></div>
+      <div class="rp-block" style="background:#ddd;width:95%;"></div><div class="rp-block" style="background:#ddd;width:88%;"></div><div class="rp-block" style="background:#ddd;width:92%;"></div></div>
+    </div>
+  </div>
+</div>
           <div class="card-overlay">
             <span class="overlay-btn">Get This Design →</span>
           </div>
@@ -430,7 +474,29 @@ footer { background: var(--dark); color: rgba(255,255,255,0.6); padding: 48px 24
       <!-- 03 Engineering -->
       <div class="resume-card" data-cat="engineering" onclick="openModal('Civil / Mechanical Engineer', 'Navy & Steel Blue Theme')">
         <div class="card-preview preview-bg-3">
-          <iframe src="templates/03_Engineering_Civil_Mechanical.html" scrolling="no" loading="lazy" title="Engineering Resume"></iframe>
+          <div class="rp" style="background:#f6f8fc;">
+  <div class="rp-side" style="width:36%;background:#0a2342;padding:8px;">
+    <div style="width:36px;height:36px;border-radius:50%;border:2px solid #3b9ddd;margin:0 auto 6px;"></div>
+    <div class="rp-name" style="background:#3b9ddd;width:80%;margin:0 auto 4px;height:6px;"></div>
+    <div class="rp-role" style="background:rgba(59,157,221,0.5);margin:0 auto 8px;width:60%;"></div>
+    <div class="rp-section"><div class="rp-section-title" style="background:#3b9ddd;width:70%;"></div>
+    <div style="height:3px;background:linear-gradient(90deg,#1a5fa8,#3b9ddd);border-radius:2px;margin-bottom:2px;width:90%;"></div>
+    <div style="height:3px;background:linear-gradient(90deg,#1a5fa8,#3b9ddd);border-radius:2px;margin-bottom:2px;width:75%;"></div>
+    <div style="height:3px;background:linear-gradient(90deg,#1a5fa8,#3b9ddd);border-radius:2px;margin-bottom:2px;width:85%;"></div></div>
+  </div>
+  <div class="rp-main">
+    <div style="display:flex;gap:3px;"><div style="font-weight:900;height:12px;background:#0a2342;border-radius:1px;flex:1;"></div><div style="height:12px;background:#3b9ddd;border-radius:1px;width:40%;"></div></div>
+    <div class="rp-role" style="background:#888;width:55%;"></div>
+    <div class="rp-section" style="margin-top:5px;">
+      <div style="height:3px;background:#0a2342;border-left:3px solid #3b9ddd;margin-bottom:3px;"></div>
+      <div style="background:#fff;border-left:3px solid #3b9ddd;padding:3px 4px;margin-bottom:3px;">
+        <div class="rp-block" style="background:#222;width:60%;height:4px;"></div>
+        <div class="rp-block" style="background:#ddd;width:90%;"></div>
+        <div class="rp-block" style="background:#ddd;width:80%;"></div>
+      </div>
+    </div>
+  </div>
+</div>
           <div class="card-overlay">
             <span class="overlay-btn">Get This Design →</span>
           </div>
@@ -453,7 +519,47 @@ footer { background: var(--dark); color: rgba(255,255,255,0.6); padding: 48px 24
       <!-- 04 Finance -->
       <div class="resume-card" data-cat="finance" onclick="openModal('Finance / Accountant', 'Dark Gold 3-Column Theme')">
         <div class="card-preview preview-bg-4">
-          <iframe src="templates/04_Finance_Accounting_HR.html" scrolling="no" loading="lazy" title="Finance Resume"></iframe>
+          <div style="background:#0d0d0d;width:100%;height:100%;display:flex;flex-direction:column;">
+  <div style="display:flex;background:#0d0d0d;height:38%;align-items:center;">
+    <div style="width:6px;background:linear-gradient(180deg,#c9a84c,#8a6520);height:100%;flex-shrink:0;"></div>
+    <div style="width:28%;background:linear-gradient(145deg,#1a1a1a,#111);height:100%;"></div>
+    <div style="flex:1;padding:8px 10px;">
+      <div style="height:12px;background:#fff;border-radius:1px;width:75%;margin-bottom:4px;"></div>
+      <div style="height:4px;background:rgba(201,168,76,0.6);border-radius:1px;width:50%;margin-bottom:6px;"></div>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;">
+        <div style="height:3px;background:rgba(255,255,255,0.2);border-radius:1px;width:28%;"></div>
+        <div style="height:3px;background:rgba(255,255,255,0.2);border-radius:1px;width:32%;"></div>
+      </div>
+    </div>
+  </div>
+  <div style="flex:1;display:flex;">
+    <div style="width:28%;background:#111;padding:6px 8px;">
+      <div style="height:3px;background:#c9a84c;width:60%;margin-bottom:3px;"></div>
+      <div style="height:2px;background:rgba(255,255,255,0.1);width:90%;margin-bottom:2px;"></div>
+      <div style="height:2px;background:rgba(255,255,255,0.1);width:80%;margin-bottom:2px;"></div>
+      <div style="height:2px;background:rgba(255,255,255,0.1);width:85%;margin-bottom:5px;"></div>
+      <div style="height:3px;background:#c9a84c;width:60%;margin-bottom:3px;"></div>
+      <div style="height:10px;background:rgba(201,168,76,0.05);border:1px solid rgba(201,168,76,0.15);margin-bottom:2px;"></div>
+    </div>
+    <div style="flex:1;background:#fafaf7;padding:6px 8px;">
+      <div style="border-left:2px solid #c9a84c;padding-left:5px;margin-bottom:5px;">
+        <div style="height:4px;background:#c9a84c;width:55%;margin-bottom:2px;border-radius:1px;"></div>
+        <div style="height:3px;background:#ddd;width:90%;border-radius:1px;margin-bottom:1px;"></div>
+        <div style="height:3px;background:#ddd;width:80%;border-radius:1px;"></div>
+      </div>
+      <div style="border-left:2px solid #c9a84c;padding-left:5px;">
+        <div style="height:4px;background:#c9a84c;width:45%;margin-bottom:2px;border-radius:1px;"></div>
+        <div style="height:3px;background:#ddd;width:85%;border-radius:1px;margin-bottom:1px;"></div>
+      </div>
+    </div>
+    <div style="width:26%;background:#0d0d0d;padding:6px 7px;">
+      <div style="height:3px;background:#c9a84c;width:70%;margin-bottom:3px;"></div>
+      <div style="height:2px;background:rgba(255,255,255,0.15);width:90%;margin-bottom:2px;"></div>
+      <div style="height:2px;background:rgba(255,255,255,0.15);width:80%;margin-bottom:2px;"></div>
+      <div style="height:2px;background:rgba(255,255,255,0.15);width:85%;"></div>
+    </div>
+  </div>
+</div>
           <div class="card-overlay">
             <span class="overlay-btn">Get This Design →</span>
           </div>
@@ -476,7 +582,32 @@ footer { background: var(--dark); color: rgba(255,255,255,0.6); padding: 48px 24
       <!-- 05 Social Work -->
       <div class="resume-card" data-cat="social" onclick="openModal('Social Worker / Counselor / Teacher', 'Warm Orange & Charcoal Theme')">
         <div class="card-preview preview-bg-5">
-          <iframe src="templates/05_SocialWork_Counselor_Teacher.html" scrolling="no" loading="lazy" title="Social Work Resume"></iframe>
+          <div class="rp" style="background:#f8f6f2;">
+  <div class="rp-side" style="width:36%;background:#3d3d3d;padding:8px;">
+    <div style="width:40px;height:40px;border-radius:50%;border:2px solid #e86432;margin:0 auto 6px;"></div>
+    <div class="rp-name" style="background:#fff;width:80%;margin:0 auto 3px;height:6px;"></div>
+    <div class="rp-role" style="background:#e86432;margin:0 auto 8px;width:65%;height:3px;"></div>
+    <div class="rp-section"><div class="rp-section-title" style="background:#e86432;width:55%;"></div>
+    <div class="rp-block" style="background:rgba(255,255,255,0.2);width:90%;"></div>
+    <div class="rp-block" style="background:rgba(255,255,255,0.2);width:80%;"></div>
+    <div class="rp-block" style="background:rgba(255,255,255,0.2);width:85%;"></div></div>
+  </div>
+  <div class="rp-main">
+    <div style="height:10px;background:#1a1a1a;border-radius:1px;width:70%;margin-bottom:3px;"></div>
+    <div style="height:3px;background:#e86432;width:40px;margin-bottom:4px;border-radius:2px;"></div>
+    <div class="rp-block" style="background:#aaa;width:95%;"></div>
+    <div class="rp-block" style="background:#aaa;width:85%;"></div>
+    <div style="background:#fff;border-left:3px solid #e86432;padding:3px 5px;margin-top:5px;">
+      <div style="height:4px;background:#e86432;width:55%;border-radius:1px;margin-bottom:3px;"></div>
+      <div class="rp-block" style="background:#ddd;width:90%;"></div>
+      <div class="rp-block" style="background:#ddd;width:80%;"></div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:3px;margin-top:5px;">
+      <div style="height:4px;background:#e86432;border-radius:1px;"></div><div style="height:4px;background:#ede8e0;border-radius:1px;"></div>
+      <div style="height:4px;background:#e86432;border-radius:1px;width:80%;"></div><div style="height:4px;background:#ede8e0;border-radius:1px;width:60%;"></div>
+    </div>
+  </div>
+</div>
           <div class="card-overlay">
             <span class="overlay-btn">Get This Design →</span>
           </div>
@@ -499,7 +630,40 @@ footer { background: var(--dark); color: rgba(255,255,255,0.6); padding: 48px 24
       <!-- 11 Hospitality -->
       <div class="resume-card" data-cat="hospitality" onclick="openModal('Hotel Manager / Hospitality', 'Deep Purple & Gold Theme')">
         <div class="card-preview preview-bg-6">
-          <iframe src="templates/11_Hospitality_Hotel_Manager.html" scrolling="no" loading="lazy" title="Hospitality Resume"></iframe>
+          <div style="width:100%;height:100%;display:flex;flex-direction:column;">
+  <div style="background:linear-gradient(135deg,#2d1b3d,#3d2455);height:40%;padding:8px 10px;display:flex;gap:8px;align-items:flex-end;">
+    <div style="width:36px;height:50px;background:linear-gradient(145deg,#3d2455,#2d1b3d);border-top:2px solid #d4af64;flex-shrink:0;"></div>
+    <div style="flex:1;">
+      <div style="height:2px;background:#d4af64;width:30px;margin-bottom:5px;border-radius:1px;"></div>
+      <div style="height:10px;background:#fff;border-radius:1px;width:65%;margin-bottom:3px;"></div>
+      <div style="height:3px;background:rgba(212,175,100,0.6);border-radius:1px;width:50%;margin-bottom:5px;"></div>
+      <div style="display:flex;gap:4px;flex-wrap:wrap;">
+        <div style="height:10px;border:1px solid rgba(212,175,100,0.3);padding:1px 5px;background:rgba(212,175,100,0.05);width:60px;border-radius:1px;"></div>
+        <div style="height:10px;border:1px solid rgba(212,175,100,0.3);padding:1px 5px;width:50px;border-radius:1px;"></div>
+      </div>
+    </div>
+  </div>
+  <div style="flex:1;display:flex;">
+    <div style="width:35%;background:#fdfaf5;padding:6px 8px;">
+      <div style="height:3px;background:#2d1b3d;border-bottom:1px solid #d4af64;margin-bottom:4px;"></div>
+      <div style="height:3px;background:#eee;width:90%;margin-bottom:2px;border-radius:1px;"></div>
+      <div style="height:3px;background:linear-gradient(90deg,#2d1b3d,#d4af64);border-radius:2px;margin-bottom:2px;width:85%;"></div>
+      <div style="height:3px;background:linear-gradient(90deg,#2d1b3d,#d4af64);border-radius:2px;margin-bottom:2px;width:70%;"></div>
+    </div>
+    <div style="flex:1;padding:6px 8px;">
+      <div style="background:#fdfaf5;border:1px solid #f0e8d8;border-left:2px solid #2d1b3d;padding:3px 5px;margin-bottom:4px;">
+        <div style="height:4px;background:#2d1b3d;width:55%;border-radius:1px;margin-bottom:2px;"></div>
+        <div style="height:3px;background:#d4af64;width:30%;border-radius:1px;margin-bottom:2px;"></div>
+        <div style="height:2px;background:#eee;width:90%;border-radius:1px;margin-bottom:1px;"></div>
+        <div style="height:2px;background:#eee;width:80%;border-radius:1px;"></div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:3px;">
+        <div style="background:#2d1b3d;padding:3px;"><div style="height:3px;background:#d4af64;border-radius:1px;"></div></div>
+        <div style="background:#2d1b3d;padding:3px;"><div style="height:3px;background:#d4af64;border-radius:1px;"></div></div>
+      </div>
+    </div>
+  </div>
+</div>
           <div class="card-overlay">
             <span class="overlay-btn">Get This Design →</span>
           </div>
@@ -521,7 +685,57 @@ footer { background: var(--dark); color: rgba(255,255,255,0.6); padding: 48px 24
       <!-- 12 Sales -->
       <div class="resume-card" data-cat="sales" onclick="openModal('Sales Executive', 'Bold Red & Stats Theme')">
         <div class="card-preview preview-bg-7">
-          <iframe src="templates/12_Sales_Executive.html" scrolling="no" loading="lazy" title="Sales Resume"></iframe>
+          <div style="width:100%;height:100%;background:#fff;display:flex;flex-direction:column;">
+  <div style="display:flex;height:38%;">
+    <div style="width:38%;background:#c41e1e;padding:8px;display:flex;flex-direction:column;justify-content:flex-end;">
+      <div style="height:10px;background:#fff;border-radius:1px;width:85%;margin-bottom:3px;"></div>
+      <div style="height:3px;background:rgba(255,255,255,0.5);border-radius:1px;width:60%;margin-bottom:5px;"></div>
+      <div style="height:2px;background:rgba(255,255,255,0.3);border-radius:1px;width:50%;"></div>
+    </div>
+    <div style="flex:1;background:#1a1a1a;padding:8px;">
+      <div style="display:flex;gap:6px;margin-bottom:6px;">
+        <div style="text-align:center;flex:1;border-right:1px solid rgba(255,255,255,0.06);">
+          <div style="height:8px;background:#c41e1e;border-radius:1px;margin:0 auto 2px;width:60%;"></div>
+          <div style="height:3px;background:#555;border-radius:1px;width:80%;margin:0 auto;"></div>
+        </div>
+        <div style="text-align:center;flex:1;border-right:1px solid rgba(255,255,255,0.06);">
+          <div style="height:8px;background:#c41e1e;border-radius:1px;margin:0 auto 2px;width:70%;"></div>
+          <div style="height:3px;background:#555;border-radius:1px;width:80%;margin:0 auto;"></div>
+        </div>
+        <div style="text-align:center;flex:1;">
+          <div style="height:8px;background:#c41e1e;border-radius:1px;margin:0 auto 2px;width:60%;"></div>
+          <div style="height:3px;background:#555;border-radius:1px;width:80%;margin:0 auto;"></div>
+        </div>
+      </div>
+      <div style="display:flex;gap:8px;">
+        <div style="height:3px;background:#555;border-radius:1px;width:45%;"></div>
+        <div style="height:3px;background:#555;border-radius:1px;width:35%;"></div>
+      </div>
+    </div>
+  </div>
+  <div style="flex:1;display:flex;">
+    <div style="width:38%;background:#fafafa;padding:6px 8px;">
+      <div style="height:3px;background:#c41e1e;border-bottom:2px solid #c41e1e;margin-bottom:3px;"></div>
+      <div style="height:3px;background:linear-gradient(90deg,#c41e1e,#e84444);border-radius:2px;margin-bottom:2px;width:90%;"></div>
+      <div style="height:3px;background:linear-gradient(90deg,#c41e1e,#e84444);border-radius:2px;margin-bottom:2px;width:70%;"></div>
+    </div>
+    <div style="flex:1;padding:6px 8px;">
+      <div style="background:#c41e1e;padding:4px 6px;margin-bottom:3px;display:flex;justify-content:space-between;">
+        <div style="height:4px;background:#fff;border-radius:1px;width:50%;margin-top:1px;"></div>
+        <div style="height:6px;border:1px solid rgba(255,255,255,0.4);padding:0 4px;width:20%;"></div>
+      </div>
+      <div style="padding:3px 5px;border:1px solid #f0f0f0;">
+        <div style="height:3px;background:#ddd;width:90%;border-radius:1px;margin-bottom:2px;"></div>
+        <div style="height:3px;background:#ddd;width:80%;border-radius:1px;margin-bottom:2px;"></div>
+        <div style="height:3px;background:#ddd;width:85%;border-radius:1px;"></div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:3px;margin-top:4px;">
+        <div style="background:#1a1a1a;padding:3px;"><div style="height:6px;background:#c41e1e;border-radius:1px;"></div><div style="height:2px;background:#555;border-radius:1px;margin-top:2px;"></div></div>
+        <div style="background:#1a1a1a;padding:3px;"><div style="height:6px;background:#c41e1e;border-radius:1px;"></div><div style="height:2px;background:#555;border-radius:1px;margin-top:2px;"></div></div>
+      </div>
+    </div>
+  </div>
+</div>
           <div class="card-overlay">
             <span class="overlay-btn">Get This Design →</span>
           </div>
@@ -544,7 +758,48 @@ footer { background: var(--dark); color: rgba(255,255,255,0.6); padding: 48px 24
       <!-- 13 Interior Design -->
       <div class="resume-card" data-cat="design" onclick="openModal('Interior Designer / Architect', 'Minimal Warm Ivory Theme')">
         <div class="card-preview preview-bg-8">
-          <iframe src="templates/13_Interior_Designer_Architect.html" scrolling="no" loading="lazy" title="Interior Design Resume"></iframe>
+          <div style="width:100%;height:100%;background:#f8f5f0;display:flex;flex-direction:column;">
+  <div style="height:4px;background:linear-gradient(90deg,#1a1a1a,#c4a882,#e8d5b4,#c4a882,#1a1a1a);"></div>
+  <div style="display:flex;height:38%;background:#fff;">
+    <div style="width:28%;background:#1a1a1a;display:flex;align-items:flex-end;justify-content:center;">
+      <div style="width:52px;height:60px;background:linear-gradient(145deg,#2a2a2a,#222);border-top:2px solid #c4a882;"></div>
+    </div>
+    <div style="flex:1;padding:8px 10px;">
+      <div style="height:12px;background:#1a1a1a;border-radius:1px;width:60%;margin-bottom:4px;"></div>
+      <div style="height:3px;background:#aaa;border-radius:1px;width:40%;margin-bottom:4px;"></div>
+      <div style="width:40px;height:1px;background:linear-gradient(90deg,#c4a882,transparent);margin-bottom:4px;"></div>
+      <div style="display:flex;gap:5px;">
+        <div style="height:3px;background:#ddd;border-radius:1px;width:35%;"></div>
+        <div style="height:3px;background:#ddd;border-radius:1px;width:30%;"></div>
+      </div>
+    </div>
+  </div>
+  <div style="flex:1;display:flex;">
+    <div style="width:34%;background:#1a1a1a;padding:6px 8px;">
+      <div style="height:3px;background:#c4a882;width:70%;margin-bottom:3px;border-radius:1px;"></div>
+      <div style="height:2px;background:rgba(196,168,130,0.5);width:85%;margin-bottom:2px;border-radius:1px;"></div>
+      <div style="height:2px;background:rgba(196,168,130,0.5);width:75%;margin-bottom:2px;border-radius:1px;"></div>
+      <div style="height:2px;background:rgba(196,168,130,0.5);width:80%;margin-bottom:5px;border-radius:1px;"></div>
+      <div style="height:2px;background:linear-gradient(90deg,#c4a882,#e8d5b4);border-radius:2px;margin-bottom:2px;width:90%;"></div>
+      <div style="height:2px;background:linear-gradient(90deg,#c4a882,#e8d5b4);border-radius:2px;margin-bottom:2px;width:70%;"></div>
+    </div>
+    <div style="flex:1;padding:6px 8px;">
+      <div style="display:flex;gap:3px;margin-bottom:4px;">
+        <div style="width:6px;background:#c4a882;flex-shrink:0;"></div>
+        <div style="flex:1;">
+          <div style="height:4px;background:#1a1a1a;border-radius:1px;width:60%;margin-bottom:2px;"></div>
+          <div style="height:3px;background:#c4a882;border-radius:1px;width:40%;margin-bottom:2px;"></div>
+          <div style="height:2px;background:#ddd;width:90%;border-radius:1px;margin-bottom:1px;"></div>
+          <div style="height:2px;background:#ddd;width:80%;border-radius:1px;"></div>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:3px;margin-top:3px;">
+        <div style="background:#fff;border:1px solid #e8dece;border-top:2px solid #c4a882;padding:3px;"><div style="height:3px;background:#1a1a1a;border-radius:1px;width:70%;margin-bottom:1px;"></div><div style="height:2px;background:#c4a882;border-radius:1px;width:50%;"></div></div>
+        <div style="background:#fff;border:1px solid #e8dece;border-top:2px solid #c4a882;padding:3px;"><div style="height:3px;background:#1a1a1a;border-radius:1px;width:70%;margin-bottom:1px;"></div><div style="height:2px;background:#c4a882;border-radius:1px;width:50%;"></div></div>
+      </div>
+    </div>
+  </div>
+</div>
           <div class="card-overlay">
             <span class="overlay-btn">Get This Design →</span>
           </div>
@@ -567,7 +822,40 @@ footer { background: var(--dark); color: rgba(255,255,255,0.6); padding: 48px 24
       <!-- 14 Logistics -->
       <div class="resume-card" data-cat="logistics" onclick="openModal('Logistics / Supply Chain Manager', 'Deep Navy & Blue Theme')">
         <div class="card-preview preview-bg-9">
-          <iframe src="templates/14_Logistics_Supply_Chain.html" scrolling="no" loading="lazy" title="Logistics Resume"></iframe>
+          <div style="width:100%;height:100%;background:#f4f7fa;display:flex;flex-direction:column;">
+  <div style="background:#0e2236;height:38%;display:flex;align-items:stretch;">
+    <div style="width:6px;background:linear-gradient(180deg,#2196f3,#0d6ebd);flex-shrink:0;"></div>
+    <div style="width:25%;background:#091828;display:flex;align-items:flex-end;justify-content:center;padding-bottom:3px;">
+      <div style="width:40px;height:50px;background:linear-gradient(145deg,#0e2236,#152d45);clip-path:polygon(8% 0%,92% 0%,100% 15%,100% 85%,92% 100%,8% 100%,0% 85%,0% 15%);border-top:2px solid #2196f3;"></div>
+    </div>
+    <div style="flex:1;padding:7px 8px;">
+      <div style="height:10px;background:#fff;border-radius:1px;width:70%;margin-bottom:3px;"></div>
+      <div style="height:3px;background:rgba(33,150,243,0.6);width:50%;margin-bottom:5px;border-radius:1px;"></div>
+      <div style="display:flex;gap:8px;">
+        <div style="text-align:center;"><div style="height:7px;background:#2196f3;border-radius:1px;width:28px;margin-bottom:1px;"></div><div style="height:2px;background:#4a6a8a;border-radius:1px;width:28px;"></div></div>
+        <div style="text-align:center;"><div style="height:7px;background:#2196f3;border-radius:1px;width:28px;margin-bottom:1px;"></div><div style="height:2px;background:#4a6a8a;border-radius:1px;width:28px;"></div></div>
+      </div>
+    </div>
+  </div>
+  <div style="flex:1;display:flex;">
+    <div style="width:33%;background:#0e2236;padding:6px 7px;">
+      <div style="height:3px;background:#2196f3;width:70%;margin-bottom:3px;border-radius:1px;"></div>
+      <div style="height:3px;background:linear-gradient(90deg,#0d6ebd,#2196f3);margin-bottom:2px;border-radius:1px;width:90%;"></div>
+      <div style="height:3px;background:linear-gradient(90deg,#0d6ebd,#2196f3);margin-bottom:2px;border-radius:1px;width:75%;"></div>
+    </div>
+    <div style="flex:1;padding:6px 8px;">
+      <div style="display:flex;gap:3px;margin-bottom:3px;">
+        <div style="background:#0e2236;padding:3px 5px;flex:1;"><div style="height:3px;background:#2196f3;border-radius:1px;width:55%;"></div></div>
+        <div style="border:1px solid rgba(33,150,243,0.3);padding:1px 4px;"><div style="height:3px;background:rgba(33,150,243,0.5);border-radius:1px;width:24px;margin-top:1px;"></div></div>
+      </div>
+      <div style="background:#fff;border-left:3px solid #2196f3;padding:3px 5px;">
+        <div style="height:3px;background:#ddd;width:90%;border-radius:1px;margin-bottom:1px;"></div>
+        <div style="height:3px;background:#ddd;width:80%;border-radius:1px;margin-bottom:1px;"></div>
+        <div style="height:3px;background:#ddd;width:85%;border-radius:1px;"></div>
+      </div>
+    </div>
+  </div>
+</div>
           <div class="card-overlay">
             <span class="overlay-btn">Get This Design →</span>
           </div>
@@ -590,7 +878,43 @@ footer { background: var(--dark); color: rgba(255,255,255,0.6); padding: 48px 24
       <!-- 15 Electrician MEP -->
       <div class="resume-card" data-cat="technical" onclick="openModal('Electrician / MEP Technician', 'Dark & Orange Industrial Theme')">
         <div class="card-preview preview-bg-10">
-          <iframe src="templates/15_Electrician_MEP_Technician.html" scrolling="no" loading="lazy" title="MEP Resume"></iframe>
+          <div style="width:100%;height:100%;background:#fff;display:flex;flex-direction:column;">
+  <div style="background:#1a1a1a;height:40%;display:flex;align-items:stretch;">
+    <div style="width:6px;background:linear-gradient(180deg,#ff8c00,#e67300);flex-shrink:0;"></div>
+    <div style="width:24%;background:#111;display:flex;align-items:flex-end;justify-content:center;">
+      <div style="width:42px;height:52px;background:linear-gradient(145deg,#1a1a1a,#252525);border-top:2px solid #ff8c00;"></div>
+    </div>
+    <div style="flex:1;padding:7px 8px;">
+      <div style="height:12px;background:#fff;border-radius:1px;width:65%;margin-bottom:3px;"></div>
+      <div style="height:3px;background:rgba(255,140,0,0.5);width:55%;margin-bottom:5px;border-radius:1px;"></div>
+      <div style="display:flex;gap:4px;flex-wrap:wrap;">
+        <div style="height:9px;border:1px solid rgba(255,140,0,0.4);padding:0 5px;background:rgba(255,140,0,0.05);border-radius:1px;width:44px;"></div>
+        <div style="height:9px;border:1px solid rgba(255,140,0,0.4);border-radius:1px;width:36px;"></div>
+        <div style="height:9px;border:1px solid rgba(255,140,0,0.4);border-radius:1px;width:52px;"></div>
+      </div>
+    </div>
+  </div>
+  <div style="flex:1;display:flex;">
+    <div style="width:34%;background:#f5f5f5;padding:6px 8px;">
+      <div style="height:3px;background:#ff8c00;border-bottom:1px solid #ff8c00;margin-bottom:3px;"></div>
+      <div style="height:3px;background:linear-gradient(90deg,#e67300,#ff8c00);border-radius:2px;margin-bottom:2px;width:90%;"></div>
+      <div style="height:3px;background:linear-gradient(90deg,#e67300,#ff8c00);border-radius:2px;margin-bottom:2px;width:70%;"></div>
+      <div style="height:3px;background:linear-gradient(90deg,#e67300,#ff8c00);border-radius:2px;margin-bottom:2px;width:80%;"></div>
+    </div>
+    <div style="flex:1;padding:6px 8px;">
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:3px;margin-bottom:4px;">
+        <div style="background:#1a1a1a;padding:3px;text-align:center;"><div style="height:8px;background:#ff8c00;border-radius:1px;width:80%;margin:0 auto;"></div></div>
+        <div style="background:#1a1a1a;padding:3px;text-align:center;"><div style="height:8px;background:#ff8c00;border-radius:1px;width:80%;margin:0 auto;"></div></div>
+        <div style="background:#1a1a1a;padding:3px;text-align:center;"><div style="height:8px;background:#ff8c00;border-radius:1px;width:80%;margin:0 auto;"></div></div>
+      </div>
+      <div style="background:#fff;border:1px solid #eee;border-left:3px solid #ff8c00;padding:3px 5px;">
+        <div style="background:#1a1a1a;padding:2px 4px;margin-bottom:3px;"><div style="height:3px;background:#ff8c00;border-radius:1px;width:50%;"></div></div>
+        <div style="height:2px;background:#ddd;width:90%;border-radius:1px;margin-bottom:1px;"></div>
+        <div style="height:2px;background:#ddd;width:80%;border-radius:1px;"></div>
+      </div>
+    </div>
+  </div>
+</div>
           <div class="card-overlay">
             <span class="overlay-btn">Get This Design →</span>
           </div>
@@ -613,7 +937,41 @@ footer { background: var(--dark); color: rgba(255,255,255,0.6); padding: 48px 24
       <!-- 16 HR Admin -->
       <div class="resume-card" data-cat="hr" onclick="openModal('HR Executive / Admin / PRO', 'Deep Teal & White Theme')">
         <div class="card-preview preview-bg-11">
-          <iframe src="templates/16_HR_Admin_PRO.html" scrolling="no" loading="lazy" title="HR Admin Resume"></iframe>
+          <div style="width:100%;height:100%;background:#fff;display:flex;flex-direction:column;">
+  <div style="height:4px;background:linear-gradient(90deg,#004d40,#00796b,#26a69a,#00796b,#004d40);"></div>
+  <div style="display:flex;height:38%;background:#fff;">
+    <div style="width:26%;background:#004d40;display:flex;align-items:flex-end;justify-content:center;padding-bottom:3px;">
+      <div style="width:44px;height:55px;background:linear-gradient(145deg,#005c4a,#006b55);clip-path:ellipse(50% 50% at 50% 50%);"></div>
+    </div>
+    <div style="flex:1;padding:8px 10px;">
+      <div style="height:11px;background:#004d40;border-radius:1px;width:65%;margin-bottom:3px;"></div>
+      <div style="height:3px;background:#aaa;width:45%;margin-bottom:6px;border-radius:1px;"></div>
+      <div style="display:flex;gap:4px;flex-wrap:wrap;">
+        <div style="height:11px;background:#f0faf7;border:1px solid #cce8e0;padding:0 6px;border-radius:1px;width:60px;"></div>
+        <div style="height:11px;background:#f0faf7;border:1px solid #cce8e0;padding:0 6px;border-radius:1px;width:50px;"></div>
+      </div>
+    </div>
+  </div>
+  <div style="flex:1;display:flex;">
+    <div style="width:34%;background:#f7fcfa;padding:6px 8px;border-right:1px solid #e0f0ec;">
+      <div style="height:3px;background:#004d40;border-bottom:2px solid #00796b;margin-bottom:3px;"></div>
+      <div style="height:3px;background:linear-gradient(90deg,#004d40,#00796b);border-radius:2px;margin-bottom:2px;width:90%;"></div>
+      <div style="height:3px;background:linear-gradient(90deg,#004d40,#00796b);border-radius:2px;margin-bottom:2px;width:70%;"></div>
+      <div style="height:3px;background:linear-gradient(90deg,#004d40,#00796b);border-radius:2px;margin-bottom:2px;width:85%;"></div>
+    </div>
+    <div style="flex:1;padding:6px 8px;">
+      <div style="background:#fff;border:1px solid #e0f0ec;border-left:3px solid #004d40;padding:3px 5px;margin-bottom:4px;">
+        <div style="height:4px;background:#004d40;border-radius:1px;width:55%;margin-bottom:2px;"></div>
+        <div style="height:3px;background:#ddd;width:90%;border-radius:1px;margin-bottom:1px;"></div>
+        <div style="height:3px;background:#ddd;width:80%;border-radius:1px;"></div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:3px;">
+        <div style="background:#f7fcfa;border:1px solid #e0f0ec;border-top:2px solid #00796b;padding:3px;"><div style="height:3px;background:#004d40;border-radius:1px;width:70%;"></div></div>
+        <div style="background:#f7fcfa;border:1px solid #e0f0ec;border-top:2px solid #00796b;padding:3px;"><div style="height:3px;background:#004d40;border-radius:1px;width:70%;"></div></div>
+      </div>
+    </div>
+  </div>
+</div>
           <div class="card-overlay">
             <span class="overlay-btn">Get This Design →</span>
           </div>
