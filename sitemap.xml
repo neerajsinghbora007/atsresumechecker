@@ -142,17 +142,5 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- ═══════════════════════════════════════
-       ADD NEW BLOG POSTS HERE
-       Copy this block and paste above this comment:
-
-  <url>
-    <loc>https://atsresumechecker.co.in/blog/YOUR-FILENAME.html</loc>
-    <lastmod>2026-MM-DD</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-       ═══════════════════════════════════════ -->
 
 </urlset>
