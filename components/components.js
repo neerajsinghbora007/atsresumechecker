@@ -7,13 +7,31 @@
    - Loads /components/footer.html into <div id="footer-placeholder">
    - Auto-highlights the active nav link based on current URL
    - Handles mobile menu toggle
+   - Injects Google Analytics GA4 on every page automatically
    
    TO UPDATE NAV OR FOOTER:
    Just edit /components/nav.html or /components/footer.html
    ALL pages update automatically. No other files need touching.
+   
+   TO UPDATE ANALYTICS:
+   Just change the GA_ID below. All pages update automatically.
    ============================================================ */
 
 (function() {
+
+  /* ── GOOGLE ANALYTICS GA4 ── */
+  var GA_ID = 'G-EDJQKR0X9G';
+  if (!document.querySelector('script[src*="googletagmanager"]')) {
+    var gaScript = document.createElement('script');
+    gaScript.async = true;
+    gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+    document.head.appendChild(gaScript);
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    window.gtag = gtag;
+    gtag('js', new Date());
+    gtag('config', GA_ID);
+  }
 
   /* ── LOAD COMPONENT ── */
   function loadComponent(placeholderId, url, callback) {
