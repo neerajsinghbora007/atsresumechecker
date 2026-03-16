@@ -260,7 +260,6 @@ body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--d
   ]
 }
 </script>
-  <script src="/components/components.js" defer></script>
 </head>
 <body>
 <style>
@@ -270,35 +269,64 @@ body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--d
   border-bottom: 1px solid #E5E7EB;
 }
 .site-nav-inner {
-  max-width: 760px; margin: 0 auto; padding: 0 20px;
-  display: flex; align-items: center; justify-content: space-between; height: 64px;
+  max-width: 1140px; margin: 0 auto; padding: 0 24px;
+  display: flex; align-items: center; justify-content: space-between; height: 68px;
 }
-.nav-logo {
-  font-family: 'Sora', sans-serif; text-decoration: none;
-  display: flex; align-items: center; gap: 9px; flex-shrink: 0;
-}
-.nav-logo-icon {
-  width: 32px; height: 32px; background: #1A56DB; border-radius: 8px;
-  display: flex; align-items: center; justify-content: center;
-  box-shadow: 0 2px 8px rgba(26,86,219,0.35); flex-shrink: 0;
-}
+.nav-logo { font-family: 'Sora', sans-serif; font-weight: 800; text-decoration: none; display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
+.nav-logo-icon { width: 34px; height: 34px; background: #1A56DB; border-radius: 9px; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 8px rgba(26,86,219,0.35); }
 .nav-logo-text { display: flex; flex-direction: column; line-height: 1.1; }
-.nav-logo-main { font-size: 14px; font-weight: 800; color: #0F2D6B; }
-.nav-logo-tag { font-size: 8.5px; font-weight: 700; color: #1A56DB; letter-spacing: 0.1em; text-transform: uppercase; }
-.nav-right { display: flex; align-items: center; gap: 8px; }
-.nav-link-samples {
-  font-size: 13px; font-weight: 600; color: #374151; text-decoration: none;
-  padding: 7px 12px; border-radius: 8px; transition: all 0.2s;
-  white-space: nowrap;
-}
-.nav-link-samples:hover { background: #EBF2FF; color: #1A56DB; }
+.nav-logo-main { font-size: 15px; font-weight: 800; color: #0F2D6B; }
+.nav-logo-tag { font-size: 9px; font-weight: 700; color: #1A56DB; letter-spacing: 0.12em; text-transform: uppercase; }
+.nav-right { display: flex; align-items: center; gap: 6px; }
+.nav-link-samples { font-size: 13px; font-weight: 500; color: #374151; text-decoration: none; padding: 7px 11px; border-radius: 8px; transition: all 0.2s; }
+.nav-link-samples:hover { color: #1A56DB; background: #EBF2FF; }
 .nav-btn-wa {
-  background: #25D366; color: white; padding: 8px 14px; border-radius: 8px;
-  font-size: 12.5px; font-weight: 700; text-decoration: none; white-space: nowrap;
+  background: #1A56DB; color: white; padding: 9px 18px; border-radius: 9px;
+  font-size: 13px; font-weight: 700; text-decoration: none;
   display: flex; align-items: center; gap: 5px;
+  box-shadow: 0 2px 8px rgba(26,86,219,0.3);
 }
+.nav-btn-wa:hover { background: #1244b8; }
+.hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 6px; border: none; background: none; }
+.hamburger span { display: block; width: 22px; height: 2px; background: #111827; border-radius: 2px; }
+.mobile-menu { display: none; background: white; border-top: 1px solid #E5E7EB; padding: 12px 20px 20px; flex-direction: column; gap: 4px; }
+.mobile-menu a { font-size: 15px; font-weight: 500; color: #374151; text-decoration: none; padding: 11px 14px; border-radius: 10px; }
+.mobile-menu a:last-child { background: #25D366; color: white !important; font-weight: 700; text-align: center; margin-top: 8px; }
+.mobile-menu.open { display: flex; }
+@media(max-width: 768px) { .nav-right { display: none; } .hamburger { display: flex; } }
 </style>
-<div id="nav-placeholder"></div>
+<nav class="site-nav">
+  <div class="site-nav-inner">
+    <a href="/" class="nav-logo">
+      <div class="nav-logo-icon">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+          <path d="M3.5 9.5L7 13L14.5 5" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div class="nav-logo-text">
+        <span class="nav-logo-main">ATS Resume</span>
+        <span class="nav-logo-tag">Checker · Est. 2026</span>
+      </div>
+    </a>
+    <div class="nav-right">
+      <a href="/#services" class="nav-link-samples">Services</a>
+      <a href="/resume-samples.html" class="nav-link-samples">📄 Templates</a>
+      <a href="/blog/" class="nav-link-samples">✍️ Blog</a>
+      <a href="/about.html" class="nav-link-samples">About</a>
+      <a href="/contact.html" class="nav-link-samples">Contact</a>
+      <a href="https://wa.me/919910136637?text=Hi%20Neeraj%2C%20I%20want%20an%20ATS%20resume." target="_blank" rel="noopener noreferrer" class="nav-btn-wa">💬 Get Resume</a>
+    </div>
+    <div class="hamburger" onclick="toggleMobileMenu()"><span></span><span></span><span></span></div>
+  </div>
+  <div class="mobile-menu" id="atsMobileMenu">
+    <a href="/#services" onclick="toggleMobileMenu()">Services</a>
+    <a href="/resume-samples.html" onclick="toggleMobileMenu()">📄 Templates</a>
+    <a href="/blog/" onclick="toggleMobileMenu()">✍️ Blog</a>
+    <a href="/about.html" onclick="toggleMobileMenu()">About</a>
+    <a href="/contact.html" onclick="toggleMobileMenu()">Contact</a>
+    <a href="https://wa.me/919910136637" target="_blank" rel="noopener noreferrer">💬 WhatsApp Us</a>
+  </div>
+</nav>
 
 <main id="main-content">
 <div class="topbar">🔥 <span>Limited Offer:</span> ATS-Optimized Resume Rewrite at just ₹499 — WhatsApp us now</div>
@@ -368,7 +396,7 @@ body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--d
   <h2 style="font-family:'Sora',sans-serif;font-size:clamp(22px,4vw,30px);font-weight:800;color:#111827;margin-bottom:14px;line-height:1.2;">What Is an ATS Resume Checker — And Why Does Every Indian Job Seeker Need One?</h2>
   <p style="font-size:15px;color:#374151;line-height:1.85;margin-bottom:14px;">An <strong>ATS (Applicant Tracking System) resume checker</strong> is a tool that scans your resume the same way automated hiring software does — before any human ever reads it. In India, companies like TCS, Infosys, Wipro, HDFC Bank, Amazon India, and virtually every MNC use ATS to filter hundreds of resumes within seconds. If your resume fails the ATS scan, it is automatically rejected, no matter how qualified you are.</p>
   <p style="font-size:15px;color:#374151;line-height:1.85;margin-bottom:14px;">According to recruitment data, <strong>75% of qualified candidates are rejected by ATS</strong> before a human reads their resume — not because of poor skills, but because of formatting errors, missing keywords, or improper structure. Our free <a href="/ats-checker.html" style="color:#1A56DB;font-weight:600;text-decoration:none;">ATS resume score checker</a> runs 16 critical checks instantly, showing you exactly what is passing and what needs to be fixed.</p>
-  <p style="font-size:15px;color:#374151;line-height:1.85;">I'm <strong>Neeraj Singh Bora</strong>, founder of <a href="/" style="color:#1A56DB;font-weight:600;text-decoration:none;">ATS Resume Checker</a>, with 10+ years in SEO, digital marketing, and recruitment. I built this tool after seeing thousands of brilliant professionals lose opportunities to automated filters. Here's everything you need to know about ATS systems in 2025 — and how to beat them.</p>
+  <p style="font-size:15px;color:#374151;line-height:1.85;">I'm <strong>Neeraj Singh Bora</strong>, founder of <a href="/" style="color:#1A56DB;font-weight:600;text-decoration:none;">ATS Resume Checker</a>, with 10+ years in SEO, digital marketing, and recruitment. I built this tool after seeing thousands of brilliant professionals lose opportunities to automated filters. Here's everything you need to know about ATS systems in 2026 — and how to beat them.</p>
 </section>
 
 <!-- HOW IT WORKS -->
@@ -403,7 +431,7 @@ body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--d
 
 <!-- WHY RESUMES FAIL ATS -->
 <section style="padding:36px 0;" id="why-resumes-fail">
-  <h2 style="font-family:'Sora',sans-serif;font-size:clamp(20px,3.5vw,26px);font-weight:800;color:#111827;margin-bottom:16px;">7 Reasons Your Resume Is Getting Rejected by ATS in India (2025)</h2>
+  <h2 style="font-family:'Sora',sans-serif;font-size:clamp(20px,3.5vw,26px);font-weight:800;color:#111827;margin-bottom:16px;">7 Reasons Your Resume Is Getting Rejected by ATS in India (2026)</h2>
   <p style="font-size:15px;color:#374151;line-height:1.85;margin-bottom:20px;">Having reviewed 10,000+ resumes across India and the UAE, <strong>Neeraj Singh Bora</strong> consistently sees the same mistakes that cause qualified professionals to get filtered out automatically:</p>
 
   <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:20px;">
@@ -471,7 +499,7 @@ body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--d
 
 <!-- HOW TO IMPROVE ATS SCORE -->
 <section style="padding:36px 0;" id="improve-ats-score">
-  <h2 style="font-family:'Sora',sans-serif;font-size:clamp(20px,3.5vw,26px);font-weight:800;color:#111827;margin-bottom:16px;">How to Improve Your ATS Resume Score — Step-by-Step Guide (2025)</h2>
+  <h2 style="font-family:'Sora',sans-serif;font-size:clamp(20px,3.5vw,26px);font-weight:800;color:#111827;margin-bottom:16px;">How to Improve Your ATS Resume Score — Step-by-Step Guide (2026)</h2>
   <p style="font-size:15px;color:#374151;line-height:1.85;margin-bottom:20px;">Once you've run our free ATS checker and identified your issues, here's exactly how to fix them. These are the same techniques <strong>Neeraj Singh Bora</strong> uses when rewriting resumes for our ₹499 service:</p>
 
   <div style="counter-reset:step;display:flex;flex-direction:column;gap:16px;">
@@ -674,7 +702,7 @@ function toggleFaqATC(el) {
       </div>
     </div>
     <div style="border-top:1px solid rgba(255,255,255,0.08);padding-top:20px;font-size:12px;text-align:center;">
-      © 2025 ATS Resume Checker | Neeraj Bora Consulting, Noida, India &nbsp;•&nbsp; Results are indicative. Expert review recommended.
+      © 2026 ATS Resume Checker | Neeraj Bora Consulting, Noida, India &nbsp;•&nbsp; Results are indicative. Expert review recommended.
     </div>
   </div>
 </footer>
