@@ -264,7 +264,7 @@ nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.97);backdrop
 .fact-card h3{font-family:'Sora',sans-serif;font-size:11px;font-weight:700;color:var(--soft);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:14px;}
 .fact-row{display:flex;justify-content:space-between;align-items:center;padding:9px 0;border-bottom:1px solid var(--border);font-size:13.5px;gap:12px;}
 .fact-row:last-child{border-bottom:none;}
-.fact-label{color:var(--soft);flex-shrink:0;}
+.fact-label{color:var(--soft);flex-shrink:0;background:transparent;}
 .fact-value{font-weight:600;color:var(--dark);text-align:right;}
 
 /* SECTION */
@@ -359,12 +359,38 @@ footer{background:var(--dark);color:rgba(255,255,255,0.6);padding:52px 24px 28px
   .cta-banner .btn-dark,.cta-banner .btn-wa{display:flex;justify-content:center;}
 }
 </style>
-  <script src="/components/components.js" defer></script>
 </head>
 <body>
 
 <!-- NAV -->
-<div id="nav-placeholder"></div>
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="logo">
+      <div class="logo-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3.5 9.5L7 13L14.5 5" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div class="logo-text"><span class="logo-main">ATS Resume</span><span class="logo-tag">Checker · Est. 2026</span></div>
+    </a>
+    <div class="nav-links">
+      <a href="/#services">Services</a>
+      <a href="/ats-checker.html">Free Tools</a>
+      <a href="/resume-samples.html">Templates</a>
+      <a href="/blog/">Blog</a>
+      <a href="/#testimonials">Reviews</a>
+      <a href="/about.html" class="active">About</a>
+      <a href="/contact.html">Contact</a>
+      <a href="https://wa.me/919910136637" class="nav-cta" target="_blank" rel="noopener noreferrer">💬 WhatsApp Us</a>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="/#services" onclick="toggleMenu()">Services</a>
+    <a href="/ats-checker.html" onclick="toggleMenu()">Free Tools</a>
+    <a href="/resume-samples.html" onclick="toggleMenu()">Templates</a>
+    <a href="/blog/" onclick="toggleMenu()">Blog</a>
+    <a href="/about.html" onclick="toggleMenu()">About</a>
+    <a href="/contact.html" onclick="toggleMenu()">Contact</a>
+    <a href="https://wa.me/919910136637" target="_blank" rel="noopener noreferrer">💬 WhatsApp Us</a>
+  </div>
+</nav>
 
 <!-- BREADCRUMB -->
 <div class="breadcrumb">
@@ -376,7 +402,7 @@ footer{background:var(--dark);color:rgba(255,255,255,0.6);padding:52px 24px 28px
   <div class="about-hero-inner">
     <div class="hero-badge">🏢 About the Company</div>
     <h1>About <em>ATS Resume Checker</em></h1>
-    <p>India's most affordable expert ATS resume writing service. Founded by Neeraj Singh Bora in Noida, India. Hand-crafting resumes since 2025.</p>
+    <p>India's most affordable expert ATS resume writing service. Founded by Neeraj Singh Bora in Noida, India. Hand-crafting resumes since 2026.</p>
   </div>
 </section>
 
@@ -393,7 +419,7 @@ footer{background:var(--dark);color:rgba(255,255,255,0.6);padding:52px 24px 28px
     </div>
     <div class="fact-card">
       <h3>Quick Facts</h3>
-      <div class="fact-row"><span class="fact-label">Founded</span><span class="fact-value">2025</span></div>
+      <div class="fact-row"><span class="fact-label">Founded</span><span class="fact-value">2026</span></div>
       <div class="fact-row"><span class="fact-label">Based in</span><span class="fact-value">Noida, India</span></div>
       <div class="fact-row"><span class="fact-label">Founder</span><span class="fact-value">Neeraj Singh Bora</span></div>
       <div class="fact-row"><span class="fact-label">Resumes written</span><span class="fact-value">10,000+</span></div>
@@ -404,7 +430,6 @@ footer{background:var(--dark);color:rgba(255,255,255,0.6);padding:52px 24px 28px
       <div class="fact-row"><span class="fact-label">Languages</span><span class="fact-value">English, Hindi</span></div>
       <div class="fact-row"><span class="fact-label">Contact</span><span class="fact-value"><a href="https://wa.me/919910136637" target="_blank" rel="noopener noreferrer" style="color:var(--green);font-weight:700;text-decoration:none;">💬 WhatsApp</a></span></div>
       <div class="fact-row"><span class="fact-label">Website</span><span class="fact-value" style="font-size:12px;">atsresumechecker.co.in</span></div>
-      <div class="fact-row"><span class="fact-label">Website</span><span class="fact-value">atsresumechecker.co.in</span></div>
     </div>
   </div>
 
@@ -431,7 +456,7 @@ footer{background:var(--dark);color:rgba(255,255,255,0.6);padding:52px 24px 28px
     <div class="section-label">Leadership</div>
     <h2>Founder — Neeraj Singh Bora</h2>
     <div class="founder-box">
-      <img src="/neeraj-singh-bora.jpg" alt="Neeraj Singh Bora — Founder, ATS Resume Checker" onerror="this.style.display='none'">
+      <img src="/neeraj-singh-bora.jpg" alt="Neeraj Singh Bora — Founder, ATS Resume Checker" width="110" height="110" loading="eager" fetchpriority="high" style="width:110px;height:110px;border-radius:50%;object-fit:cover;object-position:center top;border:3px solid var(--border);flex-shrink:0;" onerror="this.style.display='none'">
       <div class="founder-info">
         <h3>Neeraj Singh Bora</h3>
         <div class="title">Founder · ATS Resume Expert · Career Coach · Noida, India</div>
@@ -608,7 +633,48 @@ footer{background:var(--dark);color:rgba(255,255,255,0.6);padding:52px 24px 28px
 </div>
 
 <!-- FOOTER -->
-<div id="footer-placeholder"></div>
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-logo">ATS.ResumeChecker</div>
+        <p class="footer-desc">Expert resume writing and ATS optimization service. Helping Indian job seekers get noticed and hired since 2026.</p>
+        <div style="margin-top:16px;"><a href="https://wa.me/919910136637" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:8px;background:#25D366;color:white;padding:10px 18px;border-radius:8px;text-decoration:none;font-weight:700;font-size:13px;">💬 +91 99101 36637</a></div>
+        <div style="display:flex;gap:10px;margin-top:16px;">
+          <a href="https://www.facebook.com/people/Neeraj-Bora-Consulting/61588636340291/" target="_blank" rel="noopener noreferrer" style="width:38px;height:38px;border-radius:8px;background:#1877F2;display:flex;align-items:center;justify-content:center;text-decoration:none;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/company/neeraj-bora-consulting/" target="_blank" rel="noopener noreferrer" style="width:38px;height:38px;border-radius:8px;background:#0A66C2;display:flex;align-items:center;justify-content:center;text-decoration:none;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="https://www.instagram.com/neeraj_bora_consulting/" target="_blank" rel="noopener noreferrer" style="width:38px;height:38px;border-radius:8px;background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);display:flex;align-items:center;justify-content:center;text-decoration:none;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="/#services">ATS Resume Writing — ₹499</a>
+        <a href="/#services">LinkedIn Optimization — ₹599</a>
+        <a href="/#services">Resume + LinkedIn Combo</a>
+        <a href="https://wa.me/919910136637" target="_blank" rel="noopener noreferrer">WhatsApp to Order</a>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <a href="/">Home</a>
+        <a href="/ats-checker.html">Free ATS Checker</a>
+        <a href="/resume-samples.html">Resume Templates</a>
+        <a href="/blog/">Blog & Career Tips</a>
+        <a href="/about.html">About Us</a>
+        <a href="/blog/author-neeraj-singh-bora.html">About Neeraj</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 ATS Resume Checker | Neeraj Bora Consulting, Noida, India</div>
+      <div><a href="#">Privacy Policy</a> &nbsp;•&nbsp; <a href="#">Terms</a></div>
+    </div>
+  </div>
+</footer>
 
 <script>
 function toggleMenu(){document.getElementById("mobileMenu").classList.toggle("open");}
