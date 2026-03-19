@@ -5,7 +5,7 @@
   <!-- CORE PAGES -->
   <url>
     <loc>https://atsresumechecker.co.in/</loc>
-    <lastmod>2026-03-16</lastmod>
+    <lastmod>2026-03-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -16,21 +16,21 @@
 
   <url>
     <loc>https://atsresumechecker.co.in/ats-checker.html</loc>
-    <lastmod>2026-03-16</lastmod>
+    <lastmod>2026-03-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://atsresumechecker.co.in/resume-samples.html</loc>
-    <lastmod>2026-03-16</lastmod>
+    <lastmod>2026-03-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://atsresumechecker.co.in/about.html</loc>
-    <lastmod>2026-03-16</lastmod>
+    <lastmod>2026-03-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -41,22 +41,36 @@
 
   <url>
     <loc>https://atsresumechecker.co.in/contact.html</loc>
-    <lastmod>2026-03-16</lastmod>
+    <lastmod>2026-03-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://atsresumechecker.co.in/privacy-policy.html</loc>
+    <lastmod>2026-03-19</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://atsresumechecker.co.in/terms.html</loc>
+    <lastmod>2026-03-19</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
   </url>
 
   <!-- BLOG INDEX + AUTHOR -->
   <url>
     <loc>https://atsresumechecker.co.in/blog/</loc>
-    <lastmod>2026-03-16</lastmod>
+    <lastmod>2026-03-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://atsresumechecker.co.in/blog/author-neeraj-singh-bora.html</loc>
-    <lastmod>2026-03-16</lastmod>
+    <lastmod>2026-03-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -65,54 +79,83 @@
     </image:image>
   </url>
 
-  <!-- LATEST BLOG POST -->
-  <url>
-    <loc>https://atsresumechecker.co.in/blog/naukri-ats-resume-format-2026.html</loc>
-    <lastmod>2026-03-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
   <!-- PILLAR -->
   <url>
     <loc>https://atsresumechecker.co.in/blog/what-is-ats-and-how-does-it-work.html</loc>
-    <lastmod>2026-03-16</lastmod>
+    <lastmod>2026-03-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
-  <!-- CONVERSION KEYWORDS -->
+  <!-- HIGH-CONVERSION -->
   <url>
     <loc>https://atsresumechecker.co.in/blog/ats-resume-writing-service-india.html</loc>
-    <lastmod>2026-03-16</lastmod>
+    <lastmod>2026-03-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
+    <loc>https://atsresumechecker.co.in/blog/naukri-ats-resume-format-2026.html</loc>
+    <lastmod>2026-03-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- NEW POSTS (March 2026) -->
+  <url>
+    <loc>https://atsresumechecker.co.in/blog/gulf-uae-resume-format-india-2026.html</loc>
+    <lastmod>2026-03-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://atsresumechecker.co.in/blog/career-gap-resume-india-2026.html</loc>
+    <lastmod>2026-03-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://atsresumechecker.co.in/blog/what-to-remove-from-resume-india-2026.html</loc>
+    <lastmod>2026-03-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://atsresumechecker.co.in/blog/it-fresher-resume-india-2026.html</loc>
+    <lastmod>2026-03-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://atsresumechecker.co.in/blog/job-change-resume-india-2026.html</loc>
+    <lastmod>2026-03-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- RESEARCH & DEEP DIVE -->
+  <url>
     <loc>https://atsresumechecker.co.in/blog/i-checked-500-resumes-free-ats-tool.html</loc>
-    <lastmod>2026-03-16</lastmod>
+    <lastmod>2026-03-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://atsresumechecker.co.in/blog/ats-score-myth-india.html</loc>
-    <lastmod>2026-03-16</lastmod>
+    <lastmod>2026-03-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://atsresumechecker.co.in/blog/best-ats-resume-checkers-india-2026.html</loc>
-    <lastmod>2026-03-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://atsresumechecker.co.in/blog/fresher-resume-writing-service-india.html</loc>
-    <lastmod>2026-03-16</lastmod>
+    <lastmod>2026-03-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -120,35 +163,43 @@
   <!-- INFORMATIONAL -->
   <url>
     <loc>https://atsresumechecker.co.in/blog/how-to-write-ats-friendly-resume-india.html</loc>
-    <lastmod>2026-03-16</lastmod>
+    <lastmod>2026-03-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://atsresumechecker.co.in/blog/ats-resume-keywords-for-india.html</loc>
-    <lastmod>2026-03-16</lastmod>
+    <lastmod>2026-03-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://atsresumechecker.co.in/blog/why-your-resume-is-not-getting-shortlisted.html</loc>
-    <lastmod>2026-03-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://atsresumechecker.co.in/blog/fresher-resume-guide-india.html</loc>
-    <lastmod>2026-03-16</lastmod>
+    <lastmod>2026-03-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://atsresumechecker.co.in/blog/linkedin-profile-optimization-india.html</loc>
-    <lastmod>2026-03-16</lastmod>
+    <lastmod>2026-03-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- FRESHERS -->
+  <url>
+    <loc>https://atsresumechecker.co.in/blog/fresher-resume-guide-india.html</loc>
+    <lastmod>2026-03-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://atsresumechecker.co.in/blog/fresher-resume-writing-service-india.html</loc>
+    <lastmod>2026-03-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
