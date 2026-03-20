@@ -413,6 +413,13 @@ footer {
 .drop-divider{height:1px;background:#E5E7EB;margin:4px 6px;}
 @media(max-width:768px){.nav-dropdown{display:none;}}
 
+
+.mob-svc-group{background:var(--bg,#F9FAFB);border:1px solid var(--border,#E5E7EB);border-radius:12px;padding:4px 6px;margin-bottom:4px;}
+.mob-svc-head{font-size:13px;font-weight:700;color:var(--blue,#1A56DB);padding:9px 10px 6px;display:flex;align-items:center;gap:6px;}
+.mob-svc-cities{display:grid;grid-template-columns:1fr 1fr;gap:4px;padding:0 4px 6px;}
+.mob-city-link{font-size:13px;font-weight:500;color:var(--mid,#374151);text-decoration:none;padding:8px 10px;border-radius:8px;background:white;border:1px solid var(--border,#E5E7EB);transition:all .2s;display:block;text-align:center;}
+.mob-city-link:hover{background:var(--blue-l,#EBF2FF);color:var(--blue,#1A56DB);border-color:var(--blue,#1A56DB);}
+.mob-svc-all{display:block;font-size:12px;font-weight:600;color:var(--blue,#1A56DB);text-decoration:none;text-align:center;padding:7px;background:var(--blue-l,#EBF2FF);border-radius:8px;margin:0 4px 4px;}
 </style>
 
 <!-- Open Graph -->
@@ -825,16 +832,21 @@ footer {
       <span></span><span></span><span></span>
     </div>
   </div>
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="/resume-writing-services.html" onclick="toggleMenu()" style="font-weight:700;color:var(--blue);">📄 Resume Writing Services</a>
-    <a href="/resume-writing-services-mumbai.html" onclick="toggleMenu()" style="padding-left:28px;">↳ Mumbai</a>
-    <a href="/resume-writing-services-bangalore.html" onclick="toggleMenu()" style="padding-left:28px;">↳ Bangalore</a>
-    <a href="/resume-writing-services-delhi.html" onclick="toggleMenu()" style="padding-left:28px;">↳ Delhi NCR</a>
-    <a href="/resume-writing-services-hyderabad.html" onclick="toggleMenu()" style="padding-left:28px;">↳ Hyderabad</a>
-    <a href="/ats-checker.html" onclick="toggleMenu()">Free Tools</a>
-    <a href="/resume-samples.html" onclick="toggleMenu()">Templates</a>
+    <div class="mobile-menu" id="mobileMenu">
+    <div class="mob-svc-group">
+      <div class="mob-svc-head">🏙️ Resume Writing Services</div>
+      <div class="mob-svc-cities">
+        <a href="/resume-writing-services-mumbai.html" class="mob-city-link" onclick="toggleMenu()">Mumbai</a>
+        <a href="/resume-writing-services-bangalore.html" class="mob-city-link" onclick="toggleMenu()">Bangalore</a>
+        <a href="/resume-writing-services-delhi.html" class="mob-city-link" onclick="toggleMenu()">Delhi NCR</a>
+        <a href="/resume-writing-services-hyderabad.html" class="mob-city-link" onclick="toggleMenu()">Hyderabad</a>
+      </div>
+      <a href="/resume-writing-services.html" class="mob-svc-all" onclick="toggleMenu()">View All India →</a>
+    </div>
+    <a href="#tools" onclick="toggleMenu()">Free Tools</a>
+    <a href="resume-samples.html" onclick="toggleMenu()">Templates</a>
     <a href="/blog/" onclick="toggleMenu()">Blog</a>
-    <a href="/#testimonials" onclick="toggleMenu()">Reviews</a>
+    <a href="#testimonials" onclick="toggleMenu()">Reviews</a>
     <a href="/about.html" onclick="toggleMenu()">About</a>
     <a href="/contact.html" onclick="toggleMenu()">Contact</a>
     <a href="https://wa.me/919910136637" target="_blank" rel="noopener noreferrer">💬 WhatsApp Us</a>
