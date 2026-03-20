@@ -84,11 +84,12 @@ nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.97);backdrop
 .nav-cta:hover{background:var(--blue-d)!important;transform:translateY(-1px)!important;}
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px;border:none;background:none;}
 .hamburger span{display:block;width:22px;height:2px;background:var(--dark);border-radius:2px;}
-.mobile-menu{display:none;background:white;border-top:1px solid var(--border);padding:12px 20px 20px;flex-direction:column;gap:4px;}
-.mobile-menu a{font-size:15px;font-weight:500;color:var(--mid);text-decoration:none;padding:11px 14px;border-radius:10px;}
-.mobile-menu a:hover{background:var(--blue-l);color:var(--blue);}
-.mobile-menu a:last-child{background:#25D366;color:white!important;font-weight:700;text-align:center;margin-top:8px;}
+.mobile-menu{display:none;background:white;border-top:1px solid var(--border,#E5E7EB);padding:10px 16px 20px;flex-direction:column;gap:2px;}
+.mobile-menu a{font-size:15px;font-weight:500;color:var(--mid,#374151);text-decoration:none;padding:11px 14px;border-radius:10px;transition:all .2s;display:block;}
+.mobile-menu a:hover{background:var(--blue-l,#EBF2FF);color:var(--blue,#1A56DB);}
+.mobile-menu a:last-child{background:#25D366;color:white!important;font-weight:700;text-align:center;margin-top:8px;border-radius:10px;}
 .mobile-menu.open{display:flex;}
+
 
 /* ── HERO ── */
 .blog-hero{background:linear-gradient(135deg,#0A1F4E 0%,#0F2D6B 40%,#1A56DB 100%);padding:64px 24px 72px;text-align:center;position:relative;overflow:hidden;}
@@ -205,6 +206,17 @@ footer{background:var(--dark);color:rgba(255,255,255,0.6);padding:52px 24px 28px
 .nav-drop-menu a:hover,.nav-drop-menu a:focus{background:#EBF2FF;color:#1A56DB;}
 .nav-drop-menu a:first-child{font-weight:700;color:#0F2D6B;}
 .drop-divider{height:1px;background:#E5E7EB;margin:4px 6px;}
+.mobile-menu{display:none;background:white;border-top:1px solid var(--border,#E5E7EB);padding:10px 16px 20px;flex-direction:column;gap:2px;}
+.mobile-menu a{font-size:15px;font-weight:500;color:var(--mid,#374151);text-decoration:none;padding:11px 14px;border-radius:10px;transition:all .2s;display:block;}
+.mobile-menu a:hover{background:var(--blue-l,#EBF2FF);color:var(--blue,#1A56DB);}
+.mobile-menu a:last-child{background:#25D366;color:white!important;font-weight:700;text-align:center;margin-top:8px;border-radius:10px;}
+.mobile-menu.open{display:flex;}
+.mob-svc-group{background:var(--bg,#F9FAFB);border:1px solid var(--border,#E5E7EB);border-radius:12px;padding:4px 6px;margin-bottom:4px;}
+.mob-svc-head{font-size:13px;font-weight:700;color:var(--blue,#1A56DB);padding:9px 10px 6px;letter-spacing:.01em;display:flex;align-items:center;gap:6px;}
+.mob-svc-cities{display:grid;grid-template-columns:1fr 1fr;gap:4px;padding:0 4px 6px;}
+.mob-city-link{font-size:13px;font-weight:500;color:var(--mid,#374151);text-decoration:none;padding:8px 10px;border-radius:8px;background:white;border:1px solid var(--border,#E5E7EB);transition:all .2s;display:block;text-align:center;}
+.mob-city-link:hover{background:var(--blue-l,#EBF2FF);color:var(--blue,#1A56DB);border-color:var(--blue,#1A56DB);}
+.mob-svc-all{display:block;font-size:12px;font-weight:600;color:var(--blue,#1A56DB);text-decoration:none;text-align:center;padding:7px;background:var(--blue-l,#EBF2FF);border-radius:8px;margin:0 4px 4px;}
 </style>
 <script src="/components/components.js" defer></script>
 </head>
@@ -242,15 +254,20 @@ footer{background:var(--dark);color:rgba(255,255,255,0.6);padding:52px 24px 28px
     </div>
     <div class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
   </div>
-    <div class="mobile-menu" id="mobileMenu">
-    <a href="/resume-writing-services.html" onclick="toggleMenu()" style="font-weight:700;color:var(--blue,#1A56DB);">📄 Resume Writing Services</a>
-    <a href="/resume-writing-services-mumbai.html" onclick="toggleMenu()" style="padding-left:26px;font-size:14px;">↳ Mumbai</a>
-    <a href="/resume-writing-services-bangalore.html" onclick="toggleMenu()" style="padding-left:26px;font-size:14px;">↳ Bangalore</a>
-    <a href="/resume-writing-services-delhi.html" onclick="toggleMenu()" style="padding-left:26px;font-size:14px;">↳ Delhi NCR</a>
-    <a href="/resume-writing-services-hyderabad.html" onclick="toggleMenu()" style="padding-left:26px;font-size:14px;">↳ Hyderabad</a>
+      <div class="mobile-menu" id="mobileMenu">
+    <div class="mob-svc-group">
+      <div class="mob-svc-head">🏙️ Resume Writing Services</div>
+      <div class="mob-svc-cities">
+        <a href="/resume-writing-services-mumbai.html" class="mob-city-link" onclick="toggleMenu()">Mumbai</a>
+        <a href="/resume-writing-services-bangalore.html" class="mob-city-link" onclick="toggleMenu()">Bangalore</a>
+        <a href="/resume-writing-services-delhi.html" class="mob-city-link" onclick="toggleMenu()">Delhi NCR</a>
+        <a href="/resume-writing-services-hyderabad.html" class="mob-city-link" onclick="toggleMenu()">Hyderabad</a>
+      </div>
+      <a href="/resume-writing-services.html" class="mob-svc-all" onclick="toggleMenu()">View All India →</a>
+    </div>
     <a href="#tools" onclick="toggleMenu()">Free Tools</a>
-    <a href="resume-samples.html" onclick="toggleMenu()">📄 Templates</a>
-    <a href="/blog/" onclick="toggleMenu()">✍️ Blog</a>
+    <a href="resume-samples.html" onclick="toggleMenu()">Templates</a>
+    <a href="/blog/" onclick="toggleMenu()">Blog</a>
     <a href="#testimonials" onclick="toggleMenu()">Reviews</a>
     <a href="/about.html" onclick="toggleMenu()">About</a>
     <a href="/contact.html" onclick="toggleMenu()">Contact</a>
