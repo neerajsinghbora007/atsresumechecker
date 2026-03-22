@@ -13,6 +13,11 @@
 <meta name="google-site-verification" content="fYone3QgZlpmNbKoAJwMtnFq3T3O9pCSmY2aYRll7fk" /><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>I Checked 500 Indian Resumes With a Free ATS Tool — Here's What I Found (2026)</title>
 <meta name="description" content="Neeraj Singh Bora ran 500 Indian resumes through a free ATS resume checker and found 8 patterns that destroy ATS scores. Real data, real fixes, no fluff.">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="canonical" href="https://atsresumechecker.co.in/blog/i-checked-500-resumes-free-ats-tool.html" />
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -142,33 +147,80 @@ footer{background:var(--dark);color:rgba(255,255,255,0.6);padding:52px 24px 28px
 .fb a{color:rgba(255,255,255,0.5);text-decoration:none;}
 @media(max-width:900px){.article-layout{grid-template-columns:1fr;}.sidebar{position:static;}.rel-grid{grid-template-columns:1fr;}.stat-row{grid-template-columns:repeat(2,1fr);}}
 @media(max-width:768px){.nav-links{display:none;}.hamburger{display:flex;}.ft{grid-template-columns:1fr;gap:28px;}.fb{flex-direction:column;text-align:center;}.author-box{flex-direction:column;}.stat-row{grid-template-columns:1fr 1fr;}}
+
+
+
+
+/* ── NAV DROPDOWN ── */
+.nav-dropdown{position:relative;display:inline-flex;}
+.nav-drop-toggle{font-size:13.5px;font-weight:500;color:var(--mid,#374151);text-decoration:none;padding:7px 12px;border-radius:8px;transition:all .2s;cursor:pointer;white-space:nowrap;-webkit-user-select:none;user-select:none;}
+.nav-drop-toggle:hover,.nav-drop-toggle:focus{color:var(--blue,#1A56DB);background:var(--blue-l,#EBF2FF);outline:none;}
+.nav-drop-menu{display:none;position:absolute;top:calc(100% + 6px);left:0;background:#fff;border:1px solid #E5E7EB;border-radius:12px;box-shadow:0 8px 32px rgba(0,0,0,.14);min-width:230px;z-index:999;padding:6px;animation:dropIn .15s ease;}
+@keyframes dropIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:translateY(0)}}
+.nav-dropdown:hover .nav-drop-menu,.nav-dropdown.open .nav-drop-menu{display:block;}
+.nav-drop-menu a{display:block;font-size:13px;color:#374151;text-decoration:none;padding:9px 14px;border-radius:8px;transition:background .15s;white-space:nowrap;}
+.nav-drop-menu a:hover,.nav-drop-menu a:focus{background:#EBF2FF;color:#1A56DB;}
+.nav-drop-menu a:first-child{font-weight:700;color:#0F2D6B;}
+.drop-divider{height:1px;background:#E5E7EB;margin:4px 6px;}
+.mobile-menu{display:none;background:white;border-top:1px solid var(--border,#E5E7EB);padding:10px 16px 20px;flex-direction:column;gap:2px;}
+.mobile-menu a{font-size:15px;font-weight:500;color:var(--mid,#374151);text-decoration:none;padding:11px 14px;border-radius:10px;transition:all .2s;display:block;}
+.mobile-menu a:hover{background:var(--blue-l,#EBF2FF);color:var(--blue,#1A56DB);}
+.mobile-menu a:last-child{background:#25D366;color:white!important;font-weight:700;text-align:center;margin-top:8px;border-radius:10px;}
+.mobile-menu.open{display:flex;}
+.mob-svc-group{background:var(--bg,#F9FAFB);border:1px solid var(--border,#E5E7EB);border-radius:12px;padding:4px 6px;margin-bottom:4px;}
+.mob-svc-head{font-size:13px;font-weight:700;color:var(--blue,#1A56DB);padding:9px 10px 6px;letter-spacing:.01em;display:flex;align-items:center;gap:6px;}
+.mob-svc-cities{display:grid;grid-template-columns:1fr 1fr;gap:4px;padding:0 4px 6px;}
+.mob-city-link{font-size:13px;font-weight:500;color:var(--mid,#374151);text-decoration:none;padding:8px 10px;border-radius:8px;background:white;border:1px solid var(--border,#E5E7EB);transition:all .2s;display:block;text-align:center;}
+.mob-city-link:hover{background:var(--blue-l,#EBF2FF);color:var(--blue,#1A56DB);border-color:var(--blue,#1A56DB);}
+.mob-svc-all{display:block;font-size:12px;font-weight:600;color:var(--blue,#1A56DB);text-decoration:none;text-align:center;padding:7px;background:var(--blue-l,#EBF2FF);border-radius:8px;margin:0 4px 4px;}
 </style>
 <script src="/components/components.js" defer></script>
 </head>
 <body>
-<div style="background:#111827;color:#fff;text-align:center;font-size:13px;padding:9px 16px;">🔥 <span style="color:#FCD34D;font-weight:600;">Limited Offer:</span> ATS-Optimized Resume Rewrite at just ₹499 — <a href="https://wa.me/919910136637?text=Hi%20Neeraj%2C%20I%20want%20an%20ATS%20resume." target="_blank" rel="noopener noreferrer" style="color:#FCD34D;font-weight:700;text-decoration:underline;">WhatsApp us now</a></div>
+<div style="background:#111827;color:#fff;text-align:center;font-size:13px;padding:9px 16px;">🔥 <span style="color:#FCD34D;font-weight:600;">Limited Offer:</span> ATS-Optimized Resume Rewrite at just ₹999 — <a href="https://wa.me/919910136637?text=Hi%20Neeraj%2C%20I%20want%20an%20ATS%20resume." target="_blank" rel="noopener noreferrer" style="color:#FCD34D;font-weight:700;text-decoration:underline;">WhatsApp us now</a></div>
 <nav><div class="nav-inner">
-  <a href="/" class="logo" title="ATS Resume Writing Service India — ₹499 by Neeraj Singh Bora"><div class="logo-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3.5 9.5L7 13L14.5 5" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="logo-text"><span class="logo-main">ATS Resume</span><span class="logo-tag">Checker · Est. 2026</span></div></a>
-      <div class="nav-links">
-      <a href="/#services">Services</a>
-      <a href="/ats-checker.html" title="Free ATS Resume Score Checker India — 16-Point Instant Check No Login">Free Tools</a>
-      <a href="/resume-samples.html" title="ATS Resume Templates India — 11 Industry-Specific Formats Free">Templates</a>
-      <a href="/blog/" title="ATS Resume Blog — Career Tips for Indian Professionals">Blog</a>
+  <a href="/" class="logo" title="ATS Resume Writing Service India — ₹999 by Neeraj Singh Bora"><div class="logo-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3.5 9.5L7 13L14.5 5" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="logo-text"><span class="logo-main">ATS Resume</span><span class="logo-tag">Checker · Est. 2026</span></div></a>
+          <div class="nav-links">
+      <div class="nav-dropdown">
+        <a href="/resume-writing-services.html" class="nav-drop-toggle" role="button" aria-haspopup="true" aria-expanded="false">Services ▾</a>
+        <div class="nav-drop-menu" role="menu">
+          <a href="/resume-writing-services.html" role="menuitem">All India — Resume Writing</a>
+          <div class="drop-divider"></div>
+          <a href="/resume-writing-services-mumbai.html" role="menuitem">📍 Mumbai</a>
+          <a href="/resume-writing-services-bangalore.html" role="menuitem">📍 Bangalore</a>
+          <a href="/resume-writing-services-delhi.html" role="menuitem">📍 Delhi NCR</a>
+          <a href="/resume-writing-services-hyderabad.html" role="menuitem">📍 Hyderabad</a>
+          <div class="drop-divider"></div>
+          <a href="/#services" role="menuitem">All Services &amp; Pricing</a>
+        </div>
+      </div>
+      <a href="/ats-checker.html">Free Tools</a>
+      <a href="/resume-samples.html">Templates</a>
+      <a href="/blog/">Blog</a>
       <a href="/#testimonials">Reviews</a>
-      <a href="/about.html" title="About ATS Resume Checker — Neeraj Singh Bora ATS Expert Noida India">About</a>
-      <a href="/contact.html" title="Contact ATS Resume Checker — WhatsApp Neeraj Singh Bora">Contact</a>
+      <a href="/about.html">About</a>
+      <a href="/contact.html">Contact</a>
       <a href="https://wa.me/919910136637" class="nav-cta" target="_blank" rel="noopener noreferrer">💬 WhatsApp Us</a>
     </div>
     <div class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
   </div>
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="/#services" onclick="toggleMenu()">Services</a>
-    <a href="/ats-checker.html" onclick="toggleMenu()" title="Free ATS Resume Score Checker India — 16-Point Instant Check No Login">Free Tools</a>
-    <a href="/resume-samples.html" onclick="toggleMenu()" title="ATS Resume Templates India — 11 Industry-Specific Formats Free">Templates</a>
-    <a href="/blog/" onclick="toggleMenu()" title="ATS Resume Blog — Career Tips for Indian Professionals">Blog</a>
+      <div class="mobile-menu" id="mobileMenu">
+    <div class="mob-svc-group">
+      <div class="mob-svc-head">🏙️ Resume Writing Services</div>
+      <div class="mob-svc-cities">
+        <a href="/resume-writing-services-mumbai.html" class="mob-city-link" onclick="toggleMenu()">Mumbai</a>
+        <a href="/resume-writing-services-bangalore.html" class="mob-city-link" onclick="toggleMenu()">Bangalore</a>
+        <a href="/resume-writing-services-delhi.html" class="mob-city-link" onclick="toggleMenu()">Delhi NCR</a>
+        <a href="/resume-writing-services-hyderabad.html" class="mob-city-link" onclick="toggleMenu()">Hyderabad</a>
+      </div>
+      <a href="/resume-writing-services.html" class="mob-svc-all" onclick="toggleMenu()">View All India →</a>
+    </div>
+    <a href="/ats-checker.html" onclick="toggleMenu()">Free Tools</a>
+    <a href="/resume-samples.html" onclick="toggleMenu()">Templates</a>
+    <a href="/blog/" onclick="toggleMenu()">Blog</a>
     <a href="/#testimonials" onclick="toggleMenu()">Reviews</a>
-    <a href="/about.html" onclick="toggleMenu()" title="About ATS Resume Checker — Neeraj Singh Bora ATS Expert Noida India">About</a>
-    <a href="/contact.html" onclick="toggleMenu()" title="Contact ATS Resume Checker — WhatsApp Neeraj Singh Bora">Contact</a>
+    <a href="/about.html" onclick="toggleMenu()">About</a>
+    <a href="/contact.html" onclick="toggleMenu()">Contact</a>
     <a href="https://wa.me/919910136637" target="_blank" rel="noopener noreferrer">💬 WhatsApp Us</a>
   </div>
 </nav>
@@ -182,7 +234,7 @@ footer{background:var(--dark);color:rgba(255,255,255,0.6);padding:52px 24px 28px
   </div>
 </div>
 
-<div class="breadcrumb"><div class="bc"><a href="/" title="ATS Resume Writing Service India — ₹499 by Neeraj Singh Bora">Home</a> › <a href="/blog/" title="ATS Resume Blog — Career Tips for Indian Professionals">Blog</a> › I Checked 500 Indian Resumes</div></div>
+<div class="breadcrumb"><div class="bc"><a href="/" title="ATS Resume Writing Service India — ₹999 by Neeraj Singh Bora">Home</a> › <a href="/blog/" title="ATS Resume Blog — Career Tips for Indian Professionals">Blog</a> › I Checked 500 Indian Resumes</div></div>
 
 <div class="article-layout">
 <article class="prose">
@@ -290,7 +342,7 @@ footer{background:var(--dark);color:rgba(255,255,255,0.6);padding:52px 24px 28px
   <h3>🔍 See how your resume scores right now</h3>
   <p>Our free ATS checker runs all 16 checks in under 30 seconds — no login, no email required. See exactly which of these 8 patterns your resume has.</p>
   <a href="/ats-checker.html" class="yellow" title="Free ATS Resume Score Checker India — 16-Point Instant Check No Login">Check My Resume Free →</a>
-  <a href="https://wa.me/919910136637?text=Hi%20Neeraj%2C%20I%20want%20my%20resume%20professionally%20rewritten." target="_blank" rel="noopener noreferrer" class="wa">💬 Get It Fixed — ₹499</a>
+  <a href="https://wa.me/919910136637?text=Hi%20Neeraj%2C%20I%20want%20my%20resume%20professionally%20rewritten." target="_blank" rel="noopener noreferrer" class="wa">💬 Get It Fixed — ₹999</a>
 </div>
 
 <h2 id="takeaway">The One Thing All 500 Resumes Had in Common</h2>
@@ -307,9 +359,9 @@ footer{background:var(--dark);color:rgba(255,255,255,0.6);padding:52px 24px 28px
           <div style="font-size:10px;font-weight:700;color:#059669;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:6px;">Naukri</div>
           <div style="font-size:13.5px;font-weight:600;color:var(--dark);line-height:1.5;">Naukri ATS Resume Format 2026</div>
         </a>
-        <a href="/blog/ats-resume-writing-service-india.html" style="background:var(--bg);border:1px solid var(--border);border-radius:10px;padding:16px;text-decoration:none;display:block;transition:all 0.2s;" onmouseover="this.style.borderColor='#1A56DB'" onmouseout="this.style.borderColor='var(--border)'" title="ATS Resume Writing Service India — Worth ₹499 Honest Answer">
+        <a href="/blog/ats-resume-writing-service-india.html" style="background:var(--bg);border:1px solid var(--border);border-radius:10px;padding:16px;text-decoration:none;display:block;transition:all 0.2s;" onmouseover="this.style.borderColor='#1A56DB'" onmouseout="this.style.borderColor='var(--border)'" title="ATS Resume Writing Service India — Worth ₹999 Honest Answer">
           <div style="font-size:10px;font-weight:700;color:#D97706;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:6px;">Resume Service</div>
-          <div style="font-size:13.5px;font-weight:600;color:var(--dark);line-height:1.5;">ATS Resume Writing Service India — ₹499</div>
+          <div style="font-size:13.5px;font-weight:600;color:var(--dark);line-height:1.5;">ATS Resume Writing Service India — ₹999</div>
         </a>
         <a href="/blog/why-your-resume-is-not-getting-shortlisted.html" style="background:var(--bg);border:1px solid var(--border);border-radius:10px;padding:16px;text-decoration:none;display:block;transition:all 0.2s;" onmouseover="this.style.borderColor='#1A56DB'" onmouseout="this.style.borderColor='var(--border)'" title="Why Your Resume Is Not Getting Shortlisted — 8 Reasons and Fixes">
           <div style="font-size:10px;font-weight:700;color:#374151;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:6px;">Job Search</div>
@@ -344,7 +396,7 @@ footer{background:var(--dark);color:rgba(255,255,255,0.6);padding:52px 24px 28px
   <h2>Keep Reading</h2>
   <div class="rel-grid">
     <a href="/blog/what-is-ats-and-how-does-it-work.html" class="rel-card" title="What is ATS and How Does It Work — Complete Guide India 2026"><div class="rel-cat">ATS Basics</div><h3>What is ATS and How Does It Actually Work? Complete Guide 2026</h3></a>
-    <a href="/blog/ats-resume-writing-service-india.html" class="rel-card" title="ATS Resume Writing Service India — Worth ₹499 Honest Answer"><div class="rel-cat">Resume Service</div><h3>ATS Resume Writing Service India — Is It Worth It? (Honest Answer)</h3></a>
+    <a href="/blog/ats-resume-writing-service-india.html" class="rel-card" title="ATS Resume Writing Service India — Worth ₹999 Honest Answer"><div class="rel-cat">Resume Service</div><h3>ATS Resume Writing Service India — Is It Worth It? (Honest Answer)</h3></a>
     <a href="/blog/why-your-resume-is-not-getting-shortlisted.html" class="rel-card" title="Why Your Resume Is Not Getting Shortlisted — 8 Reasons and Fixes"><div class="rel-cat">Job Search India</div><h3>Why Your Resume Is Not Getting Shortlisted (And How to Fix It)</h3></a>
     <a href="/blog/ats-resume-keywords-for-india.html" class="rel-card" title="Top ATS Resume Keywords for India 2026 — By Industry and Role"><div class="rel-cat">ATS Basics</div><h3>Top ATS Keywords for India 2026 — By Industry</h3></a>
   </div>
@@ -363,7 +415,7 @@ footer{background:var(--dark);color:rgba(255,255,255,0.6);padding:52px 24px 28px
     <h3>Check your resume now</h3>
     <p>16 ATS checks. Instant results. No login needed.</p>
     <a href="/ats-checker.html" title="Free ATS Resume Score Checker India — 16-Point Instant Check No Login">🔍 Free ATS Checker</a>
-    <a href="https://wa.me/919910136637" target="_blank" rel="noopener noreferrer" class="wa">💬 Get It Rewritten — ₹499</a>
+    <a href="https://wa.me/919910136637" target="_blank" rel="noopener noreferrer" class="wa">💬 Get It Rewritten — ₹999</a>
   </div>
 </aside>
 </div>
@@ -378,12 +430,28 @@ footer{background:var(--dark);color:rgba(255,255,255,0.6);padding:52px 24px 28px
           <a href="https://www.instagram.com/neeraj_bora_consulting/" target="_blank" rel="noopener noreferrer" style="width:34px;height:34px;border-radius:8px;background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);display:flex;align-items:center;justify-content:center;text-decoration:none;" title="Instagram"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
           <a href="https://www.youtube.com/@ATS_Resume_Checker" target="_blank" rel="noopener noreferrer" style="width:34px;height:34px;border-radius:8px;background:#FF0000;display:flex;align-items:center;justify-content:center;text-decoration:none;" title="YouTube"><svg width="17" height="12" viewBox="0 0 20 14" fill="white"><path d="M19.6 2.2A2.5 2.5 0 0 0 17.9.5C16.3 0 10 0 10 0S3.7 0 2.1.5A2.5 2.5 0 0 0 .4 2.2C0 3.8 0 7 0 7s0 3.2.4 4.8A2.5 2.5 0 0 0 2.1 13.5C3.7 14 10 14 10 14s6.3 0 7.9-.5a2.5 2.5 0 0 0 1.7-1.7C20 10.2 20 7 20 7s0-3.2-.4-4.8zM8 10V4l5.3 3L8 10z"/></svg></a>
         </div></div>
-  <div class="fc"><h4>Services</h4><a href="/#services">ATS Resume Writing — ₹499</a><a href="/#services">LinkedIn Optimization — ₹599</a><a href="/#services">Resume + LinkedIn Combo</a><a href="https://wa.me/919910136637" target="_blank">WhatsApp to Order</a></div>
+  <div class="fc"><h4>Services</h4><a href="/#services">ATS Resume Writing — ₹999</a><a href="/#services">LinkedIn Optimization — ₹499</a><a href="/#services">Resume + LinkedIn Combo</a><a href="https://wa.me/919910136637" target="_blank">WhatsApp to Order</a></div>
   <div class="fc"><h4>Quick Links</h4><a href="/ats-checker.html" title="Free ATS Resume Score Checker India — 16-Point Instant Check No Login">Free ATS Checker</a><a href="/resume-samples.html" title="ATS Resume Templates India — 11 Industry-Specific Formats Free">Resume Templates</a><a href="/blog/" title="ATS Resume Blog — Career Tips for Indian Professionals">Blog</a><a href="/blog/author-neeraj-singh-bora.html" title="Neeraj Singh Bora — ATS Resume Expert Career Coach Noida India">About Neeraj</a></div>
 </div><div class="fb"><div>© 2026 ATS Resume Checker | Neeraj Bora Consulting, Noida, India</div><div><a href="/privacy-policy.html">Privacy Policy</a> &nbsp;•&nbsp; <a href="/terms.html">Terms</a></div></div></div></footer>
 <script>
 function toggleMenu(){document.getElementById("mobileMenu").classList.toggle("open");}
-document.addEventListener("click",e=>{const m=document.getElementById("mobileMenu");const h=document.querySelector(".hamburger");if(m&&h&&!m.contains(e.target)&&!h.contains(e.target))m.classList.remove("open");});
-function toggleFaq(el){const a=el.querySelector('.faq-a'),ic=el.querySelector('.faq-icon');const open=a.style.display==='block';document.querySelectorAll('.faq-a').forEach(x=>x.style.display='none');document.querySelectorAll('.faq-icon').forEach(x=>x.textContent='+');if(!open){a.style.display='block';ic.textContent='−';}}
+document.addEventListener("click",function(e){
+  var m=document.getElementById("mobileMenu");
+  var h=document.querySelector(".hamburger");
+  if(m&&h&&!m.contains(e.target)&&!h.contains(e.target))m.classList.remove("open");
+  // Close dropdown on outside click
+  if(!e.target.closest(".nav-dropdown")){
+    document.querySelectorAll(".nav-dropdown").forEach(function(d){d.classList.remove("open");});
+  }
+});
+// Touch / click toggle for dropdown (works on mobile tablets and touch screens)
+document.querySelectorAll(".nav-drop-toggle").forEach(function(btn){
+  btn.addEventListener("click",function(e){
+    var dd=btn.closest(".nav-dropdown");
+    var isOpen=dd.classList.contains("open");
+    document.querySelectorAll(".nav-dropdown").forEach(function(d){d.classList.remove("open");});
+    if(!isOpen){dd.classList.add("open");e.preventDefault();}
+  });
+});
 </script>
 </body></html>
