@@ -617,5 +617,87 @@ function toggleFaq(el){const b=el.querySelector('.faq-body');const a=el.querySel
     return false;
   }
 </script>
+
+<!-- ═══════════════════════════════════════════════════════
+     GA4 Priority 1 Conversion Events
+     Events: whatsapp_click | ats_tool_click | cta_click
+     Replaces old gtagSendEvent (was incorrectly firing 'purchase')
+     Added: 2026-05-27
+     ═══════════════════════════════════════════════════════ -->
+<script>
+(function() {
+
+  /**
+   * ga4Track — fires proper GA4 events with location context
+   */
+  window.ga4Track = function(el, name, loc) {
+    if (typeof gtag !== 'function') return;
+    gtag('event', name, {
+      cta_location: loc || 'unknown',
+      button_text:  el ? (el.innerText || el.textContent || '').trim().substring(0, 60) : '',
+      phone_number: name === 'whatsapp_click' ? '919910136637' : undefined
+    });
+  };
+
+  /**
+   * gtagSendEvent — backward-compatible shim
+   * Old code used: onclick="return gtagSendEvent(this.href)"
+   * Now fires whatsapp_click instead of wrong 'purchase' event
+   */
+  window.gtagSendEvent = function(url) {
+    var callback = function() { if (typeof url === 'string') window.location = url; };
+    var el = document.activeElement;
+    var loc = !el ? 'other'
+            : el.closest('.wa-float')    ? 'floating_button'
+            : el.closest('.topbar')      ? 'topbar'
+            : el.closest('nav')          ? 'navbar'
+            : el.closest('.mobile-menu') ? 'mobile_menu'
+            : el.closest('.hero')        ? 'hero'
+            : el.closest('.cta-banner')  ? 'cta_banner'
+            : el.closest('footer')       ? 'footer'
+            : 'other';
+    gtag('event', 'whatsapp_click', {
+      cta_location:   loc,
+      phone_number:   '919910136637',
+      event_callback: callback,
+      event_timeout:  2000
+    });
+    return false;
+  };
+
+  // Auto-attach to ATS checker links (not covered by inline onclick)
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('a[href*="ats-checker"]').forEach(function(el) {
+      if (el.hasAttribute('data-ga4')) return;
+      el.setAttribute('data-ga4', '1');
+      var loc = el.closest('.hero')       ? 'hero'
+              : el.closest('#tools')      ? 'tools_section'
+              : el.closest('.cta-banner') ? 'cta_banner'
+              : el.closest('footer')      ? 'footer'
+              : el.closest('.tool-card')  ? 'tool_card'
+              : 'other';
+      el.addEventListener('click', function() { ga4Track(el, 'ats_tool_click', loc); });
+    });
+
+    // Any remaining WhatsApp links without onclick
+    document.querySelectorAll('a[href*="wa.me"]').forEach(function(el) {
+      if (el.hasAttribute('data-ga4')) return;
+      if (el.onclick) return;
+      el.setAttribute('data-ga4', '1');
+      var loc = el.closest('.wa-float')    ? 'floating_button'
+              : el.closest('.topbar')      ? 'topbar'
+              : el.closest('nav')          ? 'navbar'
+              : el.closest('.mobile-menu') ? 'mobile_menu'
+              : el.closest('.hero')        ? 'hero'
+              : el.closest('.cta-banner')  ? 'cta_banner'
+              : el.closest('footer')       ? 'footer'
+              : 'other';
+      el.addEventListener('click', function() { ga4Track(el, 'whatsapp_click', loc); });
+    });
+  });
+
+})();
+</script>
+
 </body>
 </html>
