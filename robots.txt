@@ -2,3 +2,6 @@ User-agent: *
 Allow: /
 
 Sitemap: https://atsresumechecker.co.in/sitemap.xml
+
+# Learn Hub
+Allow: /learn/

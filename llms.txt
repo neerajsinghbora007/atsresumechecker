@@ -258,3 +258,16 @@ All articles written by Neeraj Singh Bora. India-specific. Updated 2026.
 - Facebook: https://www.facebook.com/people/Neeraj-Bora-Consulting/61588636340291/
 - LinkedIn: https://www.linkedin.com/company/neeraj-bora-consulting/
 - Instagram: https://www.instagram.com/neeraj_bora_consulting/
+
+# Learn Hub — PPC & Digital Marketing Interview Resources
+/learn/ — Free digital marketing learning hub with interview Q&A and quizzes
+/learn/google-ads-interview-questions.html — 50 Google Ads interview questions and answers
+/learn/seo-interview-questions.html — 50 SEO interview questions and answers
+/learn/hr-interview-questions.html — 50 HR interview questions India
+/learn/interview-questions-freshers-india.html — 40 interview questions for freshers
+/learn/tell-me-about-yourself-answer.html — Tell me about yourself best answers
+/learn/data-analyst-interview-questions.html — 50 data analyst interview questions
+/learn/ga4-interview-questions.html — 30 GA4 interview questions
+/learn/social-media-interview-questions.html — 40 social media manager interview questions
+/learn/meta-ads-interview-questions.html — Meta Ads interview questions
+/learn/ppc-interview-questions.html — PPC interview questions
