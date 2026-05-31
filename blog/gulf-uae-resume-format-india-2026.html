@@ -292,6 +292,16 @@ footer{background:var(--navy);color:rgba(255,255,255,0.7);padding:48px 20px 24px
 .mob-city-link{font-size:13px;font-weight:500;color:var(--mid,#374151);text-decoration:none;padding:8px 10px;border-radius:8px;background:white;border:1px solid var(--border,#E5E7EB);transition:all .2s;display:block;text-align:center;}
 .mob-city-link:hover{background:var(--blue-l,#EBF2FF);color:var(--blue,#1A56DB);border-color:var(--blue,#1A56DB);}
 .mob-svc-all{display:block;font-size:12px;font-weight:600;color:var(--blue,#1A56DB);text-decoration:none;text-align:center;padding:7px;background:var(--blue-l,#EBF2FF);border-radius:8px;margin:0 4px 4px;}
+
+/* ── LEARN DROPDOWN ── */
+.nav-dropdown{position:relative;display:inline-flex;}
+.nav-drop-toggle{font-size:13.5px;font-weight:500;color:var(--mid,#374151);text-decoration:none;padding:7px 12px;border-radius:8px;transition:all .2s;cursor:pointer;}
+.nav-drop-toggle:hover{color:var(--blue,#1A56DB);background:var(--blue-l,#EBF2FF);}
+.nav-drop-menu{display:none;position:absolute;top:calc(100% + 6px);left:0;background:white;border:1px solid #E5E7EB;border-radius:12px;box-shadow:0 8px 32px rgba(0,0,0,.12);min-width:230px;max-height:80vh;overflow-y:auto;z-index:200;padding:6px;}
+.nav-dropdown:hover .nav-drop-menu{display:block;}
+.nav-drop-menu a{display:block;font-size:13px;color:#374151;text-decoration:none;padding:8px 12px;border-radius:8px;transition:background .15s;}
+.nav-drop-menu a:hover{background:var(--blue-l,#EBF2FF);color:var(--blue,#1A56DB);}
+.drop-divider{height:1px;background:#E5E7EB;margin:3px 0;}
 </style>
 </head>
 <body>
@@ -322,8 +332,43 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div></li>
       <li><a href="/ats-checker.html">Free Tools</a></li>
       <li><a href="/resume-samples.html">Templates</a></li>
-      <li><a href="/blog/">Blog</a></li>
-      <li><a href="/#testimonials">Reviews</a></li>
+      <li><a href="/blog/">Blog</a>
+      <div class="nav-dropdown">
+        <a href="/learn/" class="nav-drop-toggle">Learn ▾</a>
+        <div class="nav-drop-menu">
+          <a href="/learn/">🎓 Learn Hub</a>
+          <div class="drop-divider"></div>
+          <strong style="padding:5px 12px;font-size:10px;color:#6B7280;display:block;text-transform:uppercase;letter-spacing:.08em">Digital Marketing</strong>
+          <a href="/learn/google-ads-interview-questions.html">Google Ads Q&amp;A</a>
+          <a href="/learn/ppc-interview-questions.html">PPC Q&amp;A</a>
+          <a href="/learn/meta-ads-interview-questions.html">Meta Ads Q&amp;A</a>
+          <a href="/learn/digital-marketing-interview-questions.html">Digital Marketing Q&amp;A</a>
+          <div class="drop-divider"></div>
+          <strong style="padding:5px 12px;font-size:10px;color:#6B7280;display:block;text-transform:uppercase;letter-spacing:.08em">SEO</strong>
+          <a href="/learn/seo-interview-questions.html">SEO Q&amp;A</a>
+          <a href="/learn/technical-seo-interview-questions.html">Technical SEO Q&amp;A</a>
+          <div class="drop-divider"></div>
+          <strong style="padding:5px 12px;font-size:10px;color:#6B7280;display:block;text-transform:uppercase;letter-spacing:.08em">Career Prep</strong>
+          <a href="/learn/hr-interview-questions.html">HR Interview Q&amp;A</a>
+          <a href="/learn/interview-questions-freshers-india.html">Freshers Guide</a>
+          <a href="/learn/tell-me-about-yourself-answer.html">Tell Me About Yourself</a>
+          <div class="drop-divider"></div>
+          <strong style="padding:5px 12px;font-size:10px;color:#6B7280;display:block;text-transform:uppercase;letter-spacing:.08em">Analytics</strong>
+          <a href="/learn/data-analyst-interview-questions.html">Data Analyst Q&amp;A</a>
+          <a href="/learn/ga4-interview-questions.html">GA4 Q&amp;A</a>
+          <div class="drop-divider"></div>
+          <strong style="padding:5px 12px;font-size:10px;color:#6B7280;display:block;text-transform:uppercase;letter-spacing:.08em">Social Media</strong>
+          <a href="/learn/social-media-interview-questions.html">Social Media Q&amp;A</a>
+          <div class="drop-divider"></div>
+          <a href="/learn/google-ads-quiz.html">🧠 Google Ads Quiz</a>
+          <a href="/learn/meta-ads-quiz.html">🧠 Meta Ads Quiz</a>
+        </div>
+      </div></li>
+      <li>    <a href="/learn/">🎓 Learn</a>
+    <a href="/learn/google-ads-interview-questions.html">↳ Google Ads Q&amp;A</a>
+    <a href="/learn/seo-interview-questions.html">↳ SEO Q&amp;A</a>
+    <a href="/learn/hr-interview-questions.html">↳ HR Interview Q&amp;A</a>
+    <a href="/#testimonials">Reviews</a></li>
       <li><a href="/about.html">About</a></li>
       <li><a href="/contact.html">Contact</a></li>
       <li><a href="https://wa.me/919910136637?text=Hi%20Neeraj%2C%20I%20want%20a%20Gulf%20ATS%20resume." target="_blank" class="btn-wa-nav">💬 WhatsApp Us</a></li>
