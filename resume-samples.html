@@ -13,19 +13,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta http-equiv="X-XSS-Protection" content="1; mode=block">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Resume Templates | 11 ATS Designs | Starting ₹999</title>
+<title>Free ATS Resume Templates India 2026 — 11 Industry Designs</title>
 <meta property="og:title" content="ATS Resume Templates India — 11 Industry-Specific Formats Free">
 <meta property="og:description" content="11 premium ATS-compatible resume templates for Indian job seekers. Single-column, ATS-safe designs for IT, Finance, Healthcare, Engineering and more.">
 <meta property="og:url" content="https://atsresumechecker.co.in/resume-samples.html">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://atsresumechecker.co.in/neeraj-singh-bora.jpg">
-<meta name="description" content="Browse 11 industry-specific ATS resume templates — Creative, Healthcare, Engineering, Finance, Sales, Hospitality & more. Hand-crafted by experts. Starting ₹999.">
+<meta name="description" content="11 free ATS-friendly resume templates for India 2026. Industry-specific designs for freshers, engineers, nurses, sales, HR and more. By Neeraj Singh Bora.">>
 <meta name="google-site-verification" content="fYone3QgZlpmNbKoAJwMtnFq3T3O9pCSmY2aYRll7fk" />
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="icon" type="image/png" href="/favicon.svg">
 <link rel="apple-touch-icon" href="/favicon.svg">
 <meta name="theme-color" content="#1A56DB">
-<link rel="canonical" href="https://atsresumechecker.co.in/resume-samples.html" />
+<link rel="canonical" href="https://atsresumechecker.co.in/resume-samples.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
@@ -318,6 +318,137 @@ footer { background: var(--dark); color: rgba(255,255,255,0.6); padding: 48px 24
 .nav-drop-menu a{display:block;font-size:13px;color:#374151;text-decoration:none;padding:8px 12px;border-radius:8px;transition:background .15s;}
 .nav-drop-menu a:hover{background:var(--blue-l,#EBF2FF);color:var(--blue,#1A56DB);}
 .drop-divider{height:1px;background:#E5E7EB;margin:3px 0;}
+
+/* ── IFRAME PREVIEW CARDS ── */
+.card-preview {
+  position: relative;
+  width: 100%;
+  height: 260px;
+  overflow: hidden;
+  border-radius: 10px 10px 0 0;
+  background: #f3f4f6;
+  cursor: pointer;
+}
+.iframe-scale-wrap {
+  width: 820px;
+  height: 1100px;
+  transform: scale(0.305);
+  transform-origin: top left;
+  pointer-events: none;
+}
+.resume-iframe {
+  width: 820px;
+  height: 1100px;
+  border: none;
+  display: block;
+}
+.card-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 45, 107, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.25s;
+}
+.resume-card:hover .card-overlay {
+  background: rgba(15, 45, 107, 0.55);
+}
+.preview-btn {
+  font-size: 14px;
+  font-weight: 700;
+  color: white;
+  background: var(--blue, #1A56DB);
+  padding: 9px 20px;
+  border-radius: 999px;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: all 0.25s;
+}
+.resume-card:hover .preview-btn {
+  opacity: 1;
+  transform: translateY(0);
+}
+.card-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px 8px;
+}
+.card-emoji { font-size: 22px; flex-shrink: 0; }
+.card-title { font-size: 14px; font-weight: 600; color: var(--dark, #111827); }
+.card-theme { font-size: 11.5px; color: var(--soft, #6B7280); margin-top: 2px; }
+.card-footer { padding: 8px 16px 14px; }
+.card-wa-btn {
+  display: block;
+  text-align: center;
+  background: #25D366;
+  color: white;
+  text-decoration: none;
+  padding: 9px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  transition: background 0.2s;
+}
+.card-wa-btn:hover { background: #1da851; }
+
+/* ── PREVIEW MODAL ── */
+.preview-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.preview-modal.open { display: flex; }
+.preview-modal-box {
+  background: white;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 900px;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.preview-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  border-bottom: 1px solid #E5E7EB;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.preview-modal-title { font-size: 16px; font-weight: 700; color: #111827; }
+.preview-modal-sub { font-size: 12px; color: #6B7280; margin-top: 2px; }
+.preview-wa-btn {
+  background: #25D366;
+  color: white;
+  text-decoration: none;
+  padding: 9px 18px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.preview-close {
+  width: 34px; height: 34px; border: none; background: #F3F4F6;
+  border-radius: 50%; font-size: 16px; cursor: pointer; flex-shrink: 0;
+}
+.preview-modal-body { flex: 1; overflow: hidden; min-height: 0; }
+.preview-iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 600px;
+  border: none;
+  display: block;
+}
 </style>
 
 <script type="application/ld+json">
@@ -330,7 +461,51 @@ footer { background: var(--dark); color: rgba(255,255,255,0.6); padding: 48px 24
   "author": {"@type": "Person", "name": "Neeraj Singh Bora"}
 }
 </script>
-<script src="/components/components.js" defer></script>
+<script src="/components/components.js" defer>
+function openPreview(file, title, theme) {
+  document.getElementById('previewTitle').textContent = title;
+  document.getElementById('previewSub').textContent = theme;
+  document.getElementById('previewIframe').src = '/resume-samples/' + file;
+  document.getElementById('previewWaBtn').href = 'https://wa.me/919910136637?text=Hi%20Neeraj%2C%20I%20want%20the%20' + encodeURIComponent(title) + '%20resume%20template.';
+  document.getElementById('previewModal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closePreview(e) {
+  if (e && e.target !== document.getElementById('previewModal')) return;
+  document.getElementById('previewModal').classList.remove('open');
+  document.getElementById('previewIframe').src = '';
+  document.body.style.overflow = '';
+}
+
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "name": "Free ATS Resume Templates India 2026",
+      "description": "11 free ATS-friendly resume templates for India — industry-specific designs for freshers, engineers, nurses, sales, HR and more.",
+      "url": "https://atsresumechecker.co.in/resume-samples.html",
+      "author": {
+        "@type": "Person",
+        "name": "Neeraj Singh Bora",
+        "url": "https://atsresumechecker.co.in/about.html"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type":"Question","name":"What is an ATS-friendly resume template?","acceptedAnswer":{"@type":"Answer","text":"An ATS-friendly resume template uses simple formatting — single column, standard fonts, no tables or graphics — so Applicant Tracking Systems used by Indian companies on Naukri and LinkedIn can correctly read and rank your resume."}},
+        {"@type":"Question","name":"Which resume format is best for freshers in India?","acceptedAnswer":{"@type":"Answer","text":"Freshers in India should use a single-column ATS resume format that leads with Education, then Skills, then Projects or Internships. Use standard fonts, save as PDF, and avoid photos, tables, and decorative elements."}},
+        {"@type":"Question","name":"Can I use these resume templates for Naukri?","acceptedAnswer":{"@type":"Answer","text":"Yes. All 11 templates are designed for Naukri, LinkedIn Easy Apply, and Shine. They use ATS-safe formatting that Naukri Resdex scores positively."}},
+        {"@type":"Question","name":"How do I get a customized version of these resume templates?","acceptedAnswer":{"@type":"Answer","text":"WhatsApp Neeraj Singh Bora at +91-9910136637. Share your job profile and he will write a personalized ATS resume in 24 hours starting at Rs.999."}},
+        {"@type":"Question","name":"Do these resume templates work for Gulf and UAE jobs?","acceptedAnswer":{"@type":"Answer","text":"Yes. The Healthcare, Hospitality, Engineering, and Logistics templates are designed for Gulf and UAE job applications following Middle Eastern recruiter expectations."}}
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -418,9 +593,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-badge">✦ Premium Resume Templates</div>
-  <h1>11 Industry-Specific<br><em>Resume Designs</em> Built to Win</h1>
-  <p>Every template is hand-crafted, ATS-optimized, and tailored for your industry. Tell us your job — we'll deliver your personalized version in 24 hours.</p>
+  <div class="hero-badge">✦ Free ATS Resume Templates India 2026</div>
+  <h1>11 Free ATS Resume Templates<br><em>for India 2026</em></h1>
+  <p>Industry-specific ATS-friendly resume templates for Indian job seekers — freshers, engineers, nurses, sales, HR and more. Hand-crafted by Neeraj Singh Bora, resume expert with 11+ years experience.</p>
   <div class="hero-btns">
     <a href="https://wa.me/919910136637?text=Hi%20Neeraj%2C%20I%20want%20a%20custom%20ATS%20resume." target="_blank" rel="noopener noreferrer" class="btn-yellow" onclick="return gtagSendEvent(this.href)">💬 Get My Custom Resume — ₹999</a>
     <a href="ats-checker.html" class="btn-ghost">🔍 Free ATS Check First</a>
@@ -458,16 +633,370 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <div class="cards-grid" id="cardsGrid">
 
-      <!-- 01 Creative -->
-      <div class="resume-card" data-cat="creative" onclick="openModal('Photographer / Videographer', 'Creative & Dark Gold Theme')">
-        <div class="card-preview preview-bg-1">
-          <div class="rp-scaled">
-<div style="display:flex;min-height:820px;">
-  <!-- Sidebar -->
-  <div style="width:272px;background:#0d0d0d;padding:36px 20px 24px;flex-shrink:0;">
-    <div style="width:90px;height:90px;border-radius:50%;border:2px solid #c49c52;margin:0 auto 14px;background:#1a1a1a;display:flex;align-items:center;justify-content:center;">
-      <span style="color:#c49c52;font-size:8px;font-weight:700;letter-spacing:1px;text-align:center;">PHOTO<br>HERE</span>
-    </div>
+      <!-- Photographer / Videographer -->
+      <div class="resume-card" data-cat="creative" onclick="openPreview('01_Creative_Photographer_Videographer.html', 'Photographer / Videographer', 'Creative & Dark Gold')">
+        <div class="card-preview">
+          <div class="iframe-scale-wrap">
+            <iframe
+              src="/resume-samples/01_Creative_Photographer_Videographer.html"
+              class="resume-iframe"
+              loading="lazy"
+              title="Photographer / Videographer Resume Template"
+              scrolling="no"
+              tabindex="-1"
+              aria-hidden="true"
+            ></iframe>
+          </div>
+          <div class="card-overlay">
+            <span class="preview-btn">👁 Preview</span>
+          </div>
+        </div>
+        <div class="card-info">
+          <div class="card-emoji">🎨</div>
+          <div>
+            <div class="card-title">Photographer / Videographer</div>
+            <div class="card-theme">Creative & Dark Gold</div>
+          </div>
+        </div>
+        <div class="card-footer">
+          <a href="https://wa.me/919910136637?text=Hi%20Neeraj%2C%20I%20want%20the%20Photographer%20/%20Videographer%20resume%20template." 
+             class="card-wa-btn" target="_blank" rel="noopener" onclick="event.stopPropagation()">
+            💬 Get This Resume — ₹999
+          </a>
+        </div>
+      </div>
+
+      <!-- Nurse / Healthcare Professional -->
+      <div class="resume-card" data-cat="healthcare" onclick="openPreview('02_Healthcare_Nurse_Medical.html', 'Nurse / Healthcare Professional', 'Clean Teal Medical')">
+        <div class="card-preview">
+          <div class="iframe-scale-wrap">
+            <iframe
+              src="/resume-samples/02_Healthcare_Nurse_Medical.html"
+              class="resume-iframe"
+              loading="lazy"
+              title="Nurse / Healthcare Professional Resume Template"
+              scrolling="no"
+              tabindex="-1"
+              aria-hidden="true"
+            ></iframe>
+          </div>
+          <div class="card-overlay">
+            <span class="preview-btn">👁 Preview</span>
+          </div>
+        </div>
+        <div class="card-info">
+          <div class="card-emoji">🏥</div>
+          <div>
+            <div class="card-title">Nurse / Healthcare Professional</div>
+            <div class="card-theme">Clean Teal Medical</div>
+          </div>
+        </div>
+        <div class="card-footer">
+          <a href="https://wa.me/919910136637?text=Hi%20Neeraj%2C%20I%20want%20the%20Nurse%20/%20Healthcare%20Professional%20resume%20template." 
+             class="card-wa-btn" target="_blank" rel="noopener" onclick="event.stopPropagation()">
+            💬 Get This Resume — ₹999
+          </a>
+        </div>
+      </div>
+
+      <!-- Civil / Mechanical Engineer -->
+      <div class="resume-card" data-cat="engineering" onclick="openPreview('03_Engineering_Civil_Mechanical.html', 'Civil / Mechanical Engineer', 'Navy & Steel Blue')">
+        <div class="card-preview">
+          <div class="iframe-scale-wrap">
+            <iframe
+              src="/resume-samples/03_Engineering_Civil_Mechanical.html"
+              class="resume-iframe"
+              loading="lazy"
+              title="Civil / Mechanical Engineer Resume Template"
+              scrolling="no"
+              tabindex="-1"
+              aria-hidden="true"
+            ></iframe>
+          </div>
+          <div class="card-overlay">
+            <span class="preview-btn">👁 Preview</span>
+          </div>
+        </div>
+        <div class="card-info">
+          <div class="card-emoji">⚙️</div>
+          <div>
+            <div class="card-title">Civil / Mechanical Engineer</div>
+            <div class="card-theme">Navy & Steel Blue</div>
+          </div>
+        </div>
+        <div class="card-footer">
+          <a href="https://wa.me/919910136637?text=Hi%20Neeraj%2C%20I%20want%20the%20Civil%20/%20Mechanical%20Engineer%20resume%20template." 
+             class="card-wa-btn" target="_blank" rel="noopener" onclick="event.stopPropagation()">
+            💬 Get This Resume — ₹999
+          </a>
+        </div>
+      </div>
+
+      <!-- Finance / Accountant -->
+      <div class="resume-card" data-cat="finance" onclick="openPreview('04_Finance_Accounting_HR.html', 'Finance / Accountant', 'Dark Gold 3-Column')">
+        <div class="card-preview">
+          <div class="iframe-scale-wrap">
+            <iframe
+              src="/resume-samples/04_Finance_Accounting_HR.html"
+              class="resume-iframe"
+              loading="lazy"
+              title="Finance / Accountant Resume Template"
+              scrolling="no"
+              tabindex="-1"
+              aria-hidden="true"
+            ></iframe>
+          </div>
+          <div class="card-overlay">
+            <span class="preview-btn">👁 Preview</span>
+          </div>
+        </div>
+        <div class="card-info">
+          <div class="card-emoji">💼</div>
+          <div>
+            <div class="card-title">Finance / Accountant</div>
+            <div class="card-theme">Dark Gold 3-Column</div>
+          </div>
+        </div>
+        <div class="card-footer">
+          <a href="https://wa.me/919910136637?text=Hi%20Neeraj%2C%20I%20want%20the%20Finance%20/%20Accountant%20resume%20template." 
+             class="card-wa-btn" target="_blank" rel="noopener" onclick="event.stopPropagation()">
+            💬 Get This Resume — ₹999
+          </a>
+        </div>
+      </div>
+
+      <!-- Social Worker / Teacher -->
+      <div class="resume-card" data-cat="social" onclick="openPreview('05_SocialWork_Counselor_Teacher.html', 'Social Worker / Teacher', 'Warm Orange & Charcoal')">
+        <div class="card-preview">
+          <div class="iframe-scale-wrap">
+            <iframe
+              src="/resume-samples/05_SocialWork_Counselor_Teacher.html"
+              class="resume-iframe"
+              loading="lazy"
+              title="Social Worker / Teacher Resume Template"
+              scrolling="no"
+              tabindex="-1"
+              aria-hidden="true"
+            ></iframe>
+          </div>
+          <div class="card-overlay">
+            <span class="preview-btn">👁 Preview</span>
+          </div>
+        </div>
+        <div class="card-info">
+          <div class="card-emoji">🎓</div>
+          <div>
+            <div class="card-title">Social Worker / Teacher</div>
+            <div class="card-theme">Warm Orange & Charcoal</div>
+          </div>
+        </div>
+        <div class="card-footer">
+          <a href="https://wa.me/919910136637?text=Hi%20Neeraj%2C%20I%20want%20the%20Social%20Worker%20/%20Teacher%20resume%20template." 
+             class="card-wa-btn" target="_blank" rel="noopener" onclick="event.stopPropagation()">
+            💬 Get This Resume — ₹999
+          </a>
+        </div>
+      </div>
+
+      <!-- Hotel Manager / Hospitality -->
+      <div class="resume-card" data-cat="hospitality" onclick="openPreview('11_Hospitality_Hotel_Manager.html', 'Hotel Manager / Hospitality', 'Deep Purple & Gold')">
+        <div class="card-preview">
+          <div class="iframe-scale-wrap">
+            <iframe
+              src="/resume-samples/11_Hospitality_Hotel_Manager.html"
+              class="resume-iframe"
+              loading="lazy"
+              title="Hotel Manager / Hospitality Resume Template"
+              scrolling="no"
+              tabindex="-1"
+              aria-hidden="true"
+            ></iframe>
+          </div>
+          <div class="card-overlay">
+            <span class="preview-btn">👁 Preview</span>
+          </div>
+        </div>
+        <div class="card-info">
+          <div class="card-emoji">🏨</div>
+          <div>
+            <div class="card-title">Hotel Manager / Hospitality</div>
+            <div class="card-theme">Deep Purple & Gold</div>
+          </div>
+        </div>
+        <div class="card-footer">
+          <a href="https://wa.me/919910136637?text=Hi%20Neeraj%2C%20I%20want%20the%20Hotel%20Manager%20/%20Hospitality%20resume%20template." 
+             class="card-wa-btn" target="_blank" rel="noopener" onclick="event.stopPropagation()">
+            💬 Get This Resume — ₹999
+          </a>
+        </div>
+      </div>
+
+      <!-- Sales Executive -->
+      <div class="resume-card" data-cat="sales" onclick="openPreview('12_Sales_Executive.html', 'Sales Executive', 'Bold Red & Stats')">
+        <div class="card-preview">
+          <div class="iframe-scale-wrap">
+            <iframe
+              src="/resume-samples/12_Sales_Executive.html"
+              class="resume-iframe"
+              loading="lazy"
+              title="Sales Executive Resume Template"
+              scrolling="no"
+              tabindex="-1"
+              aria-hidden="true"
+            ></iframe>
+          </div>
+          <div class="card-overlay">
+            <span class="preview-btn">👁 Preview</span>
+          </div>
+        </div>
+        <div class="card-info">
+          <div class="card-emoji">📈</div>
+          <div>
+            <div class="card-title">Sales Executive</div>
+            <div class="card-theme">Bold Red & Stats</div>
+          </div>
+        </div>
+        <div class="card-footer">
+          <a href="https://wa.me/919910136637?text=Hi%20Neeraj%2C%20I%20want%20the%20Sales%20Executive%20resume%20template." 
+             class="card-wa-btn" target="_blank" rel="noopener" onclick="event.stopPropagation()">
+            💬 Get This Resume — ₹999
+          </a>
+        </div>
+      </div>
+
+      <!-- Interior Designer / Architect -->
+      <div class="resume-card" data-cat="design" onclick="openPreview('13_Interior_Designer_Architect.html', 'Interior Designer / Architect', 'Minimal Warm Ivory')">
+        <div class="card-preview">
+          <div class="iframe-scale-wrap">
+            <iframe
+              src="/resume-samples/13_Interior_Designer_Architect.html"
+              class="resume-iframe"
+              loading="lazy"
+              title="Interior Designer / Architect Resume Template"
+              scrolling="no"
+              tabindex="-1"
+              aria-hidden="true"
+            ></iframe>
+          </div>
+          <div class="card-overlay">
+            <span class="preview-btn">👁 Preview</span>
+          </div>
+        </div>
+        <div class="card-info">
+          <div class="card-emoji">🏛️</div>
+          <div>
+            <div class="card-title">Interior Designer / Architect</div>
+            <div class="card-theme">Minimal Warm Ivory</div>
+          </div>
+        </div>
+        <div class="card-footer">
+          <a href="https://wa.me/919910136637?text=Hi%20Neeraj%2C%20I%20want%20the%20Interior%20Designer%20/%20Architect%20resume%20template." 
+             class="card-wa-btn" target="_blank" rel="noopener" onclick="event.stopPropagation()">
+            💬 Get This Resume — ₹999
+          </a>
+        </div>
+      </div>
+
+      <!-- Logistics / Supply Chain -->
+      <div class="resume-card" data-cat="logistics" onclick="openPreview('14_Logistics_Supply_Chain.html', 'Logistics / Supply Chain', 'Deep Navy & Blue')">
+        <div class="card-preview">
+          <div class="iframe-scale-wrap">
+            <iframe
+              src="/resume-samples/14_Logistics_Supply_Chain.html"
+              class="resume-iframe"
+              loading="lazy"
+              title="Logistics / Supply Chain Resume Template"
+              scrolling="no"
+              tabindex="-1"
+              aria-hidden="true"
+            ></iframe>
+          </div>
+          <div class="card-overlay">
+            <span class="preview-btn">👁 Preview</span>
+          </div>
+        </div>
+        <div class="card-info">
+          <div class="card-emoji">🚢</div>
+          <div>
+            <div class="card-title">Logistics / Supply Chain</div>
+            <div class="card-theme">Deep Navy & Blue</div>
+          </div>
+        </div>
+        <div class="card-footer">
+          <a href="https://wa.me/919910136637?text=Hi%20Neeraj%2C%20I%20want%20the%20Logistics%20/%20Supply%20Chain%20resume%20template." 
+             class="card-wa-btn" target="_blank" rel="noopener" onclick="event.stopPropagation()">
+            💬 Get This Resume — ₹999
+          </a>
+        </div>
+      </div>
+
+      <!-- Electrician / MEP Technician -->
+      <div class="resume-card" data-cat="technical" onclick="openPreview('15_Electrician_MEP_Technician.html', 'Electrician / MEP Technician', 'Dark & Orange Industrial')">
+        <div class="card-preview">
+          <div class="iframe-scale-wrap">
+            <iframe
+              src="/resume-samples/15_Electrician_MEP_Technician.html"
+              class="resume-iframe"
+              loading="lazy"
+              title="Electrician / MEP Technician Resume Template"
+              scrolling="no"
+              tabindex="-1"
+              aria-hidden="true"
+            ></iframe>
+          </div>
+          <div class="card-overlay">
+            <span class="preview-btn">👁 Preview</span>
+          </div>
+        </div>
+        <div class="card-info">
+          <div class="card-emoji">⚡</div>
+          <div>
+            <div class="card-title">Electrician / MEP Technician</div>
+            <div class="card-theme">Dark & Orange Industrial</div>
+          </div>
+        </div>
+        <div class="card-footer">
+          <a href="https://wa.me/919910136637?text=Hi%20Neeraj%2C%20I%20want%20the%20Electrician%20/%20MEP%20Technician%20resume%20template." 
+             class="card-wa-btn" target="_blank" rel="noopener" onclick="event.stopPropagation()">
+            💬 Get This Resume — ₹999
+          </a>
+        </div>
+      </div>
+
+      <!-- HR Executive / Admin -->
+      <div class="resume-card" data-cat="hr" onclick="openPreview('16_HR_Admin_PRO.html', 'HR Executive / Admin', 'Deep Teal & White')">
+        <div class="card-preview">
+          <div class="iframe-scale-wrap">
+            <iframe
+              src="/resume-samples/16_HR_Admin_PRO.html"
+              class="resume-iframe"
+              loading="lazy"
+              title="HR Executive / Admin Resume Template"
+              scrolling="no"
+              tabindex="-1"
+              aria-hidden="true"
+            ></iframe>
+          </div>
+          <div class="card-overlay">
+            <span class="preview-btn">👁 Preview</span>
+          </div>
+        </div>
+        <div class="card-info">
+          <div class="card-emoji">👤</div>
+          <div>
+            <div class="card-title">HR Executive / Admin</div>
+            <div class="card-theme">Deep Teal & White</div>
+          </div>
+        </div>
+        <div class="card-footer">
+          <a href="https://wa.me/919910136637?text=Hi%20Neeraj%2C%20I%20want%20the%20HR%20Executive%20/%20Admin%20resume%20template." 
+             class="card-wa-btn" target="_blank" rel="noopener" onclick="event.stopPropagation()">
+            💬 Get This Resume — ₹999
+          </a>
+        </div>
+      </div>
+
+    </div>>
     <div style="text-align:center;margin-bottom:20px;">
       <div style="font-size:16px;font-weight:700;color:#fff;font-family:Georgia,serif;margin-bottom:4px;">Athira Priya</div>
       <div style="font-size:8px;color:#c49c52;letter-spacing:3px;text-transform:uppercase;">Photographer & Videographer</div>
@@ -1387,6 +1916,122 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 
 <!-- FOOTER -->
+
+    <!-- SEO INTRO SECTION -->
+    <section style="max-width:860px;margin:0 auto 48px;padding:0 24px">
+      <h2 style="font-family:'Sora',sans-serif;font-size:22px;font-weight:700;color:var(--navy,#0F2D6B);margin-bottom:16px">ATS Resume Templates for India — Designed to Get You Shortlisted</h2>
+      <p style="font-size:15px;color:var(--mid,#374151);line-height:1.8;margin-bottom:14px">
+        Most Indian job seekers lose out before a human even reads their resume — because their resume fails the ATS (Applicant Tracking System) filter used by companies on Naukri, LinkedIn, and direct career portals. These <strong>11 free ATS resume templates</strong> are built specifically to pass Indian ATS systems while looking professional to human recruiters.
+      </p>
+      <p style="font-size:15px;color:var(--mid,#374151);line-height:1.8;margin-bottom:14px">
+        Each template is designed for a specific industry — so your resume uses the right keywords, structure, and format that recruiters in your field expect. Whether you are a <strong>fresher writing your first resume</strong>, a <strong>nurse applying to Gulf hospitals</strong>, or an <strong>engineer switching jobs</strong> — there is a template here built for your exact situation.
+      </p>
+      <p style="font-size:15px;color:var(--mid,#374151);line-height:1.8">
+        Written by <strong>Neeraj Singh Bora</strong> — 11+ years in digital marketing and resume writing, Google certified, based in Noida. Every template is single-column, ATS-safe, and tested against major Indian ATS systems.
+      </p>
+    </section>
+
+    <!-- INDUSTRY SECTIONS -->
+    <section style="max-width:860px;margin:0 auto 56px;padding:0 24px" id="industry-guide">
+      <h2 style="font-family:'Sora',sans-serif;font-size:20px;font-weight:700;color:var(--navy,#0F2D6B);margin-bottom:28px">Resume Format Guide by Industry</h2>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
+
+        <div style="background:#F9FAFB;border-radius:12px;padding:18px 20px;border:1px solid #E5E7EB">
+          <div style="font-size:20px;margin-bottom:8px">🎨</div>
+          <h3 style="font-size:14px;font-weight:700;color:#0F2D6B;margin-bottom:6px">Creative &amp; Photography Resume Format</h3>
+          <p style="font-size:13px;color:#374151;line-height:1.7">Creative professionals need a resume that shows personality without sacrificing ATS compatibility. Our dark gold theme balances visual impact with clean structure. Ideal for photographers, videographers, graphic designers, and content creators applying to Indian media agencies.</p>
+        </div>
+
+        <div style="background:#F9FAFB;border-radius:12px;padding:18px 20px;border:1px solid #E5E7EB">
+          <div style="font-size:20px;margin-bottom:8px">🏥</div>
+          <h3 style="font-size:14px;font-weight:700;color:#0F2D6B;margin-bottom:6px">Nursing &amp; Healthcare Resume Format India</h3>
+          <p style="font-size:13px;color:#374151;line-height:1.7">Nurses and healthcare professionals applying to Indian hospitals, Gulf/UAE healthcare jobs, or abroad need a clean, credential-forward format. Our teal medical theme highlights clinical experience, certifications, and specializations — the fields Indian hospital HR departments prioritize.</p>
+        </div>
+
+        <div style="background:#F9FAFB;border-radius:12px;padding:18px 20px;border:1px solid #E5E7EB">
+          <div style="font-size:20px;margin-bottom:8px">⚙️</div>
+          <h3 style="font-size:14px;font-weight:700;color:#0F2D6B;margin-bottom:6px">Civil &amp; Mechanical Engineer Resume Format</h3>
+          <p style="font-size:13px;color:#374151;line-height:1.7">Engineering resumes in India need to lead with technical skills, project experience, and certifications. Our navy steel blue template is optimized for Naukri searches by engineering recruiters — including construction, manufacturing, and infrastructure sectors.</p>
+        </div>
+
+        <div style="background:#F9FAFB;border-radius:12px;padding:18px 20px;border:1px solid #E5E7EB">
+          <div style="font-size:20px;margin-bottom:8px">💼</div>
+          <h3 style="font-size:14px;font-weight:700;color:#0F2D6B;margin-bottom:6px">Finance &amp; Accountant Resume Format</h3>
+          <p style="font-size:13px;color:#374151;line-height:1.7">Finance professionals need a resume that signals precision and trust. Our dark gold 3-column format highlights P&amp;L management, CA qualifications, GST experience, and financial tools — the keywords Indian finance recruiters and Naukri ATS systems search for most.</p>
+        </div>
+
+        <div style="background:#F9FAFB;border-radius:12px;padding:18px 20px;border:1px solid #E5E7EB">
+          <div style="font-size:20px;margin-bottom:8px">📈</div>
+          <h3 style="font-size:14px;font-weight:700;color:#0F2D6B;margin-bottom:6px">Sales Executive Resume Format India</h3>
+          <p style="font-size:13px;color:#374151;line-height:1.7">Sales resumes live and die by numbers. Our bold red template puts your revenue targets, conversion rates, and territory performance front and center. Designed for B2B and B2C sales roles across FMCG, pharmaceuticals, and tech industries in India.</p>
+        </div>
+
+        <div style="background:#F9FAFB;border-radius:12px;padding:18px 20px;border:1px solid #E5E7EB">
+          <div style="font-size:20px;margin-bottom:8px">👤</div>
+          <h3 style="font-size:14px;font-weight:700;color:#0F2D6B;margin-bottom:6px">HR Executive &amp; Admin Resume Format</h3>
+          <p style="font-size:13px;color:#374151;line-height:1.7">HR professionals in India are increasingly required to show both soft skills and HRMS tools experience. Our deep teal template balances people skills with technical keywords — HRMS, payroll, recruitment metrics, and compliance — that Indian HR departments value.</p>
+        </div>
+
+        <div style="background:#F9FAFB;border-radius:12px;padding:18px 20px;border:1px solid #E5E7EB">
+          <div style="font-size:20px;margin-bottom:8px">🏨</div>
+          <h3 style="font-size:14px;font-weight:700;color:#0F2D6B;margin-bottom:6px">Hotel Manager &amp; Hospitality Resume Format</h3>
+          <p style="font-size:13px;color:#374151;line-height:1.7">Hospitality professionals applying to hotel chains, resorts, or Gulf/UAE properties need a resume that highlights guest satisfaction metrics, team size managed, and revenue targets. Our deep purple gold template is designed for this sector's unique requirements.</p>
+        </div>
+
+        <div style="background:#F9FAFB;border-radius:12px;padding:18px 20px;border:1px solid #E5E7EB">
+          <div style="font-size:20px;margin-bottom:8px">🚢</div>
+          <h3 style="font-size:14px;font-weight:700;color:#0F2D6B;margin-bottom:6px">Logistics &amp; Supply Chain Resume Format</h3>
+          <p style="font-size:13px;color:#374151;line-height:1.7">Logistics professionals need to show end-to-end supply chain expertise, vendor management, and cost reduction achievements. Our deep navy template is optimized for operations and logistics roles across Indian manufacturing, e-commerce, and distribution sectors.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section style="max-width:860px;margin:0 auto 56px;padding:0 24px" itemscope itemtype="https://schema.org/FAQPage">
+      <h2 style="font-family:'Sora',sans-serif;font-size:20px;font-weight:700;color:var(--navy,#0F2D6B);margin-bottom:24px">Frequently Asked Questions — ATS Resume Templates India</h2>
+
+      <div style="display:flex;flex-direction:column;gap:12px">
+
+        <details style="border:1px solid #E5E7EB;border-radius:10px;padding:14px 18px" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <summary style="font-size:14px;font-weight:600;color:#111827;cursor:pointer" itemprop="name">What is an ATS-friendly resume template?</summary>
+          <div style="font-size:13.5px;color:#374151;line-height:1.7;margin-top:10px" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <span itemprop="text">An ATS-friendly resume template uses simple formatting — single column, standard fonts, no tables or graphics — so Applicant Tracking Systems used by Indian companies on Naukri and LinkedIn can correctly read and rank your resume. Fancy Canva templates often fail ATS because the software cannot parse the design elements.</span>
+          </div>
+        </details>
+
+        <details style="border:1px solid #E5E7EB;border-radius:10px;padding:14px 18px" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <summary style="font-size:14px;font-weight:600;color:#111827;cursor:pointer" itemprop="name">Which resume format is best for freshers in India?</summary>
+          <div style="font-size:13.5px;color:#374151;line-height:1.7;margin-top:10px" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <span itemprop="text">Freshers in India should use a single-column ATS resume format that leads with Education, then Skills, then Projects or Internships, then any work experience. The format should be clean, use standard fonts like Arial or Calibri, and be saved as PDF. Avoid photos, tables, and decorative elements which reduce ATS score.</span>
+          </div>
+        </details>
+
+        <details style="border:1px solid #E5E7EB;border-radius:10px;padding:14px 18px" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <summary style="font-size:14px;font-weight:600;color:#111827;cursor:pointer" itemprop="name">Can I use these resume templates for Naukri?</summary>
+          <div style="font-size:13.5px;color:#374151;line-height:1.7;margin-top:10px" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <span itemprop="text">Yes. All 11 resume templates on this page are specifically designed for Indian job portals including Naukri, LinkedIn Easy Apply, and Shine. They use ATS-safe formatting that Naukri's Resdex algorithm scores positively. Neeraj Singh Bora has personally reviewed 500+ Naukri resumes and these templates incorporate the exact format patterns that score 80+ on Naukri's ATS system.</span>
+          </div>
+        </details>
+
+        <details style="border:1px solid #E5E7EB;border-radius:10px;padding:14px 18px" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <summary style="font-size:14px;font-weight:600;color:#111827;cursor:pointer" itemprop="name">How do I get a customized version of these resume templates?</summary>
+          <div style="font-size:13.5px;color:#374151;line-height:1.7;margin-top:10px" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <span itemprop="text">WhatsApp Neeraj Singh Bora at +91-9910136637. Share your current resume or job profile and he will write a personalized, ATS-optimized resume using the appropriate template for your industry. Delivery in 24 hours, starting ₹999. You receive both PDF and Word formats.</span>
+          </div>
+        </details>
+
+        <details style="border:1px solid #E5E7EB;border-radius:10px;padding:14px 18px" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <summary style="font-size:14px;font-weight:600;color:#111827;cursor:pointer" itemprop="name">Do these resume templates work for Gulf and UAE jobs?</summary>
+          <div style="font-size:13.5px;color:#374151;line-height:1.7;margin-top:10px" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <span itemprop="text">Yes. The Healthcare, Hospitality, Engineering, and Logistics templates are specifically designed to work for Gulf and UAE job applications. They follow the format expected by Middle Eastern recruiters — no photo required, clear skills section, and Gulf-relevant certifications highlighted. Neeraj Singh Bora has specific experience writing resumes for Indian professionals applying to Dubai, Abu Dhabi, and Riyadh.</span>
+          </div>
+        </details>
+
+      </div>
+    </section>
+
 <footer>
   <div class="footer-inner">
     <div class="footer-top">
@@ -1422,33 +2067,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </footer>
 
-<!-- MODAL -->
-<div class="modal-overlay" id="modal" onclick="closeModalOutside(event)">
-  <div class="modal-box">
-    <button class="modal-close" onclick="closeModal()">✕</button>
-    <div class="modal-title" id="modalTitle">Get This Resume</div>
-    <div class="modal-sub" id="modalSub">Choose your service package</div>
-    <div class="modal-options">
-      <a href="https://wa.me/919910136637?text=Hi%20Neeraj%2C%20I%20want%20an%20ATS%20resume." target="_blank" rel="noopener noreferrer" class="modal-opt" onclick="return gtagSendEvent(this.href)">
-        <div class="modal-opt-left">
-          <div class="modal-opt-name">📄 ATS Resume Only</div>
-          <div class="modal-opt-desc">Hand-crafted resume with premium template, delivered in 24hrs</div>
-        </div>
-        <div class="modal-opt-price">₹999</div>
-      </a>
-      <a href="https://wa.me/919910136637?text=Hi%20Neeraj%2C%20I%20want%20LinkedIn%20optimization." target="_blank" rel="noopener noreferrer" class="modal-opt" onclick="return gtagSendEvent(this.href)">
-        <div class="modal-opt-left">
-          <div class="modal-opt-name">🔗 LinkedIn Optimization</div>
-          <div class="modal-opt-desc">Keyword-rich LinkedIn profile that gets found by recruiters</div>
-        </div>
-        <div class="modal-opt-price">₹499</div>
-      </a>
-      <a href="https://wa.me/919910136637?text=Hi%20Neeraj%2C%20I%20want%20the%20Resume%20plus%20LinkedIn%20combo." target="_blank" rel="noopener noreferrer" class="modal-opt" onclick="return gtagSendEvent(this.href)">
-        <div class="modal-opt-left">
-          <div class="modal-opt-name">💼 Resume + LinkedIn Combo</div>
-          <div class="modal-opt-desc">Best value — get both done together with priority delivery</div>
-        </div>
-        <div class="modal-opt-price">₹1,200</div>
-      </a>
+<!-- PREVIEW MODAL -->
+<div class="preview-modal" id="previewModal" onclick="closePreview(event)">
+  <div class="preview-modal-box">
+    <div class="preview-modal-header">
+      <div>
+        <div class="preview-modal-title" id="previewTitle"></div>
+        <div class="preview-modal-sub" id="previewSub"></div>
+      </div>
+      <div style="display:flex;gap:10px;align-items:center">
+        <a href="#" id="previewWaBtn" class="preview-wa-btn" target="_blank" rel="noopener">💬 Get This Resume — ₹999</a>
+        <button class="preview-close" onclick="closePreview()">✕</button>
+      </div>
     </div>
-    <a href="https://wa.me/919910136637?text=Hi%20Neeraj%2C%20I%20want%20to%20know%20more%20about%20your%20resume%20service." target="_blank" rel="noope
+    <div class="preview-modal-body">
+      <iframe id="previewIframe" src="" title="Resume Preview" class="preview-iframe"></iframe>
+    </div>
+  </div>
+</div>
+
+e
