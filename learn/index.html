@@ -715,15 +715,13 @@ footer{background:#111827;color:white;padding:40px 24px;text-align:center;}
 <script>
 document.querySelectorAll('.nd').forEach(function(nd){
   var timer;
-  nd.addEventListener('mouseenter', function(){
-    clearTimeout(timer);
-    nd.querySelector('.ndm').style.display = 'block';
-  });
-  nd.addEventListener('mouseleave', function(){
-    timer = setTimeout(function(){
-      nd.querySelector('.ndm').style.display = 'none';
-    }, 300);
-  });
+  var ndm = nd.querySelector('.ndm');
+  function show(){ clearTimeout(timer); ndm.style.display = 'block'; }
+  function hide(){ timer = setTimeout(function(){ ndm.style.display = 'none'; }, 300); }
+  nd.addEventListener('mouseenter', show);
+  nd.addEventListener('mouseleave', hide);
+  ndm.addEventListener('mouseenter', show);
+  ndm.addEventListener('mouseleave', hide);
 });
 </script></body>
 </html>
