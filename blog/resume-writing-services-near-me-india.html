@@ -721,5 +721,19 @@ document.querySelectorAll(".nav-drop-toggle").forEach(function(btn){
 })();
 </script>
 
+
+<script>
+(function(){
+  var timer;
+  document.querySelectorAll('.nav-dropdown').forEach(function(el){
+    var menu = el.querySelector('.nav-drop-menu');
+    if(!menu) return;
+    el.addEventListener('mouseenter', function(){ clearTimeout(timer); menu.style.display='block'; });
+    el.addEventListener('mouseleave', function(){ timer = setTimeout(function(){ menu.style.display=''; }, 200); });
+    menu.addEventListener('mouseenter', function(){ clearTimeout(timer); });
+    menu.addEventListener('mouseleave', function(){ timer = setTimeout(function(){ menu.style.display=''; }, 200); });
+  });
+})();
+</script>
 </body>
 </html>
