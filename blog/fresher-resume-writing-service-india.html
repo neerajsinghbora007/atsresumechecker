@@ -179,7 +179,6 @@ footer{background:var(--dark);color:rgba(255,255,255,0.6);padding:52px 24px 28px
 .nav-dropdown{position:relative;display:inline-flex;}
 .nav-drop-toggle{font-size:13.5px;font-weight:500;color:var(--mid,#374151);text-decoration:none;padding:7px 12px;border-radius:8px;transition:all .2s;cursor:pointer;}
 .nav-drop-toggle:hover{color:var(--blue,#1A56DB);background:var(--blue-l,#EBF2FF);}
-.nav-drop-menu{display:none;position:absolute;top:100%;left:0;background:white;border:1px solid #E5E7EB;border-radius:12px;box-shadow:0 8px 32px rgba(0,0,0,.12);min-width:230px;max-height:80vh;overflow-y:auto;z-index:200;padding:6px;}
 .nav-dropdown:hover .nav-drop-menu{display:block;}.nav-drop-menu::before{content:"";position:absolute;top:-10px;left:0;right:0;height:10px;}
 .nav-drop-menu a{display:block;font-size:13px;color:#374151;text-decoration:none;padding:8px 12px;border-radius:8px;transition:background .15s;}
 .nav-drop-menu a:hover{background:var(--blue-l,#EBF2FF);color:var(--blue,#1A56DB);}
@@ -591,7 +590,7 @@ document.querySelectorAll(".nav-drop-toggle").forEach(function(btn){
 </body></html>      <li>
         <div class="nav-dropdown">
           <a href="/learn/" class="nav-drop-toggle">Learn &#9662;</a>
-          <div class="nav-drop-menu">
+          <div class="nav-drop-menu" style="left:auto;right:0;">
             <a href="/learn/">&#127891; Learn Hub</a>
             <div class="drop-divider"></div>
             <strong style="padding:5px 12px;font-size:10px;color:#6B7280;display:block;text-transform:uppercase;letter-spacing:.08em">Digital Marketing</strong>
