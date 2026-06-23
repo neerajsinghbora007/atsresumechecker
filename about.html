@@ -746,4 +746,10 @@ document.addEventListener("click",e=>{
 function toggleFaq(el){
   const a=el.querySelector('.faq-a'),ic=el.querySelector('.faq-icon');
   const open=a.style.display==='block';
-  doc
+  document.querySelectorAll('.faq-a').forEach(x=>x.style.display='none');
+  document.querySelectorAll('.faq-icon').forEach(x=>x.textContent='+');
+  if(!open){a.style.display='block';ic.textContent='−';}
+}
+</script>
+</body>
+</html>

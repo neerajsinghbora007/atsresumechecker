@@ -639,4 +639,7 @@ document.addEventListener("click",e=>{
   const h=document.querySelector(".hamburger");
   if(m&&h&&!m.contains(e.target)&&!h.contains(e.target))m.classList.remove("open");
 });
-function 
+function toggleFaq(el){var a=el.querySelector(".faq-a"),ic=el.querySelector(".faq-icon"),open=a.style.display==="block";document.querySelectorAll(".faq-a").forEach(function(x){x.style.display="none";});document.querySelectorAll(".faq-icon").forEach(function(x){x.textContent="+";});if(!open){a.style.display="block";ic.textContent="−";}}
+</script>
+</body>
+</html>
