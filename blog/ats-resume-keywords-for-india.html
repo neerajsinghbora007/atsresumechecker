@@ -544,6 +544,7 @@ document.querySelectorAll(".nav-drop-toggle").forEach(function(btn){
 })();
 </script>
 
+<script>function toggleFaq(el){var a=el.querySelector(".faq-a"),ic=el.querySelector(".faq-icon"),open=a.style.display==="block";document.querySelectorAll(".faq-a").forEach(function(x){x.style.display="none";});document.querySelectorAll(".faq-icon").forEach(function(x){x.textContent="+";});if(!open){a.style.display="block";ic.textContent="−";}}</script>
 </body></html>      <li>
         <div class="nav-dropdown">
           <a href="/learn/" class="nav-drop-toggle">Learn &#9662;</a>
